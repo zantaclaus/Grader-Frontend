@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
+import Aos from "aos";
 
 function Login(props) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div className="login-page">
       <div className="img-container">
-        <img src={loginImage} alt="" />
+        <img data-aos="fade-right" src={loginImage} alt="" />
       </div>
-      <form className="login-form">
+      <form data-aos="fade-down" className="login-form">
         <h1>Welcome to Grader!</h1>
         <h3>Register your account</h3>
         <div className="login-input username-input">
