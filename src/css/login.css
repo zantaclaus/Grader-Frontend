@@ -72,9 +72,12 @@
   cursor: pointer;
 }
 
-.login-button:focus {
-  border-radius: 10px solid #fff;
+.login-button:disabled,
+.login-button[disabled] {
+  opacity: 0.5;
+  cursor: default;
 }
+
 @media screen and (min-width: 1230px) {
   .login-page {
     grid-template-columns: 40% 60%;
