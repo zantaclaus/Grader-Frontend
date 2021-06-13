@@ -10,3 +10,7 @@
 :root {
   --color-primary: #5069ff;
 }
+
+.content__container {
+  margin-top: 1.5rem;
+}
