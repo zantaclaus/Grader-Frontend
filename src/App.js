@@ -19,16 +19,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="navbar__container">
-          <Navbar />
-        </div>
-        <div className="content__container">
-          <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/" component={Home} />
-            <Redirect path="/" exact to="/home" />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <React.Fragment>
+            <div className="navbar__container">
+              <Navbar />
+            </div>
+            <div className="content__container">
+              <Route path="/" component={Home} />
+              <Redirect path="/" exact to="/home" />
+            </div>
+          </React.Fragment>
+        </Switch>
       </div>
     );
   }
