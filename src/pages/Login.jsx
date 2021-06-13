@@ -67,7 +67,7 @@ class Login extends Component {
       const { account } = this.state;
       const { data: jwt } = await login(account.username, account.password);
       localStorage.setItem("token", jwt.token);
-      this.props.history.push("/");
+      window.location = "/";
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
