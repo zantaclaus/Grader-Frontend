@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Joi from "joi-browser";
 import Aos from "aos";
 import auth from "../services/authService";
@@ -79,6 +79,7 @@ class Login extends Component {
   };
 
   render() {
+    if (auth.getCurrentUser()) return <Redirect to="/" />;
     const { account, errors } = this.state;
     return (
       <div>
