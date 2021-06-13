@@ -17,22 +17,36 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route path="/login" component={Login} />
-          <React.Fragment>
-            <div className="navbar__container">
-              <Navbar />
-            </div>
-            <div className="content__container">
-              <Route path="/logout" component={Logout} />
-              <Route path="/" component={Home} />
-              <Redirect path="/" exact to="/home" />
-            </div>
-          </React.Fragment>
-        </Switch>
+        {this.state.user && (
+          <div className="navbar__container">
+            <Navbar />
+          </div>
+        )}
+        <div className="content__container">
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/logout" component={Logout} />
+            <Route path="/" component={Home} />
+            <Redirect path="/" exact to="/home" />
+          </Switch>
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
+/* <Switch>
+  <Route path="/login" component={Login} />
+  <React.Fragment>
+    <div className="navbar__container">
+      <Navbar />
+    </div>
+    <div className="content__container">
+      <Route path="/logout" component={Logout} />
+      <Route path="/" component={Home} />
+      <Redirect path="/" exact to="/home" />
+    </div>
+  </React.Fragment>
+</Switch> */
