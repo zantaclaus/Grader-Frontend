@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Joi from "joi-browser";
 import Aos from "aos";
+import { login } from "../services/authService";
 import Error from "../components/Error";
 import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
@@ -38,16 +39,6 @@ class Login extends Component {
     return error ? error.details[0].message : null;
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-
-    const errors = this.validate();
-    this.setState({ errors: errors || {} });
-    if (errors) return;
-
-    console.log("Submitted");
-  };
-
   handleChange = ({ currentTarget: input }) => {
     const errors = { ...this.state.errors };
     const errorMessage = this.validateProperty(input);
@@ -58,6 +49,31 @@ class Login extends Component {
     account[input.name] = input.value;
 
     this.setState({ account, errors });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const errors = this.validate();
+    this.setState({ errors: errors || {} });
+    if (errors) return;
+
+    this.doSubmit();
+    console.log(this.state.errors);
+  };
+
+  doSubmit = async () => {
+    try {
+      const { account } = this.state;
+      await login(account.username, account.password);
+    } catch (ex) {
+      if (ex.response && ex.response.status === 400) {
+        const errors = { ...this.state.errors };
+        // errors.username = ex.response.data;
+        errors.username = "Invalid username or password.";
+        this.setState({ errors });
+      }
+    }
   };
 
   render() {
