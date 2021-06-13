@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
 import Aos from "aos";
@@ -27,9 +28,9 @@ function Login(props) {
           </label>
           <input type="password" placeholder="password" />
         </div>
-        <a href="/" className="forgot">
+        <Link to="/" className="forgot">
           Forgot Password?
-        </a>
+        </Link>
         <input type="submit" className="login-button" value="Login" />
       </form>
     </div>
