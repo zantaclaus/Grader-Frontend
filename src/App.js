@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import jwtDecode from "jwt-decode";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Logout from "./pages/Logout";
 import Navbar from "./components/Navbar";
+import auth from "./services/authService";
 
 class App extends Component {
   state = {};
 
   componentDidMount() {
-    try {
-      const jwt = localStorage.getItem("token");
-      const user = jwtDecode(jwt);
-      this.setState({ user });
-    } catch (ex) {}
+    const user = auth.getCurrentUser();
+    this.setState({ user });
   }
 
   render() {

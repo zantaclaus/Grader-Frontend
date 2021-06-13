@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Joi from "joi-browser";
 import Aos from "aos";
-import { login } from "../services/authService";
+import auth from "../services/authService";
 import Error from "../components/Error";
 import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
@@ -65,8 +65,8 @@ class Login extends Component {
   doSubmit = async () => {
     try {
       const { account } = this.state;
-      const { data: jwt } = await login(account.username, account.password);
-      localStorage.setItem("token", jwt.token);
+      await auth.login(account.username, account.password);
+
       window.location = "/";
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
