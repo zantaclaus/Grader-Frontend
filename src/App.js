@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Logout from "./pages/Logout";
 import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
 
 class App extends Component {
@@ -26,7 +27,7 @@ class App extends Component {
           <Switch>
             <Route path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
-            <Route path="/" component={Home} />
+            <ProtectedRoute path="/" component={Home} />
             <Redirect path="/" exact to="/home" />
           </Switch>
         </div>
