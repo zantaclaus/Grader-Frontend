@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {};
@@ -18,11 +19,16 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/" component={Home} />
-          <Redirect path="/" exact to="/home" />
-        </Switch>
+        <div className="navbar__container">
+          <Navbar />
+        </div>
+        <div className="content__container">
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/" component={Home} />
+            <Redirect path="/" exact to="/home" />
+          </Switch>
+        </div>
       </div>
     );
   }
