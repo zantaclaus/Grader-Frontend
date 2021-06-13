@@ -65,7 +65,9 @@ class Login extends Component {
   doSubmit = async () => {
     try {
       const { account } = this.state;
-      await login(account.username, account.password);
+      const { data: jwt } = await login(account.username, account.password);
+      localStorage.setItem("token", jwt.token);
+      this.props.history.push("/");
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
