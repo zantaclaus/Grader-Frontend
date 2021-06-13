@@ -3,6 +3,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  transform: translateY(-50px);
 }
 
 .login-page img {
@@ -81,6 +82,7 @@
 @media screen and (min-width: 1230px) {
   .login-page {
     grid-template-columns: 40% 60%;
+    transform: translateY(0);
   }
 
   .img-container {
