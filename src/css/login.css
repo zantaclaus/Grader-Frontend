@@ -15,11 +15,12 @@
 }
 
 .login-form h1 {
-  font-size: 4.8rem;
+  font-size: var(--font-biggest-size);
 }
 
 .login-form h3 {
   text-align: center;
+  font-size: var(--font-normal-size);
   margin-bottom: 3.2rem;
   font-weight: 500;
 }
@@ -27,12 +28,12 @@
 .login-input label {
   text-align: left;
   display: block;
-  font-size: 3.2rem;
+  font-size: var(--font-h2-size);
 }
 
 .login-input input {
   width: 100%;
-  font-size: 1.3rem;
+  font-size: var(--font-h3-size);
   padding: 0.7rem 2rem;
   border-radius: 10px;
   outline: 0;
@@ -52,7 +53,7 @@
 }
 
 .forgot {
-  font-size: 1.4rem;
+  font-size: var(--font-normal-size);
   text-decoration: none;
   display: block;
   text-align: right;
@@ -69,7 +70,7 @@
   margin-top: 1.6rem;
   padding: 10px 4rem;
   border-radius: 25px;
-  font-size: 1.6rem;
+  font-size: var(--font-h3-size);
   color: #fff;
   background-color: var(--color-primary);
   border-color: var(--color-primary);
@@ -105,11 +106,12 @@
   }
 
   .login-form h1 {
+    font-size: var(--font-big-size);
     margin-bottom: 0.8rem;
   }
 
   .login-form h3 {
-    font-size: 1.8rem;
+    font-size: var(--font-h2-size);
     padding-left: 0.48rem;
     margin-bottom: 6.4rem;
     text-align: left;
@@ -120,7 +122,7 @@
   }
 
   .login-input input {
-    font-size: 2.24rem;
+    font-size: var(--font-h3-size);
     line-height: 1.5;
     padding: 1.6rem 3.2rem 1.28rem 3.2rem;
   }
@@ -134,5 +136,11 @@
 @media screen and (min-width: 1540px) {
   .login-page {
     grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 1735px) {
+  .login-form h1 {
+    font-size: var(--font-biggest-size);
   }
 }

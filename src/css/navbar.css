@@ -1,59 +1,110 @@
+.nav-container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin: 0 1.6rem;
+}
+
+.nav-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .navbar {
-  padding: 2.08rem 0 1.12rem 0;
-  text-align: center;
-  box-shadow: 0 0 20px rgb(138, 136, 136);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--color-body);
 }
 
-.logo h3 {
-  font-size: 2.88rem;
-  padding-bottom: 0.48rem;
-}
-
-.nav-list {
+.nav {
+  max-width: 1024px;
+  height: 4.8rem;
   display: flex;
-  justify-content: center;
-}
-
-.nav-list ul {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  list-style: none;
 }
 
-.nav-list ul li {
-  font-size: 1.6rem;
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -40%;
+    left: 0;
+    width: 100%;
+    padding: 2.4rem 0 1.6rem;
+    text-align: center;
+    background-color: var(--color-body);
+    transition: 0.3s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1.6rem 1.6rem;
+    z-index: 100;
+  }
 }
 
-.nav-list ul li a {
-  color: #000;
-  text-decoration: none;
+.nav__item {
+  margin-bottom: 1.6rem;
 }
 
-@media screen and (min-width: 885px) {
-  .navbar {
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  color: var(--color-text);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo {
+  font-size: var(--font-h3-size);
+}
+
+.nav__logo:hover {
+  color: var(--color-primary);
+}
+
+.nav__link {
+  font-size: var(--font-normal-size);
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+}
+
+.nav__toggle {
+  /* font-size: 2.1rem; */
+  width: 50px;
+  cursor: pointer;
+}
+
+.show-menu {
+  top: 4.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .nav {
+    height: 6.3rem;
+  }
+
+  .nav__list {
     display: flex;
-    justify-content: space-between;
-  }
-
-  .logo h3 {
-    position: relative;
-    left: 40%;
-  }
-
-  .nav-list {
-    width: 700px;
-  }
-
-  .nav-list ul {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    margin: 0 3rem;
   }
+  .nav__item {
+    margin: 0 0 0 4rem;
+  }
+  .nav__toggle {
+    display: none;
+  }
+}
 
-  .nav-list ul li {
-    /* padding: 0 0.3rem; */
-    font-size: 1.92rem;
+@media screen and (min-width: 1100px) {
+  .nav-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
