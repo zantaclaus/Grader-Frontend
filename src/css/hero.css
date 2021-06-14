@@ -17,7 +17,7 @@
   font-size: 2rem;
   color: #4b4b4b;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin: 2rem 0 5rem;
 }
 
@@ -26,6 +26,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
   .hero__content {
     text-align: left;
     align-self: center;
@@ -40,6 +43,9 @@
 }
 
 @media screen and (min-width: 1700px) {
+  .hero {
+    height: auto;
+  }
   .hero__content h1 {
     font-size: 8rem;
   }

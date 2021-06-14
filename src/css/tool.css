@@ -34,7 +34,7 @@
 
 @media screen and (min-width: 768px) {
   .tool__image {
-    width: 80%;
+    width: 90%;
   }
 
   .tool__content {
@@ -53,5 +53,11 @@
   }
   .tool__content ul li {
     margin: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .tool__content {
+    margin-top: 8rem;
   }
 }

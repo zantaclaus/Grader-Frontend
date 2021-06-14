@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Aos from "aos";
 import { showMenu, linkAction } from "../services/extendService";
 import "../css/navbar.css";
 
 function Navbar(props) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const menuClick = () => {
     showMenu("nav-toggle", "nav-menu");
   };
@@ -13,7 +18,7 @@ function Navbar(props) {
   };
 
   return (
-    <div className="navbar" id="navbar">
+    <div data-aos="fade-down" className="navbar" id="navbar">
       <nav className="nav nav-container">
         <Link to="/" className="nav__logo">
           CE BOOTSUP #9

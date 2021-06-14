@@ -11,8 +11,8 @@ function Hero(props) {
   return (
     <div className="block hero">
       <div className="container grid grid--1x2">
-        <header className="hero__content">
-          <h1 data-aos="fade-right">
+        <header data-aos="fade-right" className="hero__content">
+          <h1>
             Programming <span>Tasks</span>
           </h1>
           <p>Be a good programmer in 2 weeks.</p>
