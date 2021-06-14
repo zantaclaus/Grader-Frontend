@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import hero from "../images/hero.svg";
-import "../css/home.css";
+import "../css/hero.css";
 
 function Hero(props) {
   useEffect(() => {
