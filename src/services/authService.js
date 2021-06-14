@@ -4,8 +4,8 @@ import { apiUrl } from "../config.json";
 
 const apiEndpoint = apiUrl + "/login";
 
-export async function login(nickName, password) {
-  const { data: jwt } = await axios.post(apiEndpoint, { nickName, password });
+export async function login(username, password) {
+  const { data: jwt } = await axios.post(apiEndpoint, { username, password });
   localStorage.setItem("token", jwt.token);
 }
 
