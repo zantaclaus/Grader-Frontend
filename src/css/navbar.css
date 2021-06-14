@@ -47,13 +47,14 @@
 }
 
 .nav__link,
-.nav__logo,
 .nav__toggle {
   color: var(--color-text);
   font-weight: var(--font-medium);
 }
 
 .nav__logo {
+  color: #000;
+  font-weight: 600;
   font-size: var(--font-h3-size);
 }
 

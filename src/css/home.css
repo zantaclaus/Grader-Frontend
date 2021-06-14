@@ -1,0 +1,45 @@
+.hero__content {
+  text-align: center;
+  grid-row: 2;
+}
+
+.hero__content h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  padding-top: 5rem;
+}
+
+.hero__content span {
+  color: var(--color-primary);
+}
+
+.hero__content p {
+  font-size: 2rem;
+  color: #808183;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    text-align: left;
+    align-self: center;
+    grid-row: auto;
+  }
+  .hero__content h1 {
+    padding: 0;
+  }
+  .hero__content p {
+    margin: 1rem 0 5rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .hero__content h1 {
+    font-size: 8rem;
+  }
+}
