@@ -1,0 +1,57 @@
+.tool__image {
+  width: 80%;
+  justify-self: center;
+}
+
+.tool__content {
+  text-align: center;
+}
+
+.tool__content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  padding-top: 5rem;
+}
+
+.tool__content span {
+  color: var(--color-primary);
+}
+
+.tool__content ul {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tool__content ul li {
+  margin: 0 1.5rem;
+}
+
+.react-icons {
+  color: var(--color-title);
+  font-size: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .tool__image {
+    width: 90%;
+  }
+
+  .tool__content {
+    align-self: center;
+    padding-left: 1rem;
+    text-align: left;
+  }
+
+  .tool__content h1 {
+    margin: 0 1.5rem;
+    font-size: 4.5rem;
+  }
+
+  .tool__content ul {
+    justify-content: left;
+  }
+  .tool__content ul li {
+    margin: 0 1.5rem;
+  }
+}
