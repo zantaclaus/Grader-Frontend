@@ -16,7 +16,7 @@ function Navbar(props) {
     <div className="navbar" id="navbar">
       <nav className="nav nav-container">
         <Link to="/" className="nav__logo">
-          CE BOOTSUP
+          CE BOOTSUP #9
         </Link>
 
         <div className="nav__menu" id="nav-menu">
