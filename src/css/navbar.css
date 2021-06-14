@@ -73,8 +73,13 @@
 
 .nav__toggle {
   /* font-size: 2.1rem; */
-  width: 50px;
+  /* width: 50px; */
   cursor: pointer;
+}
+
+.nav__toggle img {
+  margin-right: px;
+  width: 35px;
 }
 
 .show-menu {
