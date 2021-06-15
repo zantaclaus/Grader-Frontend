@@ -71,8 +71,9 @@ class Login extends Component {
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
-        // errors.username = ex.response.data;
-        errors.username = "Invalid username or password.";
+        errors.username = ex.response.data.usernameNotFound;
+        errors.password = ex.response.data.passwordincorrect;
+        // errors.username = "Invalid username or password.";
         this.setState({ errors });
       }
     }
