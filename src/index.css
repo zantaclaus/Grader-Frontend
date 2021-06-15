@@ -157,7 +157,7 @@ img {
 /*======== Card ========*/
 
 .card {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 10px;
   box-shadow: 0 4px 4px #c4c4c4;
 }

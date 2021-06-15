@@ -1,6 +1,6 @@
-.profile__background {
-  /* background-color: #eff1ff; */
-}
+/* .profile__background {
+  
+} */
 
 @media screen and (min-width: 768px) {
   .profile__background {
@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #eff1ff;
+    border-radius: 10px;
   }
 
   .card__profile {
