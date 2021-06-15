@@ -6,11 +6,11 @@ import "../css/profileBox.css";
 function ProfileBox(props) {
   return (
     <div>
-      <div className="profile__box">
-        <div className="profile__title">
+      <div className="card profile__box">
+        <div className="card--title profile__title">
           <h1>Your Profile</h1>
         </div>
-        <div className="profile__content">
+        <div className="card--content profile__content">
           <div className="profile__image">
             <img src={user} alt="" />
           </div>
