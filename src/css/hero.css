@@ -26,9 +26,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .hero {
+  /* .hero {
     height: 70vh;
-  }
+  } */
   .hero__content {
     text-align: left;
     align-self: center;
