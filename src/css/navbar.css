@@ -53,6 +53,13 @@
   font-weight: var(--font-medium);
 }
 
+.logo__image {
+  width: 25px;
+  position: relative;
+  top: 4px;
+  right: 10px;
+}
+
 .nav__logo {
   color: #000;
   font-weight: 600;
@@ -101,11 +108,14 @@
   .nav__list {
     display: flex;
     align-items: center;
-    margin: 0 3rem;
+    margin-left: 3rem;
   }
   .nav__item {
     margin: 0 0 0 4rem;
     transform: translateY(3px);
+  }
+  .nav__link {
+    font-size: 1.8rem;
   }
   .nav__toggle {
     display: none;
@@ -119,8 +129,8 @@
   }
 }
 
-@media screen and (min-width: 1700px) {
+/* @media screen and (min-width: 1700px) {
   .nav-container {
     max-width: 1200px;
   }
-}
+} */

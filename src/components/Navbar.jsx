@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import { showMenu, linkAction } from "../services/extendService";
+import logo from "../images/logo.png";
 import "../css/navbar.css";
 
 function Navbar(props) {
@@ -18,9 +19,10 @@ function Navbar(props) {
   };
 
   return (
-    <div data-aos="fade-down" className="navbar" id="navbar">
+    <div className="navbar" id="navbar">
       <nav className="nav nav-container">
         <Link to="/" className="nav__logo">
+          {/* <img className="logo__image" src={logo} alt="" /> */}
           CE BOOTSUP #9
         </Link>
 
