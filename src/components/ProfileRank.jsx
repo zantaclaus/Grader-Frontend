@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
 // import rank from "../images/rank.png";
 import "../css/profileRank.css";
 
 function ProfileRank(props) {
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
   return (
-    <div>
+    <div data-aos="flip-left">
       <div className="card card__profile rank__box">
         <div className="card__title">
           <h1>Your Rank</h1>

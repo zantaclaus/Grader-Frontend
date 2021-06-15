@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+
 import { Link } from "react-router-dom";
 import user from "../images/user.png";
 import "../css/profileBox.css";
 
 function ProfileBox(props) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
-    <div>
+    <div data-aos="flip-right">
       <div className="card card__profile profile__box">
         <div className="card__title profile__title">
           <h1>Your Profile</h1>
