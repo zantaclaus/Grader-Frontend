@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import Aos from "aos";
 import { IconContext } from "react-icons";
 import { FaBook } from "react-icons/fa";
