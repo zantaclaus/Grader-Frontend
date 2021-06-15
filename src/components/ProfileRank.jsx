@@ -5,7 +5,7 @@ import "../css/profileRank.css";
 function ProfileRank(props) {
   return (
     <div>
-      <div className="card card__profile">
+      <div className="card card__profile rank__box">
         <div className="card__title">
           <h1>Your Rank</h1>
         </div>

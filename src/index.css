@@ -176,10 +176,9 @@ img {
 
 .card__content {
   background-color: #fefefe;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .card__profile {
   max-width: 80%;
-  margin: 3rem auto;
 }

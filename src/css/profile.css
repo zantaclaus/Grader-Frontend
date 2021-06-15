@@ -1,0 +1,29 @@
+.profile__background {
+  /* background-color: #eff1ff; */
+}
+
+@media screen and (min-width: 768px) {
+  .profile__background {
+    margin: 10rem auto;
+  }
+
+  .profile__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #eff1ff;
+  }
+
+  .card__profile {
+    margin-top: 3rem auto 3rem auto;
+  }
+
+  .profile__box {
+    height: auto;
+  }
+
+  .profile__box .profile__content {
+    height: 440px;
+  }
+}

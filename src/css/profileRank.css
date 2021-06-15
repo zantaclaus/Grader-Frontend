@@ -1,3 +1,7 @@
+.rank__box {
+  margin: 3rem auto;
+}
+
 .rank__content {
   padding: 2rem;
   display: grid;
