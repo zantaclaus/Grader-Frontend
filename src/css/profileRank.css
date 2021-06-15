@@ -1,0 +1,48 @@
+.rank__content {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.rank__content h3 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #252f6b;
+}
+
+.rank__order {
+  position: relative;
+  text-align: center;
+}
+
+.rank__order h1 {
+  font-size: 4rem;
+  color: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+.rank__order sup {
+  font-size: 2rem;
+}
+
+.rank__order img {
+  position: absolute;
+  top: 30px;
+  right: 3px;
+  width: 15rem;
+}
+
+.rank__score {
+  text-align: center;
+}
+
+.rank__score h1 {
+  font-size: 4rem;
+  color: #252f6b;
+  transform: translateY(-5px);
+}
+
+.rank__score h3:nth-last-child(1) {
+  transform: translateY(-10px);
+}

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import { showMenu, linkAction } from "../services/extendService";
-import logo from "../images/logo.png";
+// import logo from "../images/logo.png";
 import "../css/navbar.css";
 
 function Navbar(props) {

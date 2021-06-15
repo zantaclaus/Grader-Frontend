@@ -162,7 +162,7 @@ img {
   box-shadow: 0 4px 4px #c4c4c4;
 }
 
-.card--title {
+.card__title {
   color: #fff;
   background-color: #252f6b;
   text-align: center;
@@ -170,7 +170,16 @@ img {
   border-radius: 10px 10px 0 0;
 }
 
-.card--content {
+.card__title h1 {
+  font-size: 2.5rem;
+}
+
+.card__content {
   background-color: #fefefe;
   border-radius: 10px;
+}
+
+.card__profile {
+  max-width: 80%;
+  margin: 6rem auto;
 }
