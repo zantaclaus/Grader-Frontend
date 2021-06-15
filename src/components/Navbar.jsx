@@ -42,7 +42,7 @@ function Navbar(props) {
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/" className="nav__link" onClick={linkClick}>
+              <Link to="/profile" className="nav__link" onClick={linkClick}>
                 Profile
               </Link>
             </li>

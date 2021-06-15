@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import Logout from "./pages/Logout";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -26,7 +27,8 @@ class App extends Component {
         <div className="content__container">
           <Switch>
             <Route path="/login" component={Login} />
-            <Route path="/logout" component={Logout} />
+            <ProtectedRoute path="/logout" component={Logout} />
+            <ProtectedRoute path="/profile" component={Profile} />
             <ProtectedRoute path="/" component={Home} />
             <Redirect path="/" exact to="/home" />
           </Switch>
