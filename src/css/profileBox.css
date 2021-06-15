@@ -1,3 +1,7 @@
+.profile__box {
+  margin-top: 8rem !important;
+}
+
 .profile__content {
   display: flex;
   flex-direction: column;
