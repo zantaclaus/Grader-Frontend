@@ -21,7 +21,7 @@
 }
 
 .rank__order h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   color: var(--color-primary);
   transform: translateY(-5px);
 }
@@ -31,6 +31,7 @@
 }
 
 .rank__order img {
+  max-width: 100%;
   position: absolute;
   top: 30px;
   right: 3px;

@@ -8,7 +8,7 @@ function Profile(props) {
     <div className="profile__background">
       <div className="profile__container">
         <ProfileBox />
-        <div>
+        <div className="profile__propoties">
           <ProfileRank />
           <ProfileRank />
         </div>

@@ -61,9 +61,11 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+@media screen and (max-width: 786px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /*======== Block ========*/
@@ -181,4 +183,11 @@ img {
 
 .card__profile {
   max-width: 80%;
+}
+
+@media screen and (min-width: 1700px) {
+  .card__title h1 {
+    font-size: 3.3rem;
+    padding: 0.7rem 0;
+  }
 }

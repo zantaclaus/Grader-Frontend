@@ -2,12 +2,6 @@
   margin: 3rem auto;
 }
 
-@media screen and (max-width: 768px) {
-  .profile__box {
-    margin-top: 8rem;
-  }
-}
-
 .profile__content {
   display: flex;
   flex-direction: column;

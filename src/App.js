@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         {this.state.user && (
           <div className="navbar__container">
             <Navbar />
@@ -33,7 +33,7 @@ class App extends Component {
             <Redirect path="/" exact to="/home" />
           </Switch>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

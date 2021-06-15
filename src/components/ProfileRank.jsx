@@ -1,5 +1,5 @@
 import React from "react";
-import rank from "../images/rank.png";
+// import rank from "../images/rank.png";
 import "../css/profileRank.css";
 
 function ProfileRank(props) {
@@ -15,7 +15,7 @@ function ProfileRank(props) {
             <h1>
               1<sup>st</sup>
             </h1>
-            <img src={rank} alt="" />
+            {/* <img src={rank} alt="" /> */}
           </div>
           <div className="rank__score">
             <h3>Your score</h3>
