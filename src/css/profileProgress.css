@@ -1,22 +1,9 @@
-.box {
-  width: 30px;
-  height: 30px;
-}
-
-.box1 {
-  background-color: gold;
-}
-
-.box2 {
-  background-color: tomato;
-}
-
 .progress__box {
   margin: 3rem auto;
 }
 
 .progress__content {
-  height: 17.6rem;
+  height: 18rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -27,7 +14,6 @@
 .bar__container {
   position: relative;
   width: 80%;
-  background-color: tomato;
 }
 
 .bar__title {
@@ -38,9 +24,55 @@
 
 .bar__percent {
   position: absolute;
+  font-size: 2.2rem;
   top: 0;
   right: 0;
 }
 
 .bar {
+  position: relative;
+  height: 1.7rem;
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px rgba(255, 255, 255, 0.8);
+}
+
+.bar span {
+  height: 100%;
+  background: var(--color-primary);
+  position: absolute;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.submitted__container {
+  width: 80%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+}
+
+.submitted__title {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #252f6b;
+}
+
+.submitted__count {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #252f6b;
+  transform: translateY(-5px);
+  justify-self: center;
+}
+
+.submitted__unit {
+  font-size: 2.3rem;
+  font-weight: 200;
+  color: #252f6b;
+  position: relative;
+  right: 10px;
+  top: 15px;
 }

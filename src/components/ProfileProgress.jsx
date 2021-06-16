@@ -12,12 +12,14 @@ function ProfileProgress(props) {
           <div className="bar__container">
             <div className="bar__title">Progress</div>
             <div className="bar__percent">50%</div>
-            <div className="bar"></div>
+            <div className="bar">
+              <span style={{ width: "50%" }}></span>
+            </div>
           </div>
           <div className="submitted__container">
             <div className="submitted__title">Submitted</div>
-            <div className="submitt__count">123</div>
-            <div className="submitt__unit">submit</div>
+            <div className="submitted__count">123</div>
+            <div className="submitted__unit">submit</div>
           </div>
         </div>
       </div>

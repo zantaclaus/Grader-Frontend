@@ -3,7 +3,7 @@
 }
 
 .rank__content {
-  height: 17.6rem;
+  height: var(--card-propoties-height);
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,7 +11,7 @@
 }
 
 .rank__content h3 {
-  font-size: 2.5rem;
+  font-size: var(--card-propties-font);
   font-weight: 200;
   color: #252f6b;
 }
@@ -31,20 +31,12 @@
   font-size: 2rem;
 }
 
-.rank__order img {
-  max-width: 100%;
-  position: absolute;
-  top: 30px;
-  right: 3px;
-  width: 15rem;
-}
-
 .rank__score {
   text-align: center;
 }
 
 .rank__score h1 {
-  font-size: 4rem;
+  font-size: var(--card-propoties-number);
   color: #252f6b;
   transform: translateY(-5px);
 }

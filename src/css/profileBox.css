@@ -3,6 +3,7 @@
 }
 
 .profile__content {
+  height: var(--card-profile-height);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,24 +11,24 @@
 }
 
 .profile__image {
-  width: 15rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .profile__image img {
+  width: var(--card-profile-img);
   border: 3px solid #c4c4c4;
   border-radius: 50%;
 }
 
 .profile__details h2 {
-  font-size: 1.8rem;
+  font-size: var(--card-profile-label);
   font-weight: 700;
   margin-top: 1rem;
 }
 
 .profile__details span {
-  font-size: 1.7rem;
+  font-size: var(--card-profile-span);
   font-weight: 400;
 }
 
@@ -35,7 +36,7 @@
   border-radius: 40px;
   border: 0;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: var(--card-profile-btn);
   font-weight: 600;
   margin: 2rem 0 4rem;
   padding: 1.5rem 5rem;
