@@ -11,8 +11,8 @@ function Profile(props) {
         <ProfileBox />
         <div className="profile__propoties">
           <ProfileRank />
-          <ProfileRank />
-          {/* <ProfileProgress /> */}
+
+          <ProfileProgress />
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
 }
 
 .progress__content {
-  height: 18rem;
+  height: var(--card-propoties-height);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -17,14 +17,15 @@
 }
 
 .bar__title {
-  font-size: 2.5rem;
+  font-size: var(--card-propties-font);
   font-weight: 200;
-  color: #252f6b;
+  color: var(--color-secondary);
 }
 
 .bar__percent {
   position: absolute;
-  font-size: 2.2rem;
+  font-size: var(--card-percent-size);
+  color: var(--color-secondary);
   top: 0;
   right: 0;
 }
@@ -33,6 +34,7 @@
   position: relative;
   height: 1.7rem;
   width: 100%;
+  margin-top: 1rem;
   background: #f0f0f0;
   border-radius: 10px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
@@ -41,7 +43,12 @@
 
 .bar span {
   height: 100%;
-  background: var(--color-primary);
+  background: rgb(80, 105, 255);
+  background: linear-gradient(
+    143deg,
+    rgba(80, 105, 255, 1) 0%,
+    rgba(37, 63, 107, 1) 100%
+  );
   position: absolute;
   border-radius: 10px;
   transition: 0.3s;
@@ -49,30 +56,30 @@
 
 .submitted__container {
   width: 80%;
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: 40% 40% 20%;
 }
 
 .submitted__title {
-  font-size: 2.5rem;
+  font-size: var(--card-propties-font);
   font-weight: 200;
-  color: #252f6b;
+  color: var(--color-secondary);
 }
 
 .submitted__count {
-  font-size: 4rem;
+  font-size: var(--card-propoties-number);
   font-weight: 700;
-  color: #252f6b;
+  color: var(--color-secondary);
   transform: translateY(-5px);
   justify-self: center;
 }
 
 .submitted__unit {
-  font-size: 2.3rem;
+  font-size: var(--card-propties-font);
   font-weight: 200;
-  color: #252f6b;
+  color: var(--color-secondary);
   position: relative;
-  right: 10px;
-  top: 15px;
+  right: var(--card-unit-right);
+  top: var(--card-unit-top);
 }

@@ -16,6 +16,9 @@
   --card-propoties-height: 17.6rem;
   --card-propties-font: 2.5rem;
   --card-propoties-number: 4rem;
+  --card-percent-size: 2.5rem;
+  --card-unit-right: 10px;
+  --card-unit-top: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,11 +33,18 @@
     --card-propoties-number: 4rem;
     --card-profile-position: 2.3rem;
     --card-propoties-position: -2.3rem;
+    --card-percent-size: 2rem;
+    --card-unit-right: 0px;
+    --card-unit-top: 17px;
   }
 
   .profile__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .rank__content {
+    align-items: center;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -49,10 +59,9 @@
     --card-propoties-number: 6rem;
     --card-profile-position: 4rem;
     --card-propoties-position: -4rem;
-  }
-
-  .rank__content {
-    align-items: center;
+    --card-percent-size: 2.7rem;
+    --card-unit-right: 0px;
+    --card-unit-top: 17px;
   }
 }
 
@@ -68,6 +77,8 @@
     --card-propoties-number: 7rem;
     --card-profile-position: 5.3rem;
     --card-propoties-position: -5.3rem;
+    --card-unit-right: -3px;
+    --card-unit-top: 35px;
   }
 }
 @media screen and (min-width: 1700px) {
@@ -82,6 +93,9 @@
     --card-propoties-number: 7rem;
     --card-profile-position: 7rem;
     --card-propoties-position: -7rem;
+    --card-percent-size: 3rem;
+    --card-unit-right: -28px;
+    --card-unit-top: 35px;
   }
 
   .profile__btn {

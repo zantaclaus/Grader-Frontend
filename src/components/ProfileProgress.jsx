@@ -11,9 +11,9 @@ function ProfileProgress(props) {
         <div className="card__content progress__content">
           <div className="bar__container">
             <div className="bar__title">Progress</div>
-            <div className="bar__percent">50%</div>
+            <div className="bar__percent">80%</div>
             <div className="bar">
-              <span style={{ width: "50%" }}></span>
+              <span style={{ width: "80%" }}></span>
             </div>
           </div>
           <div className="submitted__container">
