@@ -203,6 +203,7 @@
 
   .profile__details h2 {
     font-size: 3.3rem;
+    font-weight: 600;
   }
 
   .profile__details span {

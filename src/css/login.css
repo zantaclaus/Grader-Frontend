@@ -1,6 +1,6 @@
 .login-page {
   --font-login-title: 3.6rem;
-  --font-login-tagline: 1.5rem;
+  --font-login-tagline: 1.8rem;
   --font-login-label: 2rem;
   --font-login-input: 1.9rem;
   --font-login-forgot: 1.5rem;
@@ -8,8 +8,8 @@
 
 @media screen and (min-width: 768px) {
   .login-page {
-    --font-login-title: 6.4rem;
-    --font-login-tagline: 1.6rem;
+    --font-login-title: 6rem;
+    --font-login-tagline: 2rem;
     --font-login-label: 2.4rem;
     --font-login-input: 2rem;
     --font-login-forgot: 1.6rem;
@@ -124,14 +124,14 @@
   }
 
   .login-form h1 {
-    font-size: var(--font-big-size);
+    font-size: var(--font-login-title);
     margin-bottom: 0.8rem;
   }
 
   .login-form h3 {
-    font-size: var(--font-h2-size);
+    font-size: var(--font-login-tagline);
     padding-left: 0.48rem;
-    margin-bottom: 6.4rem;
+    margin-bottom: 5rem;
     text-align: left;
   }
 
@@ -140,7 +140,7 @@
   }
 
   .login-input input {
-    font-size: var(--font-h3-size);
+    font-size: var(--font-login-input);
     line-height: 1.5;
     padding: 1.6rem 3.2rem 1.28rem 3.2rem;
   }
@@ -159,6 +159,10 @@
 
 @media screen and (min-width: 1735px) {
   .login-form h1 {
-    font-size: var(--font-biggest-size);
+    font-size: var(--font-login-title);
+  }
+
+  .login-form h3 {
+    margin-bottom: 6rem;
   }
 }
