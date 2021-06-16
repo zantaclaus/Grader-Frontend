@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+
 import "../css/profileProgress.css";
 
 function ProfileProgress(props) {
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
   return (
-    <div>
+    <div data-aos="flip-left">
       <div className="card card__profile progress__box">
         <div className="card__title">
           <h1>Your Progress</h1>
