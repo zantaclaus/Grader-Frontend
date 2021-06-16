@@ -1,0 +1,46 @@
+.box {
+  width: 30px;
+  height: 30px;
+}
+
+.box1 {
+  background-color: gold;
+}
+
+.box2 {
+  background-color: tomato;
+}
+
+.progress__box {
+  margin: 3rem auto;
+}
+
+.progress__content {
+  height: 17.6rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar__container {
+  position: relative;
+  width: 80%;
+  background-color: tomato;
+}
+
+.bar__title {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #252f6b;
+}
+
+.bar__percent {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bar {
+}

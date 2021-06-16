@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileBox from "../components/ProfileBox";
 import ProfileRank from "../components/ProfileRank";
+import ProfileProgress from "../components/ProfileProgress";
 import "../css/profile.css";
 
 function Profile(props) {
@@ -10,7 +11,7 @@ function Profile(props) {
         <ProfileBox />
         <div className="profile__propoties">
           <ProfileRank />
-          <ProfileRank />
+          <ProfileProgress />
         </div>
       </div>
     </div>

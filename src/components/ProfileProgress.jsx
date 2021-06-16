@@ -1,14 +1,24 @@
 import React from "react";
+import "../css/profileProgress.css";
 
 function ProfileProgress(props) {
   return (
     <div>
-      <div className="card card__profile">
+      <div className="card card__profile progress__box">
         <div className="card__title">
           <h1>Your Progress</h1>
         </div>
-        <div className="card__content">
-          <div className="box"></div>
+        <div className="card__content progress__content">
+          <div className="bar__container">
+            <div className="bar__title">Progress</div>
+            <div className="bar__percent">50%</div>
+            <div className="bar"></div>
+          </div>
+          <div className="submitted__container">
+            <div className="submitted__title">Submitted</div>
+            <div className="submitt__count">123</div>
+            <div className="submitt__unit">submit</div>
+          </div>
         </div>
       </div>
     </div>
