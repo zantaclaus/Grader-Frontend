@@ -3,12 +3,17 @@
 :root {
   /* ======= Colors ======== */
   --color-primary: #5069ff;
-  --color-primary-hover: #3250fb;
+  --color-secondary: #252f6b;
+  --color-primary-hover: #304ffb;
+  --color-secondary-hover: #3848a1;
   --color-title: #393939;
+  --color-tagline: #4b4b4b;
   --color-text: #707070;
-  --color-text-light: #a6a6a6;
+  --color-text-light: #4b4b4b;
   --color-body: #fbfefd;
-  --color-container: #ffff;
+  --color-container: #fefefe;
+  --color-btn-title: #fff;
+  --color-card-title: #fff;
 
   /* ======= Typography ======== */
   --font-biggest-size: 3.6rem;
@@ -121,15 +126,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-.btn--primary {
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.btn--primary:hover {
-  background: var(--color-primary-hover);
+  transition: 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -143,6 +140,15 @@ a {
   .btn {
     font-size: 1.5rem;
   }
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-title);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
 }
 
 /*======== Content ========*/
@@ -166,8 +172,8 @@ a {
 }
 
 .card__title {
-  color: #fff;
-  background-color: #252f6b;
+  color: var(--color-card-title);
+  background-color: var(--color-secondary);
   text-align: center;
   padding: 10px 0;
   border-radius: 10px 10px 0 0;
@@ -178,7 +184,7 @@ a {
 }
 
 .card__content {
-  background-color: #fefefe;
+  background-color: var(--color-body);
   border-radius: 0 0 10px 10px;
 }
 

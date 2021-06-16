@@ -43,10 +43,10 @@
   text-transform: uppercase;
   white-space: nowrap;
   color: white;
-  background-color: #252f6b;
+  background-color: var(--color-secondary);
   transition: 0.3s;
 }
 
 .profile__btn:hover {
-  background-color: #3848a1;
+  background-color: var(--color-secondary-hover);
 }

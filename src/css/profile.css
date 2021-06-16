@@ -17,7 +17,6 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* background-color: #eff1ff; */
     border-radius: 10px;
   }
 
@@ -181,7 +180,6 @@
 
   .rank__score h1 {
     font-size: 7rem;
-    /* color: #252f6b; */
   }
 }
 
@@ -227,7 +225,6 @@
   .rank__content h3 {
     font-size: 3rem;
     font-weight: 200;
-    color: #252f6b;
   }
 
   .rank__order h1 {
@@ -236,6 +233,5 @@
 
   .rank__score h1 {
     font-size: 8rem;
-    color: #252f6b;
   }
 }
