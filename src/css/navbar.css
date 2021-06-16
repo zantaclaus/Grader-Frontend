@@ -61,7 +61,7 @@
 }
 
 .nav__logo {
-  color: #000;
+  color: var(--color-primary);
   font-weight: 700;
   font-size: var(--font-h3-size);
 }
