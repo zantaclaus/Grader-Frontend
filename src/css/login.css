@@ -88,7 +88,7 @@
   margin-top: 1.6rem;
   padding: 10px 4rem;
   border-radius: 25px;
-  font-size: var(--font-h3-size);
+  font-size: var(--font-login-input);
   color: #fff;
   background-color: var(--color-primary);
   border-color: var(--color-primary);

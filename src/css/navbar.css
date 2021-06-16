@@ -68,7 +68,7 @@
 .nav__link,
 .nav__toggle {
   color: var(--color-text);
-  font-weight: var(--font-medium);
+  font-weight: 500;
 }
 
 .logo__image {
