@@ -12,23 +12,18 @@
 
 .rank__content h3 {
   font-size: var(--card-propties-font);
-  font-weight: 200;
-  color: #252f6b;
+  font-weight: var(--font-semi-bold);
+  color: var(--color-secondary);
 }
 
-.rank__order {
-  position: relative;
+.rank__team {
   text-align: center;
 }
 
-.rank__order h1 {
-  font-size: 6rem;
-  color: var(--color-primary);
-  transform: translateY(-5px);
-}
-
-.rank__order sup {
-  font-size: 2rem;
+.team__logo {
+  margin-top: 0.3rem;
+  width: var(--card-team-img);
+  border-radius: 50%;
 }
 
 .rank__score {
@@ -37,6 +32,7 @@
 
 .rank__score h1 {
   font-size: var(--card-propoties-number);
+  font-weight: var(--font-bold);
   color: #252f6b;
   transform: translateY(-5px);
 }

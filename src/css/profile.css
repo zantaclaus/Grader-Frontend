@@ -16,6 +16,7 @@
   --card-propoties-height: 17.6rem;
   --card-propties-font: 2.5rem;
   --card-propoties-number: 4rem;
+  --card-team-img: 8rem;
   --card-percent-size: 2.3rem;
   --card-unit-right: 10px;
   --card-unit-top: 12px;
@@ -59,6 +60,7 @@
     --card-propoties-number: 6rem;
     --card-profile-position: 4rem;
     --card-propoties-position: -4rem;
+    --card-team-img: 12.8rem;
     --card-percent-size: 2.7rem;
     --card-unit-right: 0px;
     --card-unit-top: 17px;
@@ -76,6 +78,7 @@
     --card-propties-font: 3rem;
     --card-propoties-number: 7rem;
     --card-profile-position: 5.3rem;
+    --card-team-img: 14.3rem;
     --card-propoties-position: -5.3rem;
     --card-unit-right: -3px;
     --card-unit-top: 35px;
@@ -93,6 +96,7 @@
     --card-propoties-number: 7rem;
     --card-profile-position: 7rem;
     --card-propoties-position: -7rem;
+    --card-team-img: 14.5rem;
     --card-percent-size: 3rem;
     --card-unit-right: -28px;
     --card-unit-top: 35px;
