@@ -16,7 +16,7 @@ function Hero(props) {
             Programming <span>Tasks</span>
           </h1>
           <p>Be a good programmer in 2 weeks.</p>
-          <Link to="/login" className="btn btn--primary btn--stretched">
+          <Link to="/tasks" className="btn btn--primary btn--stretched">
             Get Started
           </Link>
         </header>
