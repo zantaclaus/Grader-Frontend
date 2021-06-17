@@ -6,7 +6,7 @@ function Home(props) {
   return (
     <React.Fragment>
       <Hero />
-      <Tool />
+      {/* <Tool /> */}
     </React.Fragment>
   );
 }

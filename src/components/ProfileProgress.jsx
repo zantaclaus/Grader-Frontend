@@ -8,7 +8,7 @@ function ProfileProgress(props) {
     Aos.init({ duration: 500 });
   }, []);
   return (
-    <div data-aos="flip-left">
+    <div data-aos="fade-up">
       <div className="card card__profile progress__box">
         <div className="card__title">
           <h1>Your Progress</h1>

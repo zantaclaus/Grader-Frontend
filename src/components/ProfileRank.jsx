@@ -8,7 +8,7 @@ function ProfileRank(props) {
     Aos.init({ duration: 500 });
   }, []);
   return (
-    <div data-aos="flip-left">
+    <div data-aos="fade-left">
       <div className="card card__profile rank__box">
         <div className="card__title">
           <h1>Your Rank</h1>
