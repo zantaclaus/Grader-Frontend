@@ -1,5 +1,5 @@
 /*==================== SHOW MENU ====================*/
-export const showMenu = (toggleId, navId) => {
+export const showMenu = (navId) => {
   let nav = document.getElementById(navId);
   nav.classList.toggle("show-menu");
 };

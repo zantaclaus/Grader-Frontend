@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
-import { showMenu, linkAction } from "../services/extendService";
+import { showMenu, linkAction } from "../services/expandService";
 // import logo from "../images/logo.png";
 import "../css/navbar.css";
 
@@ -11,7 +11,7 @@ function Navbar(props) {
   }, []);
 
   const menuClick = () => {
-    showMenu("nav-toggle", "nav-menu");
+    showMenu("nav-menu");
   };
 
   const linkClick = () => {
