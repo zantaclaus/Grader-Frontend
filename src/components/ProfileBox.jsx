@@ -10,7 +10,7 @@ function ProfileBox(props) {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div data-aos="fade-right">
+    <div data-aos="flip-right">
       <div className="card card__profile profile__box">
         <div className="card__title profile__title">
           <h1>Your Profile</h1>

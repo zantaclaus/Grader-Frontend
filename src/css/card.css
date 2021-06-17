@@ -1,0 +1,56 @@
+.card__task {
+  width: 30rem;
+  margin-bottom: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px #c4c4c4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card__task:hover {
+  transform: scale(1.05);
+}
+
+.card__task:hover .card__task__title {
+  background: #58ecc2;
+}
+
+.card__task__title {
+  height: 3em;
+  font-size: 2.15rem;
+  font-weight: 500;
+  color: var(--color-card-title);
+  background-color: var(--color-secondary);
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.card__task__content {
+  height: 15rem;
+  background-color: var(--color-body);
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.unit {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.passed {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00c892;
+}
+
+.star {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}

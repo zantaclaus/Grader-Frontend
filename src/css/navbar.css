@@ -79,7 +79,7 @@
 }
 
 .nav__logo {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-weight: 700;
   font-size: var(--font-logo);
 }

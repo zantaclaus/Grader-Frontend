@@ -76,7 +76,7 @@ a {
 
 /*======== Grids ========*/
 
-/* .grid {
+.grid {
   display: grid;
 }
 
@@ -90,7 +90,7 @@ a {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
-} */
+}
 
 /*======== Buttons ========*/
 

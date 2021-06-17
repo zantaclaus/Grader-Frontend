@@ -3,6 +3,7 @@ import "../css/tasksContainer.css";
 import { RiMoonClearFill } from "react-icons/ri";
 import SearchBox from "./SearchBox";
 import FilterBox from "./FilterBox";
+import Card from "./Card";
 
 function TasksContainer(props) {
   return (
@@ -22,7 +23,40 @@ function TasksContainer(props) {
             <FilterBox />
           </div>
         </div>
-        <div className="tasks__content"></div>
+        <div className="tasks__content">
+          <div className="tasks__content__container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
         <div className="tasks__bar tasks__footer"></div>
       </div>
     </div>
