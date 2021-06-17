@@ -1,11 +1,32 @@
-import React from "react";
-import "../css/tasksContainer.css";
-import { RiMoonClearFill } from "react-icons/ri";
+import React, { useEffect } from "react";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setTasks } from "../redux/actions/taskAction";
 import SearchBox from "./SearchBox";
 import FilterBox from "./FilterBox";
 import Card from "./Card";
+import { RiMoonClearFill } from "react-icons/ri";
+import "../css/tasksContainer.css";
 
 function TasksContainer(props) {
+  const tasks = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const fetchTasks = async () => {
+    const response = await axios
+      .get(
+        "http://localhost:5000/api/all-questions?id=60c76bb43b3b05150093c9d8"
+      )
+      .catch((error) => {
+        console.log(error);
+      });
+    dispatch(setTasks(response.data));
+  };
+
+  useEffect(() => {
+    fetchTasks();
+  }, []);
+  console.log(tasks);
   return (
     <div>
       <div className="tasks__container">
