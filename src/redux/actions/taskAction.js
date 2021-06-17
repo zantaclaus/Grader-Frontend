@@ -1,4 +1,5 @@
 import { ActionTypes } from "../contants/action-types";
+
 export const setTasks = (tasks) => {
   return {
     type: ActionTypes.SET_TASKS,

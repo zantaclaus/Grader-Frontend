@@ -9,7 +9,7 @@ import "../css/tasksContainer.css";
 import { getProblems } from "../services/problemsService";
 
 function TasksContainer(props) {
-  const tasks = useSelector((state) => state);
+  const tasks = useSelector((state) => state.allTasks.tasks);
   const dispatch = useDispatch();
 
   useEffect(() => {
