@@ -67,7 +67,7 @@ class Login extends Component {
       const { account } = this.state;
       await auth.login(account.username, account.password);
 
-      window.location = "/";
+      window.location = "/setData";
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };
