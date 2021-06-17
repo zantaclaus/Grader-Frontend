@@ -1,0 +1,39 @@
+.tasks__container {
+  margin: var(--container-margin-top) 2rem 2rem 2rem;
+  height: var(--container-height);
+  box-shadow: 0 0 15px rgb(146, 145, 145);
+  border-radius: 10px;
+}
+
+.tasks__bar {
+  height: 6rem;
+  background-color: var(--color-secondary);
+}
+
+.tasks__header {
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  display: none;
+  margin: 0 2rem;
+  width: 1px;
+  height: 4.5rem;
+  background-color: white;
+}
+
+.tasks__logo {
+  margin-left: 2rem;
+}
+
+.tasks__content {
+  background-color: #fefefe;
+  height: calc(100% - 12rem);
+}
+
+.tasks__footer {
+  border-radius: 0 0 10px 10px;
+}

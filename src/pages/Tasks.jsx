@@ -1,9 +1,11 @@
 import React from "react";
+import TasksContainer from "../components/TasksContainer";
+import "../css/tasks.css";
 
 function Tasks(props) {
   return (
     <div>
-      <h1>Task</h1>
+      <TasksContainer />
     </div>
   );
 }

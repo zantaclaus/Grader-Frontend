@@ -1,0 +1,33 @@
+.searchBox__container {
+  display: none;
+  position: relative;
+}
+
+.searchBox {
+  padding-left: 2rem;
+  padding-right: 5rem;
+  border-radius: 5px;
+  height: 4rem;
+  max-height: 4rem;
+  font-size: 1.8rem;
+}
+
+.searchBox::placeholder {
+  opacity: 0.7;
+  font-size: 1.6rem;
+}
+
+.search__line {
+  position: absolute;
+  right: 40px;
+  width: 2px;
+  height: 4rem;
+  background: var(--color-secondary);
+  opacity: 0.2;
+}
+
+.search__logo {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}

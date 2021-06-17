@@ -1,0 +1,34 @@
+.tasks__container {
+  --container-margin-top: 8rem;
+  --container-height: 100rem;
+}
+
+@media screen and (min-width: 768px) {
+  .tasks__container {
+    --container-margin-top: 9rem;
+    --container-height: 68rem;
+  }
+
+  .tasks__header {
+    justify-content: left;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .searchBox__container {
+    display: block;
+  }
+
+  .filterBox {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .tasks__container {
+    --container-margin-top: 9rem;
+    --container-height: 89.5rem;
+  }
+}
