@@ -59,7 +59,7 @@ class Login extends Component {
     if (errors) return;
 
     this.doSubmit();
-    console.log(this.state.errors);
+    // console.log(this.state.errors);
   };
 
   doSubmit = async () => {
