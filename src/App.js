@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Tasks from "./pages/Tasks";
 import Profile from "./pages/Profile";
 import Logout from "./pages/Logout";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ class App extends Component {
   componentDidMount() {
     const user = auth.getCurrentUser();
     this.setState({ user });
+    console.log(user);
   }
 
   render() {
@@ -28,6 +30,7 @@ class App extends Component {
           <Switch>
             <Route path="/login" component={Login} />
             <ProtectedRoute path="/logout" component={Logout} />
+            <ProtectedRoute path="/tasks" component={Tasks} />
             <ProtectedRoute path="/profile" component={Profile} />
             <ProtectedRoute path="/" component={Home} />
             <Redirect path="/" exact to="/home" />

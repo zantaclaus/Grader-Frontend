@@ -34,7 +34,7 @@ function Navbar(props) {
               </Link>
             </li>
             <li className="nav__item">
-              <Link to="/" className="nav__link" onClick={linkClick}>
+              <Link to="/tasks" className="nav__link" onClick={linkClick}>
                 Tasks
               </Link>
             </li>
