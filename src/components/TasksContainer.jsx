@@ -12,20 +12,19 @@ function TasksContainer(props) {
   const tasks = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  const fetchTasks = async () => {
-    const response = await axios
-      .get(
-        "http://localhost:5000/api/all-questions?id=60c76bb43b3b05150093c9d8"
-      )
-      .catch((error) => {
-        console.log(error);
-      });
-    dispatch(setTasks(response.data));
-  };
-
   useEffect(() => {
+    const fetchTasks = async () => {
+      const response = await axios
+        .get(
+          "http://localhost:5000/api/all-questions?id=60c76bb43b3b05150093c9d8"
+        )
+        .catch((error) => {
+          console.log(error);
+        });
+      dispatch(setTasks(response.data));
+    };
     fetchTasks();
-  }, []);
+  }, [dispatch]);
   console.log(tasks);
   return (
     <div>
