@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setTasks } from "../redux/actions/taskAction";
 import SearchBox from "./SearchBox";
@@ -7,6 +6,7 @@ import FilterBox from "./FilterBox";
 import Card from "./Card";
 import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
+import { getProblems } from "../services/problemsService";
 
 function TasksContainer(props) {
   const tasks = useSelector((state) => state);
@@ -14,13 +14,7 @@ function TasksContainer(props) {
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await axios
-        .get(
-          "http://localhost:5000/api/all-questions?id=60c76bb43b3b05150093c9d8"
-        )
-        .catch((error) => {
-          console.log(error);
-        });
+      const response = await getProblems();
       dispatch(setTasks(response.data));
     };
     fetchTasks();
