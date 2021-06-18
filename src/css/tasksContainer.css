@@ -1,7 +1,7 @@
 .tasks__container {
-  margin: var(--container-margin-top) 2rem 2rem 2rem;
+  margin: 2rem 2rem 2rem 2rem;
   height: var(--container-height);
-  box-shadow: 0 0 15px rgb(146, 145, 145);
+  box-shadow: 0 0 10px rgb(146, 145, 145);
   border-radius: 10px;
 }
 

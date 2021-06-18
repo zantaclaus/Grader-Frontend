@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import Aos from "aos";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import { showMenu, linkAction } from "../services/expandService";
-// import logo from "../images/logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "../css/navbar.css";
 
-function Navbar(props) {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
+function NewNav(props) {
   const menuClick = () => {
-    showMenu("nav-menu");
+    showMenu("navbar");
   };
 
   const linkClick = () => {
@@ -20,51 +15,70 @@ function Navbar(props) {
 
   return (
     <div className="navbar" id="navbar">
-      <nav className="nav nav-container">
+      <nav className="nav__container">
         <Link to="/" className="nav__logo">
-          {/* <img className="logo__image" src={logo} alt="" /> */}
           CE BOOTSUP #9
         </Link>
 
-        <div className="nav__menu" id="nav-menu">
+        <div className="nav__menu" id="nav__menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/" className="nav__link" onClick={linkClick}>
+              <NavLink
+                to="/home"
+                activeClassName="nav__selected"
+                className="nav__link"
+                onClick={linkClick}
+              >
                 Home
-              </Link>
+                <span />
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to="/tasks" className="nav__link" onClick={linkClick}>
+              <NavLink
+                to="/tasks"
+                activeClassName="nav__selected"
+                className="nav__link"
+                onClick={linkClick}
+              >
                 Tasks
-              </Link>
+                <span />
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to="/" className="nav__link" onClick={linkClick}>
+              <NavLink
+                to="/guidebook"
+                activeClassName="nav__selected"
+                className="nav__link"
+                onClick={linkClick}
+              >
                 Guidebook
-              </Link>
+                <span />
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to="/profile" className="nav__link" onClick={linkClick}>
+              <NavLink
+                to="/profile"
+                activeClassName="nav__selected"
+                className="nav__link"
+                onClick={linkClick}
+              >
                 Profile
-              </Link>
+                <span />
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to="/logout" className="nav__link">
+              <NavLink to="/logout" className="nav__link">
                 Logout
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className="nav__toggle" id="nav-toggle">
-          <img
-            alt=""
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAATElEQVRIS2NkoDFgpLH5DKMWEAzhAQmi/wSdhV8BiqOx+YDmFlDoAVTtAxIHNPcBzeOA5hbQPIiGvgU0jwOaWzD042DUByghQPPSFABt6AYZfO/+XQAAAABJRU5ErkJggg=="
-            onClick={menuClick}
-          />
+          <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
         </div>
       </nav>
     </div>
   );
 }
 
-export default Navbar;
+export default NewNav;

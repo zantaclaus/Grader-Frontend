@@ -32,6 +32,21 @@ function TasksContainer(props) {
             {tasks.map((task) => (
               <Card key={task._id} task={task} />
             ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} />
+            ))}
           </div>
         </div>
         <div className="tasks__bar tasks__footer"></div>
