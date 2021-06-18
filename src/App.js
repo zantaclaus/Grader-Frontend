@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
 import Profile from "./pages/Profile";
 import Logout from "./pages/Logout";
-import SetData from "./pages/SetData";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
@@ -21,8 +20,8 @@ function App(props) {
     dispatch(setUser(user));
   }, [dispatch]);
 
-  console.log("App.js");
-  console.log(user);
+  console.log("App user:", user);
+
   return (
     <React.Fragment>
       {user && (
@@ -36,7 +35,6 @@ function App(props) {
           <ProtectedRoute path="/logout" component={Logout} />
           <ProtectedRoute path="/tasks" component={Tasks} />
           <ProtectedRoute path="/profile" component={Profile} />
-          <ProtectedRoute path="/setData" component={SetData} />
           <ProtectedRoute path="/" component={Home} />
           <Redirect path="/" exact to="/home" />
         </Switch>

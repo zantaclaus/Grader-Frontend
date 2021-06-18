@@ -19,7 +19,7 @@ function TasksContainer(props) {
     };
     fetchTasks();
   }, [dispatch]);
-  console.log(tasks);
+  console.log("tast:", tasks);
   return (
     <div>
       <div className="tasks__container">
