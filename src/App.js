@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
@@ -9,38 +9,40 @@ import SetData from "./pages/SetData";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
+import { setUser } from "./redux/actions/userAction";
+import { useDispatch, useSelector } from "react-redux";
 
-class App extends Component {
-  state = {};
+function App(props) {
+  const user = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
 
-  componentDidMount() {
+  useEffect(() => {
     const user = auth.getCurrentUser();
-    this.setState({ user });
-    console.log(user);
-  }
+    dispatch(setUser(user));
+  }, [dispatch]);
 
-  render() {
-    return (
-      <React.Fragment>
-        {this.state.user && (
-          <div className="navbar__container">
-            <Navbar />
-          </div>
-        )}
-        <div className="content__container">
-          <Switch>
-            <Route path="/login" component={Login} />
-            <ProtectedRoute path="/logout" component={Logout} />
-            <ProtectedRoute path="/tasks" component={Tasks} />
-            <ProtectedRoute path="/profile" component={Profile} />
-            <ProtectedRoute path="/setData" component={SetData} />
-            <ProtectedRoute path="/" component={Home} />
-            <Redirect path="/" exact to="/home" />
-          </Switch>
+  console.log("App.js");
+  console.log(user);
+  return (
+    <React.Fragment>
+      {user && (
+        <div className="navbar__container">
+          <Navbar />
         </div>
-      </React.Fragment>
-    );
-  }
+      )}
+      <div className="content__container">
+        <Switch>
+          <Route path="/login" component={Login} />
+          <ProtectedRoute path="/logout" component={Logout} />
+          <ProtectedRoute path="/tasks" component={Tasks} />
+          <ProtectedRoute path="/profile" component={Profile} />
+          <ProtectedRoute path="/setData" component={SetData} />
+          <ProtectedRoute path="/" component={Home} />
+          <Redirect path="/" exact to="/home" />
+        </Switch>
+      </div>
+    </React.Fragment>
+  );
 }
 
 export default App;
