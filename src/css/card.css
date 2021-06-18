@@ -20,7 +20,7 @@
   font-size: 2.15rem;
   font-weight: 500;
   color: var(--color-card-title);
-  background-color: #253b6e;
+  background: var(--color-gradient);
   border-radius: 25px 25px 0 0;
   display: flex;
   justify-content: center;

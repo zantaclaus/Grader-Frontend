@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .task__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -10,6 +10,66 @@
 }
 
 .pdf__container {
-  height: 1000px;
+  padding: 2rem;
+  /* height: 1000px; */
+  color: white;
   background: #102540;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 6.2rem);
+}
+
+.chaya {
+  font-size: 1.5rem;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.question {
+  font-size: 1.5rem;
+  color: #bdbdbe;
+  line-height: 2.5rem;
+  margin: 1rem 0;
+  letter-spacing: 0.5px;
+}
+
+.label {
+  margin-top: 2rem;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.pattern__label {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pattern__detail {
+  font-size: 1.5rem;
+  color: #bdbdbe;
+}
+
+.testcase table {
+  font-size: 1.5rem;
+}
+
+.testcase table,
+.testcase td,
+.testcase th {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  padding: 0.8rem;
+}
+
+.testcase__table {
+  /* height: 100px; */
+  /* margin-bottom: 1rem; */
+  /* display: flex; */
+  /* flex-direction: column; */
 }

@@ -13,7 +13,7 @@ function Card({ task }) {
     <div>
       <div className="card__task">
         <Link to={`/tasks/${task._id}`} className="card__link">
-          <div className="card__task__title">{task.number}</div>
+          <div className="card__task__title">{task.title}</div>
           <div className="card__task__content">
             <div className="unit">{task.unit}</div>
             <div className="passed">{task.finished}</div>

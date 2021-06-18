@@ -20,12 +20,84 @@ function Task(props) {
       dispatch(selectedTasks(response.data[0]));
     };
     fetchTask();
-    console.log("user id", user);
-  }, [dispatch, id]);
+    console.log("Task is: ", task);
+  }, [dispatch, user.id, id]);
 
   return (
     <div className="task__container">
-      <div className="pdf__container"></div>
+      <div className="pdf__container">
+        <div className="chaya">{task.chaya}</div>
+        <div className="title">{task.title}</div>
+        <div className="question">{task.question}</div>
+        <div className="pattern">
+          <div className="label">รูปเเบบการรับข้อมูล</div>
+          <div className="pattern">
+            <div className="pattern__label">Input</div>
+            <div className="pattern__detail">{task.q_input}</div>
+          </div>
+          <div className="pattern">
+            <div className="pattern__label">Output</div>
+            <div className="pattern__detail">{task.q_output}</div>
+          </div>
+        </div>
+        <div className="testcase">
+          <div className="label">ตัวอย่าง</div>
+          <div className="testcase__table">
+            <table>
+              <thead>
+                <tr>
+                  <th colSpan="2">Test case 1</th>
+                </tr>
+                <tr>
+                  <th>input</th>
+                  <th>output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{task.str_input_1}</td>
+                  <td>{task.str_output_1}</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th colSpan="2">Test case 2</th>
+                </tr>
+                <tr>
+                  <th>input</th>
+                  <th>output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{task.str_input_2}</td>
+                  <td>{task.str_output_2}</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th colSpan="2">Test case 3</th>
+                </tr>
+                <tr>
+                  <th>input</th>
+                  <th>output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{task.str_input_3}</td>
+                  <td>{task.str_output_3}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="detail"></div>
+      </div>
       <div className="editor__container"></div>
     </div>
   );
