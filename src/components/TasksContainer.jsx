@@ -1,32 +1,14 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setTasks } from "../redux/actions/taskAction";
+import React from "react";
+import { useSelector } from "react-redux";
 import SearchBox from "./SearchBox";
 import FilterBox from "./FilterBox";
 import Card from "./Card";
 import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
 // import { getTasks } from "../services/tasksService";
-import axios from "axios";
 
 function TasksContainer(props) {
-  const user = useSelector((state) => state.user.user);
   const tasks = useSelector((state) => state.allTasks.tasks);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      const response = await axios
-        .get(`http://localhost:5000/api/all-questions?id=${user.id}`)
-        .catch((error) => {
-          console.log(error);
-        });
-      dispatch(setTasks(response.data));
-    };
-    fetchTasks();
-  }, [dispatch, user.id]);
-  console.log("tasks user:", user);
-  console.log("tast:", tasks);
 
   return (
     <div>

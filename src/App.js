@@ -34,7 +34,7 @@ function App(props) {
         <Switch>
           <Route path="/login" component={Login} />
           <ProtectedRoute path="/logout" component={Logout} />
-          <Route path="/tasks/:id" exact component={Task} />
+          <ProtectedRoute path="/tasks/:id" exact component={Task} />
           <ProtectedRoute path="/tasks" component={Tasks} />
           <ProtectedRoute path="/profile" component={Profile} />
           <ProtectedRoute path="/" component={Home} />
