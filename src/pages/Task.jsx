@@ -5,7 +5,17 @@ import axios from "axios";
 import { selectedTasks } from "../redux/actions/taskAction";
 import "../css/task.css";
 
+import Editor from "react-simple-code-editor";
+import { useState } from "react";
+import { highlight, languages } from "prismjs/components/prism-core";
+import "prismjs/themes/prism.css";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-c";
+
 function Task(props) {
+  const [code, setCode] = useState(`#include<stdio.h>
+  int main()
+  printf("Hello World")`);
   const task = useSelector((state) => state.task);
   const user = useSelector((state) => state.user.user);
   const { id } = useParams();
@@ -97,7 +107,18 @@ function Task(props) {
         </div>
         <div className="detail"></div>
       </div>
-      <div className="editor__container"></div>
+      <div className="editor__container">
+        <Editor
+          value={code}
+          onValueChange={(code) => setCode(code)}
+          highlight={(code) => highlight(code, languages.c, "c")}
+          padding={10}
+          // style={{
+          //   fontFamily: '"Fira code", "Fira Mono", monospace',
+          //   fontSize: 20,
+          // }}
+        />
+      </div>
     </div>
   );
 }
