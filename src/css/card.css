@@ -20,7 +20,7 @@
   font-size: 2.15rem;
   font-weight: 500;
   color: var(--color-card-title);
-  background-color: var(--color-secondary);
+  background-color: #253b6e;
   border-radius: 25px 25px 0 0;
   display: flex;
   justify-content: center;
@@ -68,5 +68,5 @@
 } */
 
 .card__link {
-  color: var(--color-secondary);
+  color: var(--color-title);
 }

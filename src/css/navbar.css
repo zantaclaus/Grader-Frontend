@@ -43,13 +43,13 @@
 
 .nav__link {
   font-size: var(--font-list);
-  color: var(--color-secondary);
+  color: var(--color-title);
 }
 .nav__link:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 .nav__logo {
-  color: var(--color-secondary);
+  color: var(--color-titel);
   font-weight: 700;
   font-size: var(--font-logo);
 }
@@ -117,7 +117,7 @@
   }
 
   .nav__selected {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     position: relative;
   }
 
@@ -128,7 +128,7 @@
     width: 100%;
     height: 4px;
     border-radius: 10px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     transform: scaleX(0);
     animation: animate 0.5s cubic-bezier(1, 0, 0.3, 1) forwards;
   }
