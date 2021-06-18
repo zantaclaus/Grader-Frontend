@@ -54,3 +54,19 @@
   display: flex;
   justify-content: space-around;
 }
+
+/* .card__tasks a {
+  color: inherit;
+  text-decoration: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.card__tasks a:hover {
+  color: balck;
+  text-decoration: inherit;
+} */
+
+.card__link {
+  color: var(--color-secondary);
+}

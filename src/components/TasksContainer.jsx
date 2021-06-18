@@ -6,20 +6,28 @@ import FilterBox from "./FilterBox";
 import Card from "./Card";
 import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
-import { getProblems } from "../services/problemsService";
+// import { getTasks } from "../services/tasksService";
+import axios from "axios";
 
 function TasksContainer(props) {
+  const user = useSelector((state) => state.user.user);
   const tasks = useSelector((state) => state.allTasks.tasks);
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await getProblems();
+      const response = await axios
+        .get(`http://localhost:5000/api/all-questions?id=${user.id}`)
+        .catch((error) => {
+          console.log(error);
+        });
       dispatch(setTasks(response.data));
     };
     fetchTasks();
-  }, [dispatch]);
+  }, [dispatch, user.id]);
+  console.log("tasks user:", user);
   console.log("tast:", tasks);
+
   return (
     <div>
       <div className="tasks__container">
@@ -39,36 +47,9 @@ function TasksContainer(props) {
         </div>
         <div className="tasks__content">
           <div className="tasks__content__container">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} />
+            ))}
           </div>
         </div>
         <div className="tasks__bar tasks__footer"></div>
