@@ -20,7 +20,6 @@ function Task(props) {
       dispatch(selectedTasks(response.data[0]));
     };
     fetchTask();
-    console.log("Task is: ", task);
   }, [dispatch, user.id, id]);
 
   return (
