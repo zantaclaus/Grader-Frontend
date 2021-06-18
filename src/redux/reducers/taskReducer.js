@@ -11,3 +11,12 @@ export const taskReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+export const selectedTaskReducer = (state = {}, { type, payload }) => {
+  switch (type) {
+    case ActionTypes.SELECTED_TASK:
+      return { ...state, ...payload };
+    default:
+      return state;
+  }
+};
