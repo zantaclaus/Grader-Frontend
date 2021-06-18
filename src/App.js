@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Task from "./pages/Task";
 import Tasks from "./pages/Tasks";
 import Profile from "./pages/Profile";
 import Logout from "./pages/Logout";
@@ -33,6 +34,7 @@ function App(props) {
         <Switch>
           <Route path="/login" component={Login} />
           <ProtectedRoute path="/logout" component={Logout} />
+          <Route path="/tasks/:id" exact component={Task} />
           <ProtectedRoute path="/tasks" component={Tasks} />
           <ProtectedRoute path="/profile" component={Profile} />
           <ProtectedRoute path="/" component={Home} />
