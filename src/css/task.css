@@ -1,0 +1,15 @@
+.task__container {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .task__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pdf__container {
+  height: 1000px;
+  background: #102540;
+}

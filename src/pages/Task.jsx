@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { selectedTasks } from "../redux/actions/taskAction";
+import "../css/task.css";
 
 function Task(props) {
   const task = useSelector((state) => state.task);
@@ -20,7 +21,12 @@ function Task(props) {
     fetchTask();
   }, [dispatch, id]);
 
-  return <div></div>;
+  return (
+    <div className="task__container">
+      <div className="pdf__container"></div>
+      <div className="editor__container"></div>
+    </div>
+  );
 }
 
 export default Task;
