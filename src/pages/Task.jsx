@@ -39,9 +39,13 @@ int main()
     event.target.value = ""; // Clear File
   };
 
-  const handleCodeSubmit = () => {
-    console.log("Code Submitted");
-    console.log(code);
+  const handleCodeSubmit = async () => {
+    const { id: userid } = user;
+    // const submitted = await axios.post("http://localhost:5000/api/fetch-sub", {
+    //   code,
+    //   userid,
+    //   id,
+    // });
   };
 
   useEffect(() => {
