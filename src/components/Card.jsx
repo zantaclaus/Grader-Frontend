@@ -11,7 +11,7 @@ function Card({ task, titleColor }) {
 
   return (
     <div>
-      <div className="card__task" className={titleColor}>
+      <div className={titleColor}>
         <Link to={`/tasks/${task._id}`} className="card__link">
           <div className="card__task__title">{task.title}</div>
           <div className="card__task__content">

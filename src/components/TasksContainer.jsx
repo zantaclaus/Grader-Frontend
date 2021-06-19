@@ -33,6 +33,18 @@ function TasksContainer(props) {
               <Card key={task._id} task={task} titleColor="card__task oddRow" />
             ))}
             {tasks.map((task) => (
+              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+            ))}
+            {tasks.map((task) => (
+              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+            ))}
+            {/* {tasks.map((task) => (
               <Card
                 key={task._id}
                 task={task}
@@ -41,24 +53,7 @@ function TasksContainer(props) {
             ))}
             {tasks.map((task) => (
               <Card key={task._id} task={task} titleColor="card__task oddRow" />
-            ))}
-            {tasks.map((task) => (
-              <Card
-                key={task._id}
-                task={task}
-                titleColor="card__task evenRow"
-              />
-            ))}
-            {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
-            ))}
-            {tasks.map((task) => (
-              <Card
-                key={task._id}
-                task={task}
-                titleColor="card__task evenRow"
-              />
-            ))}
+            ))} */}
           </div>
         </div>
         <div className="tasks__bar tasks__footer"></div>
