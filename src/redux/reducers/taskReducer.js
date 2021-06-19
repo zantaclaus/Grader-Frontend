@@ -16,6 +16,8 @@ export const selectedTaskReducer = (state = {}, { type, payload }) => {
   switch (type) {
     case ActionTypes.SELECTED_TASK:
       return { ...state, ...payload };
+    case ActionTypes.REMOVE_SELECTED_TASK:
+      return {};
     default:
       return state;
   }

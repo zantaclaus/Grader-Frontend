@@ -13,3 +13,9 @@ export const selectedTasks = (task) => {
     payload: task,
   };
 };
+
+export const removeSelectedTasks = () => {
+  return {
+    type: ActionTypes.REMOVE_SELECTED_TASK,
+  };
+};
