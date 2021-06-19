@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Aos from "aos";
 import SearchBox from "./SearchBox";
 import FilterBox from "./FilterBox";
 import Card from "./Card";
 import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
+
 // import { getTasks } from "../services/tasksService";
 
 function TasksContainer(props) {
   const tasks = useSelector((state) => state.allTasks.tasks);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div>
-      <div className="tasks__container">
+      <div data-aos="zoom-in" className="tasks__container">
         <div className="tasks__bar tasks__header">
           <div className="tasks__logo">
             <RiMoonClearFill className="logo" color="gold" size="3rem" />
