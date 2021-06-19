@@ -7,7 +7,7 @@
 
 .tasks__bar {
   height: 6rem;
-  background: var(--color-gradient);
+  background: #252f6b;
 }
 
 .tasks__header {

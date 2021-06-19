@@ -49,7 +49,7 @@
   color: var(--color-secondary);
 }
 .nav__logo {
-  color: var(--color-titel);
+  color: var(--color-secondary);
   font-weight: 700;
   font-size: var(--font-logo);
 }

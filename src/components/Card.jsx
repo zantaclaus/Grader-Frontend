@@ -5,13 +5,13 @@ import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 import "../css/card.css";
 
-function Card({ task }) {
+function Card({ task, titleColor }) {
   const blackStar = _.range(1, task.rank + 1);
   const whiteStar = _.range(task.rank + 1, 6);
 
   return (
     <div>
-      <div className="card__task">
+      <div className="card__task" className={titleColor}>
         <Link to={`/tasks/${task._id}`} className="card__link">
           <div className="card__task__title">{task.title}</div>
           <div className="card__task__content">
