@@ -3,23 +3,46 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { selectedTasks } from "../redux/actions/taskAction";
+import { AiFillFileAdd } from "react-icons/ai";
+
 import "../css/task.css";
 
 import Editor from "react-simple-code-editor";
 import { useState } from "react";
 import { highlight, languages } from "prismjs/components/prism-core";
-import "prismjs/themes/prism.css";
+import "prismjs/themes/prism-okaidia.css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-c";
 
 function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>
-  int main()
-  printf("Hello World")`);
+int main() 
+{
+  printf("Hello World");
+  return 0;
+}`);
   const task = useSelector((state) => state.task);
   const user = useSelector((state) => state.user.user);
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    const render = new FileReader();
+    render.readAsText(file);
+    render.onload = () => {
+      setCode(render.result);
+    };
+  };
+
+  const onInputClick = (event) => {
+    event.target.value = ""; // Clear File
+  };
+
+  const handleCodeSubmit = () => {
+    console.log("Code Submitted");
+    console.log(code);
+  };
 
   useEffect(() => {
     const fetchTask = async () => {
@@ -105,19 +128,37 @@ function Task(props) {
             </table>
           </div>
         </div>
-        <div className="detail"></div>
+        <div className="detail">
+          <div className="label">เพิ่มเติม</div>
+          <div className="question">{task.detail}</div>
+        </div>
       </div>
       <div className="editor__container">
-        <Editor
-          value={code}
-          onValueChange={(code) => setCode(code)}
-          highlight={(code) => highlight(code, languages.c, "c")}
-          padding={10}
-          // style={{
-          //   fontFamily: '"Fira code", "Fira Mono", monospace',
-          //   fontSize: 20,
-          // }}
-        />
+        <div className="task__btn">
+          <input
+            type="file"
+            id="file"
+            onChange={handleFileChange}
+            onClick={onInputClick}
+            accept=".c, .cpp"
+          />
+          <label htmlFor="file" className="file__label">
+            <AiFillFileAdd size="2rem" className="file__icon" />
+            Upload File
+          </label>
+        </div>
+        <div className="task__editor">
+          <Editor
+            value={code}
+            onValueChange={(code) => setCode(code)}
+            highlight={(code) => highlight(code, languages.c, "c")}
+            padding={10}
+            className="editor"
+          />
+        </div>
+        <div className="task__submit">
+          <button onClick={handleCodeSubmit}>Submit</button>
+        </div>
       </div>
     </div>
   );
