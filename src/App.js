@@ -39,7 +39,7 @@ function App(props) {
           <ProtectedRoute path="/tasks" component={Tasks} />
           <ProtectedRoute path="/guidebook" component={GuideBook} />
           <ProtectedRoute path="/profile" component={Profile} />
-          <ProtectedRoute path="/" component={Home} />
+          <ProtectedRoute path="/home" component={Home} />
           <Redirect path="/" exact to="/home" />
         </Switch>
       </div>
