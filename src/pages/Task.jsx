@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectedTasks,
-  removeSelectedTasks,
-} from "../redux/actions/taskAction";
+import { fetchTask, removeSelectedTasks } from "../redux/actions/taskAction";
 import { AiFillFileAdd } from "react-icons/ai";
 import "../css/task.css";
 
@@ -19,7 +15,7 @@ import "prismjs/components/prism-c";
 function Task(props) {
   const task = useSelector((state) => state.task);
   const user = useSelector((state) => state.user.user);
-  const { id: userid } = user;
+  const { id: userId } = user;
   const { id: taskId } = useParams();
   const dispatch = useDispatch();
   const [code, setCode] = useState(`#include<stdio.h>
@@ -43,23 +39,16 @@ int main()
   };
 
   const handleCodeSubmit = async () => {
-    // const submitted = await axios.post("http://localhost:5000/api/fetch-sub", {code,userid,id,});
+    console.log(code);
+    // const submitted = await axios.post("http://localhost:5000/api/fetch-sub", {code,userId,id,});
   };
 
   useEffect(() => {
-    const fetchTask = async () => {
-      const response = await axios
-        .get(`http://localhost:5000/api/question-id/${userid}/${taskId}`)
-        .catch((error) => console.log("Error", error));
-
-      dispatch(selectedTasks(response.data[0]));
-    };
-
-    if (taskId) fetchTask();
+    if (taskId) dispatch(fetchTask(userId, taskId));
     return () => {
       dispatch(removeSelectedTasks());
     };
-  }, [dispatch, userid, taskId]);
+  }, [dispatch, userId, taskId]);
 
   return (
     <div className="task__container">

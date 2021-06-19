@@ -3,7 +3,7 @@
 :root {
   /* ======= Colors ======== */
   --color-primary: #5069ff;
-  --color-secondary: #253b6e;
+  --color-secondary: #252f6b;
   --color-primary-hover: #304ffb;
   --color-secondary-hover: #3848a1;
   --color-title: #393939;
@@ -14,7 +14,7 @@
   --color-container: #fefefe;
   --color-btn-title: #fff;
   --color-card-title: #fff;
-  --color-gradient: #4089f6;
+  --color-gradient: #ffa600;
 
   /* ======= Typography ======== */
   --font-semi-bold: 400;
