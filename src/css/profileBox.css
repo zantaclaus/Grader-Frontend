@@ -44,7 +44,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   color: white;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   transition: 0.3s;
 }
 

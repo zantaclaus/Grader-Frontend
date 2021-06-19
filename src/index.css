@@ -2,9 +2,10 @@
 
 :root {
   /* ======= Colors ======== */
-  --color-primary: #5069ff;
-  --color-secondary: #252f6b;
-  --color-primary-hover: #304ffb;
+
+  --color-primary: #252f6b;
+  --color-secondary: #8bc7ff;
+  --color-nav-hover: #8bc7ff;
   --color-secondary-hover: #3848a1;
   --color-title: #393939;
   --color-tagline: #4b4b4b;
@@ -56,7 +57,7 @@ a {
 /*======== Block ========*/
 
 .block {
-  --padding-vertical: 6rem;
+  --padding-vertical: 3rem;
   padding: var(--padding-vertical) 2rem;
 }
 
@@ -153,7 +154,7 @@ a {
 
 .card__title {
   color: var(--color-card-title);
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   text-align: center;
   padding: 10px 0;
   border-radius: 10px 10px 0 0;

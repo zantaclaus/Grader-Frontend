@@ -20,7 +20,7 @@
   font-size: 2.15rem;
   font-weight: 500;
   color: var(--color-card-title);
-  background: #4958b4;
+  background: #2f40ac;
   border-radius: 25px 25px 0 0;
   display: flex;
   justify-content: center;
@@ -69,12 +69,4 @@
 
 .card__link {
   color: var(--color-title);
-}
-
-.oddRow .card__task__title {
-  background-color: #2f40ac;
-}
-
-.evenRow .card__task__title {
-  background-color: #77b2ff;
 }

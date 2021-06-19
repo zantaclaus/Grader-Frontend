@@ -19,13 +19,13 @@
 .bar__title {
   font-size: var(--card-propties-font);
   font-weight: var(--font-semi-bold);
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .bar__percent {
   position: absolute;
   font-size: var(--card-percent-size);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   top: 0;
   right: 0;
 }
@@ -64,13 +64,13 @@
 .submitted__title {
   font-size: var(--card-propties-font);
   font-weight: var(--font-semi-bold);
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .submitted__count {
   font-size: var(--card-propoties-number);
   font-weight: var(--font-bold);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   transform: translateY(-5px);
   justify-self: center;
 }
@@ -78,7 +78,7 @@
 .submitted__unit {
   font-size: var(--card-propties-font);
   font-weight: var(--font-semi-bold);
-  color: var(--color-secondary);
+  color: var(--color-primary);
   position: relative;
   right: var(--card-unit-right);
   top: var(--card-unit-top);

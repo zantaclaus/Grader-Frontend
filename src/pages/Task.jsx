@@ -13,7 +13,14 @@ import "prismjs/components/prism-clike";
 import "prismjs/components/prism-c";
 
 function Task(props) {
-  const task = useSelector((state) => state.task);
+  let task = useSelector((state) => state.task);
+
+  let output = task.str_output_1;
+  output
+    ? (output = output.replace(/\n/g, "<br/>"))
+    : console.log("output undefine");
+  console.log("Str Output", output);
+
   const user = useSelector((state) => state.user.user);
   const { id: userId } = user;
   const { id: taskId } = useParams();
@@ -87,7 +94,7 @@ int main()
                   <tbody>
                     <tr>
                       <td>{task.str_input_1}</td>
-                      <td>{task.str_output_1}</td>
+                      <td>{output}</td>
                     </tr>
                   </tbody>
                 </table>
