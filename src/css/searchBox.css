@@ -31,3 +31,19 @@
   right: 8px;
   top: 8px;
 }
+
+@media screen and (min-width: 1800px) {
+  .searchBox {
+    padding-left: 2rem;
+    padding-right: 5rem;
+    border-radius: 5px;
+    height: 4rem;
+    max-height: 4rem;
+    font-size: 1.8rem;
+  }
+
+  .searchBox::placeholder {
+    opacity: 0.7;
+    font-size: 1.6rem;
+  }
+}

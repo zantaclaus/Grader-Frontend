@@ -1,13 +1,13 @@
 .tasks__container {
-  margin: 2rem 2rem 2rem 2rem;
+  margin: 1rem 2rem 2rem 2rem;
   height: var(--container-height);
   box-shadow: 0 0 10px rgb(146, 145, 145);
   border-radius: 10px;
 }
 
 .tasks__bar {
-  height: 6rem;
-  background: #252f6b;
+  height: 5.5rem;
+  background: var(--color-primary);
 }
 
 .tasks__header {
@@ -30,8 +30,8 @@
 }
 
 .tasks__content {
-  background-color: #fefefe;
-  height: calc(100% - 12rem);
+  background-color: var(--color-body);
+  height: calc(100% - 8rem);
   overflow: auto;
 }
 
@@ -48,7 +48,7 @@
 
 @media screen and (min-width: 850px) {
   .tasks__content__container {
-    margin: 4rem;
+    margin: 3rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -68,5 +68,13 @@
 @media screen and (min-width: 1800px) {
   .tasks__content__container {
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  .tasks__bar {
+    height: 6rem;
+  }
+
+  .tasks__content {
+    height: calc(100% - 9rem);
   }
 }
