@@ -30,30 +30,20 @@ function TasksContainer(props) {
         <div className="tasks__content">
           <div className="tasks__content__container">
             {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+              <Card key={task._id} task={task} titleColor="card__task" />
             ))}
             {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+              <Card key={task._id} task={task} titleColor="card__task" />
             ))}
             {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+              <Card key={task._id} task={task} titleColor="card__task" />
             ))}
             {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+              <Card key={task._id} task={task} titleColor="card__task" />
             ))}
             {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
+              <Card key={task._id} task={task} titleColor="card__task" />
             ))}
-            {/* {tasks.map((task) => (
-              <Card
-                key={task._id}
-                task={task}
-                titleColor="card__task evenRow"
-              />
-            ))}
-            {tasks.map((task) => (
-              <Card key={task._id} task={task} titleColor="card__task oddRow" />
-            ))} */}
           </div>
         </div>
         <div className="tasks__bar tasks__footer"></div>
