@@ -23,7 +23,7 @@
 .team__logo {
   margin-top: 0.3rem;
   width: var(--card-team-img);
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .rank__score {

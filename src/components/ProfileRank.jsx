@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
-import team1 from "../images/team1.png";
+import team2 from "../images/team2.webp";
 import "../css/profileRank.css";
 
 function ProfileRank(props) {
@@ -16,7 +16,7 @@ function ProfileRank(props) {
         <div className="card__content rank__content">
           <div className="rank__team">
             <h3>You are</h3>
-            <img className="team__logo" src={team1} alt="" />
+            <img className="team__logo" src={team2} alt="" />
           </div>
           <div className="rank__score">
             <h3>Your score</h3>
