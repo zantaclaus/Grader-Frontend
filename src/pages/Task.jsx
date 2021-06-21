@@ -1,35 +1,18 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchTask, removeSelectedTasks } from "../redux/actions/taskAction";
-import { AiFillFileAdd } from "react-icons/ai";
-import "../css/task.css";
-
-import Editor from "react-simple-code-editor";
+import React from "react";
 import { useState } from "react";
-import { highlight, languages } from "prismjs/components/prism-core";
-import "prismjs/themes/prism-okaidia.css";
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-c";
+import TaskQuestion from "../components/TaskQuestion";
+import TaskDetail from "../components/TaskDetail";
+import TaskEditor from "../components/TaskEditor";
+import BtnUpload from "../components/BtnUpload";
+import "../css/task.css";
+import TaskSubmit from "../components/TaskSubmit";
 
-function Task(props) {
-  let task = useSelector((state) => state.task);
-
-  let output = task.str_output_1;
-  output
-    ? (output = output.replace(/\n/g, "<br/>"))
-    : console.log("output undefine");
-  console.log("Str Output", output);
-
-  const user = useSelector((state) => state.user.user);
-  const { id: userId } = user;
-  const { id: taskId } = useParams();
-  const dispatch = useDispatch();
+function NewTask(props) {
   const [code, setCode] = useState(`#include<stdio.h>
 int main() 
 {
-  printf("Hello World");
-  return 0;
+
+    return 0;
 }`);
 
   const handleFileChange = (e) => {
@@ -45,131 +28,39 @@ int main()
     event.target.value = ""; // Clear File
   };
 
-  const handleCodeSubmit = async () => {
-    console.log(code);
-    // const submitted = await axios.post("http://localhost:5000/api/fetch-sub", {code,userId,id,});
-  };
-
-  useEffect(() => {
-    if (taskId) dispatch(fetchTask(userId, taskId));
-    return () => {
-      dispatch(removeSelectedTasks());
-    };
-  }, [dispatch, userId, taskId]);
-
   return (
-    <div className="task__container">
-      {Object.keys(task).length === 0 ? (
-        <h1>Loading...</h1>
-      ) : (
-        <React.Fragment>
-          <div className="pdf__container">
-            <div className="chaya">{task.chaya}</div>
-            <div className="title">{task.title}</div>
-            <div className="question">{task.question}</div>
-            <div className="pattern">
-              <div className="label">รูปเเบบการรับข้อมูล</div>
-              <div className="pattern">
-                <div className="pattern__label">Input</div>
-                <div className="pattern__detail">{task.q_input}</div>
-              </div>
-              <div className="pattern">
-                <div className="pattern__label">Output</div>
-                <div className="pattern__detail">{task.q_output}</div>
-              </div>
-            </div>
-            <div className="testcase">
-              <div className="label">ตัวอย่าง</div>
-              <div className="testcase__table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th colSpan="2">Test case 1</th>
-                    </tr>
-                    <tr>
-                      <th>input</th>
-                      <th>output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>{task.str_input_1}</td>
-                      <td>{output}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table>
-                  <thead>
-                    <tr>
-                      <th colSpan="2">Test case 2</th>
-                    </tr>
-                    <tr>
-                      <th>input</th>
-                      <th>output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>{task.str_input_2}</td>
-                      <td>{task.str_output_2}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table>
-                  <thead>
-                    <tr>
-                      <th colSpan="2">Test case 3</th>
-                    </tr>
-                    <tr>
-                      <th>input</th>
-                      <th>output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>{task.str_input_3}</td>
-                      <td>{task.str_output_3}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="detail">
-              <div className="label">เพิ่มเติม</div>
-              <div className="question">{task.detail}</div>
-            </div>
+    <form className="task__form">
+      <div className="task__grid">
+        <div className="task__left">
+          <TaskQuestion />
+        </div>
+        <div className="task__right">
+          <div className="detail__container">
+            <TaskDetail
+              title="Submitted Resulted"
+              detail="pppppp--pp"
+              header="header"
+              content="resulted"
+            />
+            <TaskDetail
+              title="Finished"
+              detail="10"
+              header="header"
+              content="finished"
+            />
           </div>
-          <div className="editor__container">
-            <div className="task__btn">
-              <input
-                type="file"
-                id="file"
-                onChange={handleFileChange}
-                onClick={onInputClick}
-                accept=".c, .cpp"
-              />
-              <label htmlFor="file" className="file__label">
-                <AiFillFileAdd size="2rem" className="file__icon" />
-                Upload File
-              </label>
-            </div>
-            <div className="task__editor">
-              <Editor
-                value={code}
-                onValueChange={(code) => setCode(code)}
-                highlight={(code) => highlight(code, languages.c, "c")}
-                padding={10}
-                className="editor"
-              />
-            </div>
-            <div className="task__submit">
-              <button onClick={handleCodeSubmit}>Submit</button>
-            </div>
+          <TaskEditor code={code} setCode={setCode} />
+          <div className="btn__container">
+            <BtnUpload
+              handleFileChange={handleFileChange}
+              onInputClick={onInputClick}
+            />
+            <TaskSubmit />
           </div>
-        </React.Fragment>
-      )}
-    </div>
+        </div>
+      </div>
+    </form>
   );
 }
 
-export default Task;
+export default NewTask;

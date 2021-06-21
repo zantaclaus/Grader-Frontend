@@ -1,0 +1,23 @@
+#submit {
+  display: none;
+}
+
+.task__submit {
+  margin-left: 1rem;
+  height: 50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--color-primary);
+}
+
+.submit__label {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}

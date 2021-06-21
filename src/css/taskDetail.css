@@ -1,0 +1,21 @@
+.task__detail {
+  margin: 2rem;
+  background-color: #fff;
+  border: 5px solid var(--color-primary);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task__detail .header {
+  font-size: 2rem;
+}
+
+.task__detail .resulted {
+  font-size: 4rem;
+}
+.task__detail .finished {
+  font-size: 4.5rem;
+}

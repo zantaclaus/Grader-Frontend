@@ -1,0 +1,12 @@
+.editor__container {
+  margin: 1rem 2rem;
+  border: 5px solid var(--color-primary);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.editor {
+  min-height: 1000px;
+  height: auto;
+  font-size: 1.8rem;
+}

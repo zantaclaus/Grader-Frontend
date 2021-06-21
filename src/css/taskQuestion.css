@@ -1,0 +1,6 @@
+.pdf__container {
+  height: 85vh;
+  margin: 2rem;
+  border: 5px solid var(--color-primary);
+  border-radius: 10px;
+}
