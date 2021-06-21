@@ -1,8 +1,7 @@
 import React from "react";
-import team4 from "../images/team4.webp";
+import team1 from "../images/team1.webp";
 import team2 from "../images/team2.webp";
 import team3 from "../images/team3.webp";
-import user from "../images/user.png";
 import "../css/leaderBoard.css";
 
 function LeaderBoard(props) {
@@ -14,14 +13,37 @@ function LeaderBoard(props) {
       </header>
       <div className="leader__content">
         <div className="leader__card">
-          <img src={user} alt="" className="leader__logo" />
-          <span className="leader__username">Zantaclaus</span>
+          <div className="face front">
+            <h1>T</h1>
+          </div>
+          <div className="face back">
+            <div className="back__content">
+              <img src={team1} alt="" />
+              <h1>zantaclaus</h1>
+            </div>
+          </div>
         </div>
         <div className="leader__card">
-          <img src={user} alt="" className="leader__logo" />
+          <div className="face front">
+            <h1>O</h1>
+          </div>
+          <div className="face back">
+            <div className="back__content">
+              <img src={team2} alt="" />
+              <h1>zantaclaus</h1>
+            </div>
+          </div>
         </div>
         <div className="leader__card">
-          <img src={user} alt="" className="leader__logo" />
+          <div className="face front">
+            <h1>P</h1>
+          </div>
+          <div className="face back">
+            <div className="back__content">
+              <img src={team3} alt="" />
+              <h1>zantaclaus</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
