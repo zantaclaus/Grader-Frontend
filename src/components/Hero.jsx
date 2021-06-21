@@ -20,7 +20,12 @@ function Hero(props) {
             Get Started
           </Link>
         </header>
-        <img data-aos="fade-left" className="hero__image" src={hero} alt="" />
+        <img
+          data-aos="zoom-in-left"
+          className="hero__image"
+          src={hero}
+          alt=""
+        />
       </div>
     </div>
   );
