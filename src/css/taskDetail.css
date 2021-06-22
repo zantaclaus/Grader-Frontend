@@ -15,7 +15,9 @@
 
 .task__detail .resulted {
   font-size: 4rem;
+  color: var(--color-primary);
 }
 .task__detail .finished {
   font-size: 4.5rem;
+  color: var(--color-primary);
 }
