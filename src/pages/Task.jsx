@@ -19,6 +19,7 @@ int main()
     return 0;
 }`);
 
+  let task = useSelector((state) => state.task);
   const user = useSelector((state) => state.user.user);
   const { id: userId } = user;
   const { id: taskId } = useParams();
@@ -54,13 +55,13 @@ int main()
           <div className="detail__container">
             <TaskDetail
               title="Submitted Resulted"
-              detail="pppppp--pp"
+              detail={task.result}
               header="header"
               content="resulted"
             />
             <TaskDetail
               title="Finished"
-              detail="10"
+              detail={task.finished}
               header="header"
               content="finished"
             />
