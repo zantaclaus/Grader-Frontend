@@ -1,5 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { fetchTask, removeSelectedTasks } from "../redux/actions/taskAction";
+
 import TaskQuestion from "../components/TaskQuestion";
 import TaskDetail from "../components/TaskDetail";
 import TaskEditor from "../components/TaskEditor";
@@ -14,6 +18,18 @@ int main()
 
     return 0;
 }`);
+
+  const user = useSelector((state) => state.user.user);
+  const { id: userId } = user;
+  const { id: taskId } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (taskId) dispatch(fetchTask(userId, taskId));
+    return () => {
+      dispatch(removeSelectedTasks());
+    };
+  }, [dispatch, userId, taskId]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];

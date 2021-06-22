@@ -1,0 +1,40 @@
+.tastcase__container {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tastcase__table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.table {
+  /* border: 2px solid #000; */
+  padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+  border-style: solid;
+  border-color: #000;
+}
+
+.header__input {
+  border-width: 2px;
+}
+
+.header__output {
+  border-width: 2px 2px 2px 0;
+}
+
+.detail__input {
+  border-width: 0 2px 2px 2px;
+}
+
+.detail__output {
+  border-width: 0 2px 2px 0;
+}
+
+.table__header {
+  font-size: 1.8rem;
+}
+
+.table__detail {
+  font-size: 1.8rem;
+}

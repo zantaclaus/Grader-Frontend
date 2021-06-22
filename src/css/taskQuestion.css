@@ -1,6 +1,40 @@
 .pdf__container {
   height: 85vh;
   margin: 2rem;
+  padding: 0 1rem;
   border: 5px solid var(--color-primary);
   border-radius: 10px;
+  position: relative;
+  overflow: auto;
+}
+
+.pdf__container .title {
+  margin-top: 1.5rem;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.pdf__container .chaya {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  /* text-align: center; */
+}
+
+.pdf__container .question {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.task__label {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pattern .pattern__detail {
+  font-size: 1.8rem;
 }
