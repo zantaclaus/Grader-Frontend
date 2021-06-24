@@ -15,11 +15,15 @@
 }
 
 .submit__label {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   cursor: pointer;
   align-items: center;
+}
+
+.submit__icon {
+  margin-right: 1.2rem;
 }
