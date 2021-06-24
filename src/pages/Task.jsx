@@ -11,7 +11,7 @@ import BtnUpload from "../components/BtnUpload";
 import "../css/task.css";
 import TaskSubmit from "../components/TaskSubmit";
 
-function NewTask(props) {
+function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>
 int main() 
 {
@@ -46,38 +46,44 @@ int main()
   };
 
   return (
-    <form className="task__form">
-      <div className="task__grid">
-        <div className="task__left">
-          <TaskQuestion />
-        </div>
-        <div className="task__right">
-          <div className="detail__container">
-            <TaskDetail
-              title="Submitted Resulted"
-              detail={task.result}
-              header="header"
-              content="resulted"
-            />
-            <TaskDetail
-              title="Finished"
-              detail={task.finished}
-              header="header"
-              content="finished"
-            />
+    <React.Fragment>
+      {Object.keys(task).length === 0 ? (
+        <h1>Loading...</h1>
+      ) : (
+        <form className="task__form">
+          <div className="task__grid">
+            <div className="task__left">
+              <TaskQuestion />
+            </div>
+            <div className="task__right">
+              <div className="detail__container">
+                <TaskDetail
+                  title="Submitted Resulted"
+                  detail={task.result}
+                  header="header"
+                  content="resulted"
+                />
+                <TaskDetail
+                  title="Finished"
+                  detail={task.finished}
+                  header="header"
+                  content="finished"
+                />
+              </div>
+              <TaskEditor code={code} setCode={setCode} />
+              <div className="btn__container">
+                <BtnUpload
+                  handleFileChange={handleFileChange}
+                  onInputClick={onInputClick}
+                />
+                <TaskSubmit />
+              </div>
+            </div>
           </div>
-          <TaskEditor code={code} setCode={setCode} />
-          <div className="btn__container">
-            <BtnUpload
-              handleFileChange={handleFileChange}
-              onInputClick={onInputClick}
-            />
-            <TaskSubmit />
-          </div>
-        </div>
-      </div>
-    </form>
+        </form>
+      )}
+    </React.Fragment>
   );
 }
 
-export default NewTask;
+export default Task;
