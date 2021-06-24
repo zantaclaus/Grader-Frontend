@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { addToggle, delClass } from "../services/toggleService";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BsMoon } from "react-icons/bs";
+import { IoMoon } from "react-icons/io5";
+import { IoSunny } from "react-icons/io5";
 import "../css/navbar.css";
 
 function Navbar(props) {
+  const [isMoon, setIsMoon] = useState(true);
+  console.log("isMoon", isMoon);
   const menuClick = () => {
     addToggle("navbar", "show__menu");
   };
@@ -74,11 +77,15 @@ function Navbar(props) {
             </li>
           </ul>
         </div>
-        <div className="theme__toggle">
-          <BsMoon size="2rem" />
-        </div>
         <div className="nav__toggle" id="nav-toggle">
           <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
+        </div>
+        <div
+          className="theme__toggle"
+          id="theme-toggle"
+          onClick={() => setIsMoon(!isMoon)}
+        >
+          {isMoon ? <IoMoon size="3rem" /> : <IoSunny size="3rem" />}
         </div>
       </nav>
     </div>

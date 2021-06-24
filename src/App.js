@@ -27,7 +27,7 @@ function App(props) {
   return (
     <React.Fragment>
       {user && (
-        <div className="navbar__container">
+        <div>
           <Navbar />
         </div>
       )}
