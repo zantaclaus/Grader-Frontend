@@ -1,16 +1,16 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { showMenu, linkAction } from "../services/expandService";
+import { addToggle, delClass } from "../services/toggleService";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "../css/navbar.css";
 
 function NewNav(props) {
   const menuClick = () => {
-    showMenu("navbar");
+    addToggle("navbar", "show__menu");
   };
 
   const linkClick = () => {
-    linkAction();
+    delClass("navbar", "show__menu");
   };
 
   return (

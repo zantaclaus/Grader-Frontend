@@ -1,11 +1,15 @@
 import React from "react";
 import "../css/filterBox.css";
 import { FaCaretDown } from "react-icons/fa";
-import { showDropdown, linkAction } from "../services/dropdownService";
+import { addToggle, delClass } from "../services/toggleService";
 
 function FilterBox(props) {
   const dropDownClick = () => {
-    showDropdown("dropdown");
+    addToggle("dropdown", "show-dropdown");
+  };
+
+  const linkClick = () => {
+    delClass("dropdown", "show-dropdown");
   };
 
   return (
@@ -16,25 +20,25 @@ function FilterBox(props) {
           <FaCaretDown />
         </div>
         <div className="dropdown-list">
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             All Units
           </div>
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             Condition
           </div>
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             Loop
           </div>
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             Array
           </div>
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             String
           </div>
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             Pattern
           </div>
-          <div className="dropdown-list__item" onClick={linkAction}>
+          <div className="dropdown-list__item" onClick={linkClick}>
             God Mode
           </div>
         </div>
