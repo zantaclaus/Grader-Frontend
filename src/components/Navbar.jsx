@@ -2,9 +2,10 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { addToggle, delClass } from "../services/toggleService";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsMoon } from "react-icons/bs";
 import "../css/navbar.css";
 
-function NewNav(props) {
+function Navbar(props) {
   const menuClick = () => {
     addToggle("navbar", "show__menu");
   };
@@ -73,6 +74,9 @@ function NewNav(props) {
             </li>
           </ul>
         </div>
+        <div className="theme__toggle">
+          <BsMoon size="2rem" />
+        </div>
         <div className="nav__toggle" id="nav-toggle">
           <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
         </div>
@@ -81,4 +85,4 @@ function NewNav(props) {
   );
 }
 
-export default NewNav;
+export default Navbar;
