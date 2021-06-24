@@ -8,13 +8,18 @@ import "../css/navbar.css";
 
 function Navbar(props) {
   const [isMoon, setIsMoon] = useState(true);
-  console.log("isMoon", isMoon);
+
   const menuClick = () => {
     addToggle("navbar", "show__menu");
   };
 
   const linkClick = () => {
     delClass("navbar", "show__menu");
+  };
+
+  const themeClick = () => {
+    addToggle("root", "dark__mode");
+    setIsMoon(!isMoon);
   };
 
   return (
@@ -80,11 +85,7 @@ function Navbar(props) {
         <div className="nav__toggle" id="nav-toggle">
           <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
         </div>
-        <div
-          className="theme__toggle"
-          id="theme-toggle"
-          onClick={() => setIsMoon(!isMoon)}
-        >
+        <div className="theme__toggle" id="theme-toggle" onClick={themeClick}>
           {isMoon ? <IoMoon size="3rem" /> : <IoSunny size="3rem" />}
         </div>
       </nav>
