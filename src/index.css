@@ -4,7 +4,7 @@
   /* ======= Colors ======== */
 
   --color-primary: #252f6b;
-  --color-secondary: #8bc7ff;
+  --color-secondary: #4a6bff;
   --color-nav-hover: #8bc7ff;
   --color-secondary-hover: #3848a1;
   --color-title: #393939;
@@ -53,6 +53,10 @@ a {
     height: auto;
   }
 }
+
+/* .boxShadow {
+  box-shadow: 0 0 10px var(--color-primary);
+} */
 
 /*======== Block ========*/
 

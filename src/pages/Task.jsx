@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchTask, removeSelectedTasks } from "../redux/actions/taskAction";
-
 import TaskQuestion from "../components/TaskQuestion";
 import TaskDetail from "../components/TaskDetail";
 import TaskEditor from "../components/TaskEditor";
@@ -20,6 +19,8 @@ int main()
 }`);
 
   let task = useSelector((state) => state.task);
+  // const { linkPDF } = task;
+
   const user = useSelector((state) => state.user.user);
   const { id: userId } = user;
   const { id: taskId } = useParams();

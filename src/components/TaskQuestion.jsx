@@ -35,6 +35,9 @@ function TaskQuestion(props) {
           output={task.str_output_3}
         />
       </div>
+      <h1>
+        <a href={task.linkPDF}>click</a>
+      </h1>
     </div>
   );
 }
