@@ -7,7 +7,6 @@
   width: 100%;
   background: var(--color-body);
   padding: 1rem 0;
-  transition: 0.25s;
   /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); */
 }
 
@@ -137,5 +136,9 @@
     100% {
       transform: scaleX(1);
     }
+  }
+
+  .navbar.show__menu .nav__menu {
+    top: 0;
   }
 }
