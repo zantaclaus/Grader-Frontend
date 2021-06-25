@@ -86,7 +86,11 @@ function Navbar(props) {
           <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
         </div>
         <div className="theme__toggle" id="theme-toggle" onClick={themeClick}>
-          {isMoon ? <IoMoon size="3rem" /> : <IoSunny size="3rem" />}
+          {isMoon ? (
+            <IoMoon size="3rem" />
+          ) : (
+            <IoSunny size="3rem" color="white" />
+          )}
         </div>
       </nav>
     </div>

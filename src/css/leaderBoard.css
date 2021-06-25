@@ -1,3 +1,7 @@
+.leader__block {
+  background-color: var(--color-body);
+}
+
 .leader__header {
   display: flex;
   flex-direction: column;
