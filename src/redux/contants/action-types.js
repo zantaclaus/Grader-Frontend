@@ -6,5 +6,6 @@ export const ActionTypes = {
   SET_USER: "SET_USER",
   PAGE_INCREMENT: "PAGE_INCREMENT",
   PAGE_DECREMENT: "PAGE_DECREMENT",
+  SET_PAGE: "SET_Page",
   SET_TITLE: "SET_TITLE",
 };

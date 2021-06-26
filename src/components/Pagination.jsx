@@ -2,26 +2,31 @@ import React from "react";
 import "../css/pagination.css";
 import { IoMdArrowDropleftCircle } from "react-icons/io";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { pageIncrement, pageDecrement } from "../redux/actions/pageAction";
 
-function Pagination(props) {
+function Pagination({ lastPage }) {
   const dispatch = useDispatch();
+  const currentPage = useSelector((state) => state.page);
 
   return (
     <div className="pagination__container">
-      <IoMdArrowDropleftCircle
-        size="3.8rem"
-        color="white"
-        className="arrow arrow__left"
-        onClick={() => dispatch(pageDecrement())}
-      />
-      <IoMdArrowDroprightCircle
-        size="3.8rem"
-        color="white"
-        className="arrow arrow__right"
-        onClick={() => dispatch(pageIncrement())}
-      />
+      {currentPage !== 1 ? (
+        <IoMdArrowDropleftCircle
+          size="3.8rem"
+          color="white"
+          className="arrow arrow__left"
+          onClick={() => dispatch(pageDecrement())}
+        />
+      ) : null}
+      {currentPage !== lastPage ? (
+        <IoMdArrowDroprightCircle
+          size="3.8rem"
+          color="white"
+          className="arrow arrow__right"
+          onClick={() => dispatch(pageIncrement())}
+        />
+      ) : null}
     </div>
   );
 }

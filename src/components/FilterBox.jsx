@@ -6,6 +6,7 @@ import { addToggle, delClass } from "../services/toggleService";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTitle } from "../redux/actions/dropdownAction";
+import { setPage } from "../redux/actions/pageAction";
 
 function FilterBox(props) {
   const [units, setUnits] = useState([]);
@@ -25,6 +26,7 @@ function FilterBox(props) {
   const linkClick = (title) => {
     delClass("dropdown", "show-dropdown");
     dispatch(setTitle(title));
+    dispatch(setPage(1));
   };
 
   return (
