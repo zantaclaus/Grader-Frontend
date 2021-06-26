@@ -5,7 +5,6 @@ import { AiFillFileAdd } from "react-icons/ai";
 function BtnUpload({ handleFileChange, onInputClick }) {
   return (
     <div className="task__btn">
-      {" "}
       <input
         type="file"
         id="file"

@@ -23,6 +23,10 @@
   /* background-color: gold; */
   margin: 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-end;
+}
+
+.task__btn__right {
+  display: flex;
 }

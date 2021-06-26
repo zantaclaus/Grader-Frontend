@@ -1,0 +1,15 @@
+.download__btn {
+  height: 50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--color-primary);
+  margin-right: 1rem;
+}
+
+.download__logo {
+  margin-right: 1rem;
+}

@@ -9,6 +9,7 @@ import TaskEditor from "../components/TaskEditor";
 import BtnUpload from "../components/BtnUpload";
 import "../css/task.css";
 import TaskSubmit from "../components/TaskSubmit";
+import BtnDownload from "../components/BtnDownload";
 
 function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>
@@ -19,19 +20,12 @@ int main()
 }`);
 
   let task = useSelector((state) => state.task);
-  // const { linkPDF } = task;
+  const { linkPDF } = task;
 
   const user = useSelector((state) => state.user.user);
   const { id: userId } = user;
   const { id: taskId } = useParams();
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (taskId) dispatch(fetchTask(userId, taskId));
-    return () => {
-      dispatch(removeSelectedTasks());
-    };
-  }, [dispatch, userId, taskId]);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -45,6 +39,17 @@ int main()
   const onInputClick = (event) => {
     event.target.value = ""; // Clear File
   };
+
+  const handleCodeSubmit = () => {
+    alert("Submit");
+  };
+
+  useEffect(() => {
+    if (taskId) dispatch(fetchTask(userId, taskId));
+    return () => {
+      dispatch(removeSelectedTasks());
+    };
+  }, [dispatch, userId, taskId]);
 
   return (
     <React.Fragment>
@@ -73,11 +78,14 @@ int main()
               </div>
               <TaskEditor code={code} setCode={setCode} />
               <div className="btn__container">
-                <BtnUpload
-                  handleFileChange={handleFileChange}
-                  onInputClick={onInputClick}
-                />
-                <TaskSubmit />
+                <BtnDownload linkPDF={linkPDF} />
+                <div className="task__btn__right">
+                  <BtnUpload
+                    handleFileChange={handleFileChange}
+                    onInputClick={onInputClick}
+                  />
+                  <TaskSubmit handleCodeSubmit={handleCodeSubmit} />
+                </div>
               </div>
             </div>
           </div>
