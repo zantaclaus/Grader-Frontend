@@ -5,7 +5,7 @@ import { getUnits } from "../services/unitService";
 import { addToggle, delClass } from "../services/toggleService";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setTitle, SetTitle } from "../redux/actions/dropdownAction";
+import { setTitle } from "../redux/actions/dropdownAction";
 
 function FilterBox(props) {
   const [units, setUnits] = useState([]);
