@@ -6,6 +6,7 @@ import FilterBox from "./FilterBox";
 import Card from "./Card";
 import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
+import Pagination from "./Pagination";
 
 // import { getTasks } from "../services/tasksService";
 
@@ -40,7 +41,9 @@ function TasksContainer(props) {
             ))}
           </div>
         </div>
-        <div className="tasks__bar tasks__footer"></div>
+        <div className="tasks__bar tasks__footer">
+          <Pagination />
+        </div>
       </div>
     </div>
   );
