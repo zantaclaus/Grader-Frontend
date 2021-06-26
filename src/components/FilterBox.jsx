@@ -16,7 +16,6 @@ function FilterBox({ setSearchQuery }) {
   useEffect(() => {
     const units = [{ name: "All Units" }, ...getUnits()];
     setUnits(units);
-    console.log(units);
   }, []);
 
   const dropDownClick = () => {
