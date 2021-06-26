@@ -47,6 +47,11 @@
   background: var(--color-primary);
 }
 
+.dropdown-list__item.selected {
+  color: #fff;
+  background: var(--color-primary);
+}
+
 .show-dropdown .dropdown-list {
   display: block;
 }

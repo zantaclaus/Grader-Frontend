@@ -37,7 +37,7 @@
 
 .tasks__content__container {
   margin: 3rem;
-  height: 100%;
+  /* height: 100%; */
   display: grid;
   justify-items: center;
 }

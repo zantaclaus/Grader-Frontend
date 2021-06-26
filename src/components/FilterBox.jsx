@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setTitle } from "../redux/actions/dropdownAction";
 import { setPage } from "../redux/actions/pageAction";
 
-function FilterBox(props) {
+function FilterBox({ setSearchQuery }) {
   const [units, setUnits] = useState([]);
   const dispatch = useDispatch();
   const title = useSelector((state) => state.selectedUnit);
@@ -27,6 +27,7 @@ function FilterBox(props) {
     delClass("dropdown", "show-dropdown");
     dispatch(setTitle(title));
     dispatch(setPage(1));
+    setSearchQuery("");
   };
 
   return (
@@ -40,7 +41,11 @@ function FilterBox(props) {
           {units.map((unit) => (
             <div
               key={unit.name}
-              className="dropdown-list__item"
+              className={
+                title === unit.name
+                  ? "dropdown-list__item selected"
+                  : "dropdown-list__item"
+              }
               onClick={() => linkClick(unit.name)}
             >
               {unit.name}

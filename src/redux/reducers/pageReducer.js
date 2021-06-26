@@ -1,7 +1,6 @@
 import { ActionTypes } from "../contants/action-types";
 
 export const pageReducer = (state = 1, { type, payload }) => {
-  console.log("pageReducer", state);
   switch (type) {
     case ActionTypes.PAGE_INCREMENT:
       return state + 1;

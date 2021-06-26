@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Aos from "aos";
 import SearchBox from "./SearchBox";
 import FilterBox from "./FilterBox";
@@ -8,20 +8,34 @@ import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
 import Pagination from "./Pagination";
 import { paginate } from "../services/paginateService";
+import { setTitle } from "../redux/actions/dropdownAction";
+import { setPage } from "../redux/actions/pageAction";
 
 function TasksContainer(props) {
   const tasks = useSelector((state) => state.allTasks.tasks);
   const selectedUnit = useSelector((state) => state.selectedUnit);
   const currentPage = useSelector((state) => state.page);
+  const [searchQuery, setSearchQuery] = useState("");
   const pageSize = 20;
+  const dispatch = useDispatch();
 
   let filtered = tasks;
-  if (selectedUnit !== "All Units") {
-    filtered = filtered.filter((u) => u.unit.trim() === selectedUnit);
+  if (searchQuery) {
+    filtered = tasks.filter((task) =>
+      task.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+    );
+  } else if (selectedUnit !== "All Units") {
+    filtered = tasks.filter((u) => u.unit.trim() === selectedUnit);
   }
 
   const sliceProblems = paginate(filtered, currentPage, pageSize);
   const lastPage = Math.ceil(filtered.length / pageSize);
+
+  const handleSearch = (query) => {
+    dispatch(setPage(1));
+    dispatch(setTitle("All Units"));
+    setSearchQuery(query);
+  };
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -37,14 +51,14 @@ function TasksContainer(props) {
           <div className="tasks__title"></div>
           <span className="line" />
           <div className="tasks__search">
-            <SearchBox />
+            <SearchBox value={searchQuery} onChange={handleSearch} />
           </div>
           <span className="line" />
           <div className="tasks__filter">
-            <FilterBox />
+            <FilterBox setSearchQuery={setSearchQuery} />
           </div>
         </div>
-        <div className="tasks__content">
+        <div className="tasks__content" id="tasks__content">
           <div className="tasks__content__container">
             {sliceProblems.map((task) => (
               <Card key={task._id} task={task} titleColor="card__task" />

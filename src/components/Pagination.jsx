@@ -9,14 +9,28 @@ function Pagination({ lastPage }) {
   const dispatch = useDispatch();
   const currentPage = useSelector((state) => state.page);
 
-  return (
+  const scrollToTop = () => {
+    document.getElementById("tasks__content").scroll(0, 0);
+  };
+
+  const pageDecrease = () => {
+    scrollToTop();
+    dispatch(pageDecrement());
+  };
+
+  const pageIncrease = () => {
+    scrollToTop();
+    dispatch(pageIncrement());
+  };
+
+  return lastPage === 0 ? null : (
     <div className="pagination__container">
       {currentPage !== 1 ? (
         <IoMdArrowDropleftCircle
           size="3.8rem"
           color="white"
           className="arrow arrow__left"
-          onClick={() => dispatch(pageDecrement())}
+          onClick={pageDecrease}
         />
       ) : null}
       {currentPage !== lastPage ? (
@@ -24,7 +38,7 @@ function Pagination({ lastPage }) {
           size="3.8rem"
           color="white"
           className="arrow arrow__right"
-          onClick={() => dispatch(pageIncrement())}
+          onClick={pageIncrease}
         />
       ) : null}
     </div>
