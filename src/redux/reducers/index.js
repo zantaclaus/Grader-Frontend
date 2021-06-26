@@ -9,7 +9,7 @@ const reducers = combineReducers({
   allTasks: taskReducer,
   task: selectedTaskReducer,
   page: pageReducer,
-  title: dropdownReducer,
+  selectedUnit: dropdownReducer,
 });
 
 export default reducers;

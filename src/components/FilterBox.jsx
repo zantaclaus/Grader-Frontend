@@ -10,7 +10,7 @@ import { setTitle } from "../redux/actions/dropdownAction";
 function FilterBox(props) {
   const [units, setUnits] = useState([]);
   const dispatch = useDispatch();
-  const title = useSelector((state) => state.title);
+  const title = useSelector((state) => state.selectedUnit);
 
   useEffect(() => {
     const units = [{ name: "All Units" }, ...getUnits()];

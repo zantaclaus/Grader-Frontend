@@ -12,6 +12,8 @@ import Pagination from "./Pagination";
 
 function TasksContainer(props) {
   const tasks = useSelector((state) => state.allTasks.tasks);
+  const title = useSelector((state) => state.title);
+  // const filtered = tasks.filtered(u => u.unit );
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
