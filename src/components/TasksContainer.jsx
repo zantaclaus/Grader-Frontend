@@ -8,12 +8,14 @@ import { RiMoonClearFill } from "react-icons/ri";
 import "../css/tasksContainer.css";
 import Pagination from "./Pagination";
 
-// import { getTasks } from "../services/tasksService";
-
 function TasksContainer(props) {
   const tasks = useSelector((state) => state.allTasks.tasks);
-  const title = useSelector((state) => state.title);
-  // const filtered = tasks.filtered(u => u.unit );
+  const selectedUnit = useSelector((state) => state.selectedUnit);
+
+  let filtered = tasks;
+  if (selectedUnit !== "All Units") {
+    filtered = filtered.filter((u) => u.unit.trim() === selectedUnit);
+  }
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -38,7 +40,7 @@ function TasksContainer(props) {
         </div>
         <div className="tasks__content">
           <div className="tasks__content__container">
-            {tasks.map((task) => (
+            {filtered.map((task) => (
               <Card key={task._id} task={task} titleColor="card__task" />
             ))}
           </div>
