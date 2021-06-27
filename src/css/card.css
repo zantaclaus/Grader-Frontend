@@ -19,7 +19,7 @@
   height: 3em;
   font-size: 2.15rem;
   font-weight: 500;
-  color: var(--color-card-title);
+  color: var(--tasks-card-header);
   background: #2f40ac;
   border-radius: 25px 25px 0 0;
   display: flex;
@@ -30,7 +30,7 @@
 
 .card__task__content {
   height: 15rem;
-  background-color: var(--color-body);
+  background-color: var(--tasks-card-content-background);
   border-radius: 0 0 25px 25px;
   display: flex;
   flex-direction: column;
@@ -68,5 +68,5 @@
 } */
 
 .card__link {
-  color: var(--color-title);
+  color: var(--tasks-card-content);
 }

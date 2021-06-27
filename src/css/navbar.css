@@ -5,7 +5,7 @@
 
 .navbar {
   width: 100%;
-  background: var(--color-body);
+  background: var(--navbar-background);
   padding: 1rem 0;
   /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); */
 }
@@ -28,20 +28,20 @@
 
 .nav__link {
   font-size: var(--font-list);
-  color: var(--color-title);
+  color: var(--navbar-link);
 }
 .nav__link:hover {
-  color: var(--color-nav-hover);
+  color: var(--navbar-link-hover);
 }
 .nav__logo {
-  color: var(--color-primary);
+  color: var(--navbar-logo);
   font-weight: 700;
   font-size: var(--font-logo);
 }
 
 .nav__menu {
   position: absolute;
-  background-color: var(--color-body);
+  background-color: var(#fbfefd);
   top: -50%;
   right: 0;
   width: 100%;

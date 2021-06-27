@@ -15,7 +15,33 @@
   --color-container: #fefefe;
   --color-btn-title: #fff;
   --color-card-title: #fff;
-  --color-gradient: #0099e4;
+
+  --navbar-background: #fbfefd;
+  --navbar-logo: #252f6b;
+  --navbar-link: #393939;
+  --navbar-link-hover: #8bc7ff;
+
+  --hero-background: #fbfefd;
+  --hero-span: #252f6b;
+  --hero-tagline: #4b4b4b;
+
+  --leader-background: #fbfefd;
+  --leader-tagline: #4b4b4b;
+  --leader-border: #252f6b;
+  --leader-card: #252f6b;
+
+  --tasks-background: #fbfefd;
+  --tasks-container-background: #fbfefd;
+  --tasks-bar: #252f6b;
+  --tasks-card-header-background: #252f6b;
+  --tasks-card-header: #fff;
+  --tasks-card-content-background: #fbfefd;
+  --tasks-card-content: #000;
+
+  --profile-header-background: #252f6b;
+  --profile-header: #fff;
+  --profile-content-background: #fbfefd;
+  --profile-content: #252f6b;
 
   /* ======= Typography ======== */
   --font-semi-bold: 400;
@@ -67,7 +93,7 @@ a {
 .block {
   --padding-vertical: 3rem;
   padding: var(--padding-vertical) 2rem;
-  background-color: var(--color-body);
+  /* background-color: var(--color-body); */
 }
 
 .container {
@@ -162,8 +188,8 @@ a {
 }
 
 .card__title {
-  color: var(--color-card-title);
-  background-color: var(--color-primary);
+  color: var(--profile-header);
+  background-color: var(--profile-header-background);
   text-align: center;
   padding: 10px 0;
   border-radius: 10px 10px 0 0;
@@ -174,7 +200,8 @@ a {
 }
 
 .card__content {
-  background-color: var(--color-body);
+  color: var(--profile-content);
+  background-color: var(--profile-content-background);
   border-radius: 0 0 10px 10px;
 }
 

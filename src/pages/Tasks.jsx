@@ -15,7 +15,7 @@ function Tasks(props) {
   }, [dispatch, userId]);
 
   return (
-    <div>
+    <div className="tasks__background">
       {Object.keys(tasks).length === 0 ? (
         <h1>Loading...</h1>
       ) : (

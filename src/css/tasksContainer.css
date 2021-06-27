@@ -1,3 +1,7 @@
+.tasks__background {
+  background-color: var(--tasks-background);
+}
+
 .tasks__container {
   margin: 1rem 2rem 2rem 2rem;
   height: var(--container-height);
@@ -7,7 +11,7 @@
 
 .tasks__bar {
   height: 5.5rem;
-  background: var(--color-primary);
+  background: var(--tasks-bar);
 }
 
 .tasks__header {
@@ -30,7 +34,7 @@
 }
 
 .tasks__content {
-  background-color: var(--color-body);
+  background-color: var(--tasks-container-background);
   height: calc(100% - 8rem);
   overflow: auto;
 }
