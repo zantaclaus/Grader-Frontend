@@ -13,7 +13,6 @@
 .rank__content h3 {
   font-size: var(--card-propties-font);
   font-weight: var(--font-semi-bold);
-  /* color: var(--color-primary); */
 }
 
 .rank__team {

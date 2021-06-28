@@ -23,7 +23,7 @@
 
 .dropdown-list {
   display: none;
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--border-primary);
   border-radius: 10px;
   width: 100%;
   background: #fff;
@@ -39,17 +39,16 @@
   font-size: 1.4rem;
   border-radius: 8px;
   cursor: pointer;
-  /* transition: 0.3s; */
 }
 
 .dropdown-list__item:hover {
   color: #fff;
-  background: var(--color-primary);
+  background: var(--dropdown-active-background);
 }
 
 .dropdown-list__item.selected {
   color: #fff;
-  background: var(--color-primary);
+  background: var(--dropdown-active-background);
 }
 
 .show-dropdown .dropdown-list {

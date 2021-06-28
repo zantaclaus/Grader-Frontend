@@ -44,10 +44,10 @@
   text-transform: uppercase;
   white-space: nowrap;
   color: white;
-  background-color: var(--color-primary);
+  background-color: var(--btn-background);
   transition: 0.3s;
 }
 
 .profile__btn:hover {
-  background-color: var(--color-secondary-hover);
+  background-color: var(--btn-hover);
 }

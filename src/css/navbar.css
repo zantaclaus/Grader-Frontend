@@ -41,7 +41,7 @@
 
 .nav__menu {
   position: absolute;
-  background-color: var(#fbfefd);
+  background-color: var(--navbar-background);
   top: -50%;
   right: 0;
   width: 100%;
@@ -108,7 +108,7 @@
   }
 
   .nav__selected {
-    color: var(--color-primary);
+    color: var(--navbar-selected);
     position: relative;
   }
 
@@ -119,7 +119,7 @@
     width: 100%;
     height: 4px;
     border-radius: 10px;
-    background-color: var(--color-primary);
+    background-color: var(--navbar-selected);
     transform: scaleX(0);
     animation: animate 0.5s cubic-bezier(1, 0, 0.3, 1) forwards;
   }

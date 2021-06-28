@@ -59,7 +59,7 @@
 }
 
 .login-input input:focus {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--border-primary);
 }
 
 .username-input {
@@ -81,7 +81,7 @@
 }
 
 .forgot:hover {
-  color: var(--color-primary);
+  color: var(--login-forgot-hover);
 }
 
 .login-button {
@@ -90,8 +90,8 @@
   border-radius: 25px;
   font-size: var(--font-login-input);
   color: var(--color-btn-title);
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: var(--btn-background);
+  border-color: var(--btn-background);
   cursor: pointer;
 }
 

@@ -6,7 +6,7 @@
   align-items: center;
   border-radius: 10px;
   color: white;
-  background-color: var(--color-primary);
+  background-color: var(--btn-download);
   margin-right: 1rem;
 }
 

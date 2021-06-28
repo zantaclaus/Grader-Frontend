@@ -5,21 +5,32 @@
 
   --color-primary: #252f6b;
   --color-secondary: #4a6bff;
-  --color-nav-hover: #8bc7ff;
-  --color-secondary-hover: #3848a1;
   --color-title: #393939;
   --color-tagline: #4b4b4b;
-  --color-text: #707070;
-  --color-text-light: #4b4b4b;
   --color-body: #fbfefd;
-  --color-container: #fefefe;
   --color-btn-title: #fff;
   --color-card-title: #fff;
+
+  --scroll-bar-color: #252f6b;
+  --scroll-bar-background: #fbfefd;
+
+  --border-primary: #252f6b;
+
+  --btn-download: #252f6b;
+  --btn-upload: #252f6b;
+  --btn-background: #252f6b;
+  --btn-hover: #3848a1;
+
+  --dropdown-background: #fbfefd;
+  --dropdown-active-background: #252f6b;
+
+  --login-forgot-hover: #252f6b;
 
   --navbar-background: #fbfefd;
   --navbar-logo: #252f6b;
   --navbar-link: #393939;
   --navbar-link-hover: #8bc7ff;
+  --navbar-selected: #252f6b;
 
   --hero-background: #fbfefd;
   --hero-span: #252f6b;
@@ -33,10 +44,12 @@
   --tasks-background: #fbfefd;
   --tasks-container-background: #fbfefd;
   --tasks-bar: #252f6b;
-  --tasks-card-header-background: #252f6b;
+  --tasks-card-header-background: #4a6bff;
   --tasks-card-header: #fff;
   --tasks-card-content-background: #fbfefd;
   --tasks-card-content: #000;
+
+  --task-font-color: #252f6b;
 
   --profile-header-background: #252f6b;
   --profile-header: #fff;
@@ -49,7 +62,11 @@
 }
 
 .dark__mode {
-  --color-body: #111010;
+  --navbar-background: #201d1d;
+  --navbar-logo: #fff;
+  --navbar-link: #fff;
+  --navbar-link-hover: #8bc7ff;
+  --navbar-selected: #8bc7ff;
 }
 
 *,

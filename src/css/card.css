@@ -12,7 +12,7 @@
 }
 
 .card__task:hover .card__task__title {
-  background: var(--color-secondary);
+  background: var(--tasks-card-header-background);
 }
 
 .card__task__title {
