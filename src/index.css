@@ -61,19 +61,23 @@
 
 .dark__mode {
   --color-background: #050d1a;
+  --color-primary: #3e64ff;
 
-  --btn-background: #185adb;
+  --scroll-bar-color: #fff;
+  --scroll-bar-background: #fff;
+
+  --btn-background: var(--color-primary);
   --btn-hover: #3848a1;
 
   --navbar-background: var(--color-background);
   --navbar-logo: #fff;
   --navbar-link: #fff;
-  --navbar-link-hover: #185adb;
-  --navbar-selected: #185adb;
+  --navbar-link-hover: var(--color-primary);
+  --navbar-selected: var(--color-primary);
 
   --hero-background: var(--color-background);
   --hero-color: #fff;
-  --hero-span: #185adb;
+  --hero-span: var(--color-primary);
   --hero-tagline: #fff;
 }
 
@@ -84,6 +88,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Prompt", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scroll-bar-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-color);
+  border-radius: 50px;
+  /* border: 1px solid var(--color-primary); */
 }
 
 html {

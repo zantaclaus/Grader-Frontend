@@ -40,17 +40,3 @@
 .pattern .pattern__detail {
   font-size: 1.8rem;
 }
-
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: var(--scroll-bar-background);
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-bar-color);
-  border-radius: 50px;
-  /* border: 1px solid var(--color-primary); */
-}
