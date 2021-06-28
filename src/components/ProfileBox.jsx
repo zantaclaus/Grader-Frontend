@@ -4,8 +4,11 @@ import Aos from "aos";
 import { Link } from "react-router-dom";
 import user from "../images/user.png";
 import "../css/profileBox.css";
+import { useSelector } from "react-redux";
 
 function ProfileBox(props) {
+  const userDetail = useSelector((state) => state.userDetail.user);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -21,13 +24,13 @@ function ProfileBox(props) {
           </div>
           <div className="profile__details">
             <h2>
-              Username : <span>น้องฉลาม</span>
+              Username : <span>{userDetail.username}</span>
             </h2>
             <h2>
-              Nickname : <span>น้องฉลาม123</span>
+              Nickname : <span>{userDetail.nickName}</span>
             </h2>
             <h2>
-              Team : <span>ชาหลามไง</span>
+              Team : <span>{userDetail.group}</span>
             </h2>
           </div>
           <Link to="/" className="profile__btn">

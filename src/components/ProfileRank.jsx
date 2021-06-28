@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import team2 from "../images/team2.webp";
 import "../css/profileRank.css";
+import { useSelector } from "react-redux";
 
 function ProfileRank(props) {
+  const userDetail = useSelector((state) => state.userDetail.user);
+
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
@@ -20,7 +23,7 @@ function ProfileRank(props) {
           </div>
           <div className="rank__score">
             <h3>Your score</h3>
-            <h1>14634</h1>
+            <h1>{userDetail.score}</h1>
             <h3>points</h3>
           </div>
         </div>

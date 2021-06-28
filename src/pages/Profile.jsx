@@ -10,6 +10,8 @@ import { fetchUserDetail, setUserDetail } from "../redux/actions/userAction";
 
 function Profile(props) {
   const user = useSelector((state) => state.user.user);
+  const userDetail = useSelector((state) => state.userDetail.user);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,16 +21,22 @@ function Profile(props) {
   });
 
   return (
-    <div className="profile__background">
-      <div className="profile__container">
-        <ProfileBox />
-        <div className="profile__propoties">
-          <ProfileRank />
+    <React.Fragment>
+      {!userDetail ? (
+        <h1>Loading...</h1>
+      ) : (
+        <div className="profile__background">
+          <div className="profile__container">
+            <ProfileBox />
+            <div className="profile__propoties">
+              <ProfileRank />
 
-          <ProfileProgress />
+              <ProfileProgress />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </React.Fragment>
   );
 }
 
