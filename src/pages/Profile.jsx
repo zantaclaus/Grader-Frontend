@@ -5,20 +5,16 @@ import ProfileProgress from "../components/ProfileProgress";
 import "../css/profile.css";
 import { useEffect } from "react";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUserDetail, setUserDetail } from "../redux/actions/userAction";
 
 function Profile(props) {
   const user = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (user.id) {
-      const fetchUser = async () => {
-        const response = await axios.get(
-          `https://api.ceboostup.com/api/user?id=${user.id}`
-        );
-        console.log("user", response.data);
-      };
-
-      fetchUser();
+      dispatch(fetchUserDetail(user.id));
     }
   });
 
