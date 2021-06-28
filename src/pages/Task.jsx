@@ -10,6 +10,7 @@ import BtnUpload from "../components/BtnUpload";
 import "../css/task.css";
 import TaskSubmit from "../components/TaskSubmit";
 import BtnDownload from "../components/BtnDownload";
+import axios from "axios";
 
 function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>
@@ -40,12 +41,17 @@ int main()
     event.target.value = ""; // Clear File
   };
 
-  const handleCodeSubmit = () => {
-    alert("Submit");
+  const handleCodeSubmit = async () => {
+    if (userId) {
+      await axios.post(
+        `https://api.ceboostup.com/api/submit?userId=${user.id}&questionId=${taskId}`,
+        { code: code }
+      );
+    }
   };
 
   useEffect(() => {
-    if (taskId) dispatch(fetchTask(userId, taskId));
+    if (taskId && userId) dispatch(fetchTask(userId, taskId));
     return () => {
       dispatch(removeSelectedTasks());
     };

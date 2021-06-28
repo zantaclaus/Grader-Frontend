@@ -1,9 +1,11 @@
 import axios from "axios";
+import { useSelector } from "react-redux";
 import { apiUrl } from "../config.json";
 
 export function getTasks() {
-  const userid = "60c76bb43b3b05150093c9d8";
-  return axios.get(apiUrl + `/all-questions?id=${userid}`).catch((error) => {
+  const user = useSelector((state) => state.user.user);
+
+  return axios.get(apiUrl + `/all-questions?id=${user.id}`).catch((error) => {
     console.log(error);
   });
 }
