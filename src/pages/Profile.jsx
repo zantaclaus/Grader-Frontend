@@ -4,9 +4,8 @@ import ProfileRank from "../components/ProfileRank";
 import ProfileProgress from "../components/ProfileProgress";
 import "../css/profile.css";
 import { useEffect } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUserDetail, setUserDetail } from "../redux/actions/userAction";
+import { fetchUserDetail } from "../redux/actions/userAction";
 
 function Profile(props) {
   const user = useSelector((state) => state.user.user);
@@ -30,7 +29,6 @@ function Profile(props) {
             <ProfileBox />
             <div className="profile__propoties">
               <ProfileRank />
-
               <ProfileProgress />
             </div>
           </div>
