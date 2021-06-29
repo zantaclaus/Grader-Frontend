@@ -11,7 +11,9 @@ function Tasks(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTasks(userId));
+    if (userId) {
+      dispatch(fetchTasks(userId));
+    }
   }, [dispatch, userId]);
 
   return (

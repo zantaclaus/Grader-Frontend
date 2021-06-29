@@ -10,25 +10,27 @@ function Card({ task, titleColor }) {
   const whiteStar = _.range(task.rank + 1, 6);
 
   return (
-    <div>
-      <div className={titleColor}>
-        <Link to={`/tasks/${task._id}`} className="card__link">
-          <div className="card__task__title">{task.title}</div>
-          <div className="card__task__content">
-            <div className="unit">{task.unit}</div>
-            <div className="passed">{task.finished}</div>
-            <div className="star">
-              {blackStar.map((rank) => (
-                <AiFillStar key={rank} size="2.3rem" />
-              ))}
-              {whiteStar.map((rank) => (
-                <AiOutlineStar key={rank} size="2.3rem" />
-              ))}
+    <React.Fragment>
+      <div>
+        <div className={titleColor}>
+          <Link to={`/tasks/${task._id}`} className="card__link">
+            <div className="card__task__title">{task.title}</div>
+            <div className="card__task__content">
+              <div className="unit">{task.unit}</div>
+              <div className="passed">{task.finished}</div>
+              <div className="star">
+                {blackStar.map((rank) => (
+                  <AiFillStar key={rank} size="2.3rem" />
+                ))}
+                {whiteStar.map((rank) => (
+                  <AiOutlineStar key={rank} size="2.3rem" />
+                ))}
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

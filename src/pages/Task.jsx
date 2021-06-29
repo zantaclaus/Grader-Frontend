@@ -10,7 +10,6 @@ import BtnUpload from "../components/BtnUpload";
 import "../css/task.css";
 import TaskSubmit from "../components/TaskSubmit";
 import BtnDownload from "../components/BtnDownload";
-import axios from "axios";
 
 function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>
@@ -41,15 +40,6 @@ int main()
     event.target.value = ""; // Clear File
   };
 
-  const handleCodeSubmit = async () => {
-    if (userId) {
-      await axios.post(
-        `https://api.ceboostup.com/api/submit?userId=${user.id}&questionId=${taskId}`,
-        { code: code }
-      );
-    }
-  };
-
   useEffect(() => {
     if (taskId && userId) dispatch(fetchTask(userId, taskId));
     return () => {
@@ -62,7 +52,7 @@ int main()
       {Object.keys(task).length === 0 ? (
         <h1>Loading...</h1>
       ) : (
-        <form className="task__form">
+        <div className="task__form">
           <div className="task__grid">
             <div className="task__left">
               <TaskQuestion />
@@ -90,12 +80,12 @@ int main()
                     handleFileChange={handleFileChange}
                     onInputClick={onInputClick}
                   />
-                  <TaskSubmit handleCodeSubmit={handleCodeSubmit} />
+                  <TaskSubmit code={code} taskId={taskId} />
                 </div>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       )}
     </React.Fragment>
   );

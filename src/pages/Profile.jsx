@@ -17,7 +17,7 @@ function Profile(props) {
     if (user.id) {
       dispatch(fetchUserDetail(user.id));
     }
-  });
+  }, [user.id, dispatch]);
 
   return (
     <React.Fragment>
