@@ -14,9 +14,17 @@
   color: var(--hero-color);
 }
 
-.hero__content span {
-  color: var(--hero-span);
+.hero__title--1 {
+  color: #0084a4;
 }
+
+.hero__title--2 {
+  color: #03468f;
+}
+
+/* .hero__content span {
+  color: var(--hero-span);
+} */
 
 .hero__content p {
   font-size: 2rem;
@@ -63,5 +71,53 @@
 }
 
 #Vector {
-  fill: #eaeaeb;
+  fill: #0000cd;
+}
+
+#flower1 {
+  fill: #20b2aa;
+}
+
+#flower2 {
+  fill: #20b2aa;
+}
+
+#flower3 {
+  fill: #20b2aa;
+}
+
+#flower4 {
+  fill: #20b2aa;
+}
+
+#flower5 {
+  fill: #20b2aa;
+}
+
+#flower6 {
+  fill: #20b2aa;
+}
+
+#flower7 {
+  fill: #0084a4;
+}
+
+#flower8 {
+  fill: #0084a4;
+}
+
+#flower9 {
+  fill: #0084a4;
+}
+
+#flower10 {
+  fill: #0084a4;
+}
+
+#flower11 {
+  fill: #0084a4;
+}
+
+#flower12 {
+  fill: #0084a4;
 }

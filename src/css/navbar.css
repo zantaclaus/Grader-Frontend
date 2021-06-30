@@ -28,8 +28,17 @@
 
 .nav__link {
   font-size: var(--font-list);
-  color: var(--navbar-link);
+  /* color: var(--navbar-link); */
 }
+
+.nav__link--1 {
+  color: var(--navbar-link-1);
+}
+
+.nav__link--2 {
+  color: var(--navbar-link-2);
+}
+
 .nav__link:hover {
   color: var(--navbar-link-hover);
 }

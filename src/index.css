@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
+  --scroll-bar-color: #252f6b;
+  --scroll-bar-background: #fbfefd;
+
+  --border-primary: #252f6b;
+
+  --btn-background: #07ceeb;
+  --btn-hover: #3848a1;
+
+  --dropdown-background: #fbfefd;
+  --dropdown-active-background: #252f6b;
+
   /* ======= Colors ======== */
   --color-background: #fbfefd;
   --color-primary: #252f6b;
@@ -10,22 +21,13 @@
   --color-btn-title: #fff;
   --color-card-title: #fff;
 
-  --scroll-bar-color: #252f6b;
-  --scroll-bar-background: #fbfefd;
-
-  --border-primary: #252f6b;
-
-  --btn-background: #252f6b;
-  --btn-hover: #3848a1;
-
-  --dropdown-background: #fbfefd;
-  --dropdown-active-background: #252f6b;
-
   --login-forgot-hover: #252f6b;
 
   --navbar-background: #fbfefd;
   --navbar-logo: #252f6b;
   --navbar-link: #393939;
+  --navbar-link-1: #252f6b;
+  --navbar-link-2: #252f6b;
   --navbar-link-hover: #8bc7ff;
   --navbar-selected: #252f6b;
 
@@ -68,12 +70,14 @@
   --scroll-bar-color: #fff;
   --scroll-bar-background: #fff;
 
-  --btn-background: var(--color-primary);
+  --btn-background: #07ceeb;
   --btn-hover: #3848a1;
 
   --navbar-background: var(--color-background);
   --navbar-logo: #fff;
   --navbar-link: #fff;
+  --navbar-link-1: #f72585;
+  --navbar-link-2: #b5179e;
   --navbar-link-hover: var(--color-primary);
   --navbar-selected: var(--color-primary);
 

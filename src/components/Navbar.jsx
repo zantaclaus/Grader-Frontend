@@ -35,7 +35,7 @@ function Navbar(props) {
               <NavLink
                 to="/home"
                 activeClassName="nav__selected"
-                className="nav__link"
+                className="nav__link--1 nav__link"
                 onClick={linkClick}
               >
                 Home
@@ -46,7 +46,7 @@ function Navbar(props) {
               <NavLink
                 to="/tasks"
                 activeClassName="nav__selected"
-                className="nav__link"
+                className="nav__link--2 nav__link"
                 onClick={linkClick}
               >
                 Tasks
@@ -57,7 +57,7 @@ function Navbar(props) {
               <NavLink
                 to="/guidebook"
                 activeClassName="nav__selected"
-                className="nav__link"
+                className="nav__link--1 nav__link"
                 onClick={linkClick}
               >
                 Guidebook
@@ -68,7 +68,7 @@ function Navbar(props) {
               <NavLink
                 to="/profile"
                 activeClassName="nav__selected"
-                className="nav__link"
+                className="nav__link--2 nav__link"
                 onClick={linkClick}
               >
                 Profile
@@ -76,7 +76,7 @@ function Navbar(props) {
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/logout" className="nav__link">
+              <NavLink to="/logout" className="nav__link--1 nav__link">
                 Logout
               </NavLink>
             </li>
