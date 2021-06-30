@@ -35,9 +35,11 @@
   --hero-tagline: #4b4b4b;
 
   --leader-background: #fbfefd;
+  --leader-title: #000;
   --leader-tagline: #4b4b4b;
   --leader-border: #252f6b;
   --leader-card: #252f6b;
+  --leader-user: #252f6b;
 
   --tasks-background: #fbfefd;
   --tasks-container-background: #fbfefd;
@@ -79,6 +81,13 @@
   --hero-color: #fff;
   --hero-span: var(--color-primary);
   --hero-tagline: #fff;
+
+  --leader-background: var(--color-background);
+  --leader-title: #fff;
+  --leader-tagline: var(--color-primary);
+  --leader-border: #fff;
+  --leader-card: #fff;
+  --leader-user: #fff;
 }
 
 *,
