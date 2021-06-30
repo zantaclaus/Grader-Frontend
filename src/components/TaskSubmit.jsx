@@ -4,19 +4,36 @@ import { FaLocationArrow } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-function TaskSubmit({ code, taskId }) {
+function TaskSubmit({ code, taskId, input, output }) {
   const user = useSelector((state) => state.user.user);
 
-  function autoRefresh(t) {
-    setTimeout("location.reload(true)", t);
-  }
+  const refreshPage = () => {
+    window.location.reload();
+  };
 
   const handleCodeSubmit = async () => {
-    await axios.post(
-      `https://api.ceboostup.com/api/submit?userId=${user.id}&questionId=${taskId}`,
-      { code: code }
-    );
-    autoRefresh();
+    const data = {
+      questionId: taskId,
+      userId: user.id,
+      rank: 1,
+      code: code,
+      input: input,
+      output: output,
+    };
+
+    await fetch(`https://compiler.ceboostup.com/check_result`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" },
+    });
+    // await axios.post(`https://compiler.ceboostup.com/check_result`, {
+    //   questionId: taskId,
+    //   userId: user.id,
+    //   code: code,
+    //   input: input,
+    //   output: output,
+    // });
+    refreshPage();
   };
 
   return (

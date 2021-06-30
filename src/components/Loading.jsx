@@ -6,7 +6,7 @@ function Loading(props) {
   return (
     <div className="loading__container">
       <div className="spinee">
-        <span style={{ i: 1 }}></span>
+        <span className="spand1"></span>
         <span style={{ i: 3 }}></span>
         <span style={{ i: 4 }}></span>
         <span style={{ i: 5 }}></span>
@@ -27,7 +27,7 @@ function Loading(props) {
         <span style={{ i: 19 }}></span>
         <span style={{ i: 20 }}></span>
         <div className="shark">
-          <IoFishOutline />
+          <IoFishOutline size="3rem" />
         </div>
       </div>
     </div>

@@ -81,7 +81,12 @@ int main()
                     handleFileChange={handleFileChange}
                     onInputClick={onInputClick}
                   />
-                  <TaskSubmit code={code} taskId={taskId} />
+                  <TaskSubmit
+                    code={code}
+                    taskId={taskId}
+                    input={task.input}
+                    output={task.output}
+                  />
                 </div>
               </div>
             </div>
