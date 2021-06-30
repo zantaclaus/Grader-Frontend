@@ -10,6 +10,7 @@ import BtnUpload from "../components/BtnUpload";
 import "../css/task.css";
 import TaskSubmit from "../components/TaskSubmit";
 import BtnDownload from "../components/BtnDownload";
+import Loading from "../components/Loading";
 
 function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>
@@ -50,7 +51,7 @@ int main()
   return (
     <React.Fragment>
       {Object.keys(task).length === 0 ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
         <div className="task__form">
           <div className="task__grid">

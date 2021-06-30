@@ -6,6 +6,7 @@ import "../css/profile.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUserDetail } from "../redux/actions/userAction";
+import Loading from "../components/Loading";
 
 function Profile(props) {
   const user = useSelector((state) => state.user.user);
@@ -22,7 +23,7 @@ function Profile(props) {
   return (
     <React.Fragment>
       {!userDetail ? (
-        <h1>Loading...</h1>
+        <Loading />
       ) : (
         <div className="profile__background">
           <div className="profile__container">
