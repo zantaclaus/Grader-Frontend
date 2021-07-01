@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
 import { BiImageAlt } from "react-icons/bi";
 import { BiUserPin } from "react-icons/bi";
 import { BiKey } from "react-icons/bi";
