@@ -13,6 +13,7 @@ import { setUser } from "./redux/actions/userAction";
 import { useDispatch, useSelector } from "react-redux";
 import GuideBook from "./pages/GuideBook";
 import Manage from "./pages/Manage";
+import ManagePassword from "./pages/ManagePassword";
 
 function App(props) {
   const user = useSelector((state) => state.user.user);
@@ -40,6 +41,7 @@ function App(props) {
           <ProtectedRoute path="/tasks" component={Tasks} />
           <ProtectedRoute path="/guidebook" component={GuideBook} />
           <ProtectedRoute path="/profile" component={Profile} />
+          <ProtectedRoute path="/managePassword" component={ManagePassword} />
           <ProtectedRoute path="/manage" component={Manage} />
           <ProtectedRoute path="/home" component={Home} />
           <Redirect path="/" exact to="/home" />

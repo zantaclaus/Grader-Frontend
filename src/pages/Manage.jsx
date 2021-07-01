@@ -6,14 +6,14 @@ import { BiKey } from "react-icons/bi";
 import "../css/manage.css";
 
 function Manage(props) {
-  const linkClick = () => {
+  const linkClick = (path) => {
     console.log("click");
-    window.location = "/";
+    window.location = `/${path}`;
   };
 
   return (
     <div className="manage__container">
-      <div className="manage__box" onClick={linkClick}>
+      <div className="manage__box" onClick={() => linkClick("managePassword")}>
         <div className="manage__iconBx">
           <BiImageAlt size="20rem" color="black" />
         </div>
@@ -25,7 +25,7 @@ function Manage(props) {
         </div>
       </div>
 
-      <div className="manage__box" onClick={linkClick}>
+      <div className="manage__box" onClick={() => linkClick("managePassword")}>
         <div className="manage__iconBx">
           <BiUserPin size="20rem" />
         </div>
@@ -37,7 +37,7 @@ function Manage(props) {
         </div>
       </div>
 
-      <div className="manage__box" onClick={linkClick}>
+      <div className="manage__box" onClick={() => linkClick("managePassword")}>
         <div className="manage__iconBx">
           <BiKey size="20rem" />
         </div>
