@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
-import hero from "../images/hero.svg";
+// import hero from "../images/hero.svg";
 import "../css/hero.css";
 
 function Hero(props) {
@@ -30,7 +30,7 @@ function Hero(props) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="hero 1" clip-path="url(#clip0)">
+            <g id="hero 1" clipPath="url(#clip0)">
               <g id="plane">
                 <path
                   id="Vector"
@@ -43,8 +43,8 @@ function Hero(props) {
                 id="kan2"
                 d="M294.91 324.85C294.91 324.85 248.91 243.33 179.59 219.85C150.5 209.99 125.11 191.45 107.75 166.11C99.5295 154.077 92.433 141.313 86.55 127.98"
                 stroke="#535461"
-                stroke-width="2"
-                stroke-miterlimit="10"
+                strokeWidth="2"
+                strokeMiterlimit="10"
               />
               <path
                 id="flower12"
@@ -70,8 +70,8 @@ function Hero(props) {
                 id="kan1"
                 d="M292.26 323.23C292.26 323.23 283.26 230.06 229.38 180.5C206.79 159.7 191.09 132.45 185.48 102.26C182.847 87.927 181.535 73.3827 181.56 58.81"
                 stroke="#535461"
-                stroke-width="2"
-                stroke-miterlimit="10"
+                strokeWidth="2"
+                strokeMiterlimit="10"
               />
               <path
                 id="flower4"
@@ -639,9 +639,9 @@ function Hero(props) {
                 y2="291.49"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#808080" stop-opacity="0.25" />
-                <stop offset="0.54" stop-color="#808080" stop-opacity="0.12" />
-                <stop offset="1" stop-color="#808080" stop-opacity="0.1" />
+                <stop stopColor="#808080" stopOpacity="0.25" />
+                <stop offset="0.54" stopColor="#808080" stopOpacity="0.12" />
+                <stop offset="1" stopColor="#808080" stopOpacity="0.1" />
               </linearGradient>
               <clipPath id="clip0">
                 <rect width="1150.44" height="866.47" fill="white" />

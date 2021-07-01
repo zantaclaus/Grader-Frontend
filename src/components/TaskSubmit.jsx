@@ -2,7 +2,7 @@ import React from "react";
 import "../css/taskSubmit.css";
 import { FaLocationArrow } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import axios from "axios";
+// import axios from "axios";
 
 function TaskSubmit({ code, taskId, input, output }) {
   const user = useSelector((state) => state.user.user);
