@@ -33,7 +33,7 @@ function ProfileBox(props) {
               Team : <span>{userDetail.group}</span>
             </h2>
           </div>
-          <Link to="/" className="profile__btn">
+          <Link to="/manage" className="profile__btn">
             Account Manage
           </Link>
         </div>
