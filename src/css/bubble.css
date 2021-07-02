@@ -6,10 +6,12 @@
   justify-content: space-around;
   position: absolute;
   bottom: -70px;
+  visibility: hidden;
 }
 .bubbles img {
   width: 50px;
   animation: bubble 7s linear infinite;
+  animation-fill-mode: backwards;
 }
 .bubbles img:nth-child(1) {
   width: 25px;
@@ -40,6 +42,8 @@
 @keyframes bubble {
   0% {
     transform: translateY(0);
+    visibility: visible;
+    opacity: 0;
   }
   50% {
     opacity: 1;
