@@ -1,13 +1,25 @@
 import React, { useState } from "react";
+import { getTheme, setTheme } from "../services/themeService";
 import { Link, NavLink } from "react-router-dom";
 import { addToggle, delClass } from "../services/toggleService";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 import "../css/navbar.css";
+import { useEffect } from "react";
 
 function Navbar(props) {
-  const [isMoon, setIsMoon] = useState(true);
+  const [isLight, setIsLight] = useState(true);
+
+  useEffect(() => {
+    const theme = getTheme();
+    if (theme === "light") {
+      setIsLight(true);
+    } else {
+      addToggle("root", "dark__mode");
+      setIsLight(false);
+    }
+  }, []);
 
   const menuClick = () => {
     addToggle("navbar", "show__menu");
@@ -19,7 +31,14 @@ function Navbar(props) {
 
   const themeClick = () => {
     addToggle("root", "dark__mode");
-    setIsMoon(!isMoon);
+    setIsLight(!isLight);
+    setTheme();
+    const theme = getTheme();
+    if (theme === "light") {
+      setIsLight(true);
+    } else {
+      setIsLight(false);
+    }
   };
 
   return (
@@ -83,14 +102,14 @@ function Navbar(props) {
           </ul>
         </div>
         <div className="nav__toggle" id="nav-toggle">
-          {isMoon ? (
+          {isLight ? (
             <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
           ) : (
             <GiHamburgerMenu size="3rem" color="white" onClick={menuClick} />
           )}
         </div>
         <div className="theme__toggle" id="theme-toggle" onClick={themeClick}>
-          {isMoon ? (
+          {isLight ? (
             <IoMoon size="3rem" />
           ) : (
             <IoSunny size="3rem" color="white" />

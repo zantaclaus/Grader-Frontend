@@ -6,6 +6,7 @@ import auth from "../services/authService";
 import Error from "../components/Error";
 import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
+import { delClass } from "../services/toggleService";
 
 class Login extends Component {
   state = {
@@ -20,6 +21,10 @@ class Login extends Component {
 
   componentDidMount() {
     Aos.init({ duration: 1000 });
+  }
+
+  componentDidUpdate() {
+    delClass("root", "dark__mode");
   }
 
   validateProperty = ({ name, value }) => {
