@@ -36,7 +36,9 @@ function TaskQuestion(props) {
         />
       </div>
       <h1>
-        <a href={task.linkPDF}>click</a>
+        <a href={task.linkPDF} target="_blank">
+          click
+        </a>
       </h1>
     </div>
   );
