@@ -15,11 +15,11 @@
 }
 
 .hero__title--1 {
-  color: #0084a4;
+  color: var(--hero-span);
 }
 
 .hero__title--2 {
-  color: #03468f;
+  color: var(--hero-span);
 }
 
 /* .hero__content span {
@@ -71,53 +71,65 @@
 }
 
 #Vector {
-  fill: #0000cd;
+  fill: var(--hero-plain);
 }
 
 #flower1 {
-  fill: #20b2aa;
+  fill: var(--hero-flower-1);
 }
 
 #flower2 {
-  fill: #20b2aa;
+  fill: var(--hero-flower-1);
 }
 
 #flower3 {
-  fill: #20b2aa;
+  fill: var(--hero-flower-1);
 }
 
 #flower4 {
-  fill: #20b2aa;
+  fill: var(--hero-flower-1);
 }
 
 #flower5 {
-  fill: #20b2aa;
+  fill: var(--hero-flower-1);
 }
 
 #flower6 {
-  fill: #20b2aa;
+  fill: var(--hero-flower-1);
 }
 
 #flower7 {
-  fill: #0084a4;
+  fill: var(--hero-flower-2);
 }
 
 #flower8 {
-  fill: #0084a4;
+  fill: var(--hero-flower-2);
 }
 
 #flower9 {
-  fill: #0084a4;
+  fill: var(--hero-flower-2);
 }
 
 #flower10 {
-  fill: #0084a4;
+  fill: var(--hero-flower-2);
 }
 
 #flower11 {
-  fill: #0084a4;
+  fill: var(--hero-flower-2);
 }
 
 #flower12 {
-  fill: #0084a4;
+  fill: var(--hero-flower-2);
+}
+
+#Vector_31 {
+  fill: var(--hero-bar-1);
+}
+
+#Vector_32 {
+  fill: var(--hero-bar-2);
+}
+
+#Vector_33 {
+  fill: var(--hero-bar-3);
 }

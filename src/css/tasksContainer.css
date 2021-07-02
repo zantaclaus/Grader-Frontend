@@ -3,10 +3,10 @@
 }
 
 .tasks__container {
-  margin: 1rem 2rem 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   height: var(--container-height);
-  box-shadow: 0 0 10px rgb(146, 145, 145);
   border-radius: 10px;
+  /* box-shadow: 0 0 10px rgb(146, 145, 145); */
 }
 
 .tasks__bar {
@@ -35,7 +35,7 @@
 
 .tasks__content {
   background-color: var(--tasks-container-background);
-  height: calc(100% - 8rem);
+  height: calc(100% - 11rem);
   overflow: auto;
 }
 
@@ -79,6 +79,6 @@
   }
 
   .tasks__content {
-    height: calc(100% - 9rem);
+    height: calc(100% - 13rem);
   }
 }

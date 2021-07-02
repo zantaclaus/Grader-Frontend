@@ -2,7 +2,7 @@
   width: 30rem;
   margin-bottom: 3rem;
   border-radius: 25px;
-  box-shadow: 0 2px 4px #c4c4c4;
+  box-shadow: 0 2px 4px var(--tasks-card-shadow);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -12,7 +12,7 @@
 }
 
 .card__task:hover .card__task__title {
-  background: var(--tasks-card-header-background);
+  background: var(--tasks-card-header-background-hover);
 }
 
 .card__task__title {
@@ -20,7 +20,7 @@
   font-size: 2.15rem;
   font-weight: 500;
   color: var(--tasks-card-header);
-  background: #2f40ac;
+  background: var(--tasks-card-header-background);
   border-radius: 25px 25px 0 0;
   display: flex;
   justify-content: center;

@@ -11,7 +11,7 @@
   align-items: center;
   border-radius: 10px;
   color: white;
-  background-color: var(--btn-background);
+  background: var(--btn-background);
 }
 
 .submit__label {

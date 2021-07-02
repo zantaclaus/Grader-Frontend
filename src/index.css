@@ -35,6 +35,12 @@
   --hero-color: #000;
   --hero-span: #252f6b;
   --hero-tagline: #4b4b4b;
+  --hero-plain: #0000cd;
+  --hero-flower-1: #20b2aa;
+  --hero-flower-2: #0084a4;
+  --hero-bar-1: #665cf7;
+  --hero-bar-2: #b86ef1;
+  --hero-bar-3: #f46dfb;
 
   --leader-background: #fbfefd;
   --leader-title: #000;
@@ -46,7 +52,9 @@
   --tasks-background: #fbfefd;
   --tasks-container-background: #fbfefd;
   --tasks-bar: #252f6b;
-  --tasks-card-header-background: #4a6bff;
+  --tasks-card-shadow: #c4c4c4;
+  --tasks-card-header-background: #2f40ac;
+  --tasks-card-header-background-hover: #4a6bff;
   --tasks-card-header: #fff;
   --tasks-card-content-background: #fbfefd;
   --tasks-card-content: #000;
@@ -66,32 +74,52 @@
 .dark__mode {
   --color-background: #050d1a;
   --color-primary: #3e64ff;
-
-  --scroll-bar-color: #fff;
-  --scroll-bar-background: #fff;
-
-  --btn-background: #07ceeb;
-  --btn-hover: #3848a1;
+  --color-btn-title: #fff;
 
   --navbar-background: var(--color-background);
-  --navbar-logo: #fff;
+  --navbar-logo: #5cccf7;
   --navbar-link: #fff;
-  --navbar-link-1: #f72585;
-  --navbar-link-2: #b5179e;
+  --navbar-link-1: #665cf7;
+  --navbar-link-2: #b86ef1;
+  --navbar-link-3: #f46dfb;
+  --navbar-link-4: #f360ac;
+  --navbar-link-5: #fff;
   --navbar-link-hover: var(--color-primary);
   --navbar-selected: var(--color-primary);
 
   --hero-background: var(--color-background);
   --hero-color: #fff;
-  --hero-span: var(--color-primary);
+  --hero-span: #2ecbb9;
   --hero-tagline: #fff;
+  --hero-plain: #3e64ff;
+  --hero-flower-1: #20b2aa;
+  --hero-flower-2: #0084a4;
+  --hero-bar-1: #665cf7;
+  --hero-bar-2: #b86ef1;
+  --hero-bar-3: #f46dfb;
 
   --leader-background: var(--color-background);
-  --leader-title: #fff;
-  --leader-tagline: var(--color-primary);
-  --leader-border: #fff;
-  --leader-card: #fff;
-  --leader-user: #fff;
+  --leader-title: #f360ac;
+  --leader-tagline: #fff;
+  --leader-border: #b86ef1;
+  --leader-card: #f7fcff;
+  --leader-user: #5cccf7;
+
+  --tasks-background: var(--color-background);
+  --tasks-container-background: #1b222e;
+  --tasks-bar: #2b2490;
+  --tasks-card-shadow: #1b222e;
+  --tasks-card-header-background: #0840a8;
+  --tasks-card-header-background-hover: #2a4ce6;
+  --tasks-card-header: #fff;
+  --tasks-card-content-background: var(--color-background);
+  --tasks-card-content: #fbfefd;
+
+  --scroll-bar-color: #fff;
+  --scroll-bar-background: #fff;
+
+  --btn-background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+  --btn-hover: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
 }
 
 *,
@@ -190,7 +218,8 @@ a {
   border-radius: 40px;
   border: 0;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  letter-spacing: 2;
   font-weight: 600;
   margin: 1rem 0;
   padding: 2rem 3rem;

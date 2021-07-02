@@ -1,10 +1,10 @@
 .tasks__container {
-  --container-height: 100rem;
+  --container-height: calc(100vh - 3.5rem);
 }
 
 @media screen and (min-width: 768px) {
   .tasks__container {
-    --container-height: 68rem;
+    --container-height: calc(100vh - 6.2rem);
   }
 
   .tasks__header {
@@ -26,6 +26,6 @@
 
 @media screen and (min-width: 1700px) {
   .tasks__container {
-    --container-height: 89.5rem;
+    --container-height: calc(100vh - 6.2rem);
   }
 }

@@ -34,9 +34,17 @@
 .nav__link--1 {
   color: var(--navbar-link-1);
 }
-
 .nav__link--2 {
   color: var(--navbar-link-2);
+}
+.nav__link--3 {
+  color: var(--navbar-link-3);
+}
+.nav__link--4 {
+  color: var(--navbar-link-4);
+}
+.nav__link--5 {
+  color: var(--navbar-link-5);
 }
 
 .nav__link:hover {

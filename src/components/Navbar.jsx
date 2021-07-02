@@ -26,7 +26,7 @@ function Navbar(props) {
     <div className="navbar" id="navbar">
       <nav className="nav__container">
         <Link to="/" className="nav__logo">
-          CE BOOTSUP #9
+          CE BOOSTUP #9
         </Link>
 
         <div className="nav__menu" id="nav__menu">
@@ -35,7 +35,7 @@ function Navbar(props) {
               <NavLink
                 to="/home"
                 activeClassName="nav__selected"
-                className="nav__link--1 nav__link"
+                className="nav__link nav__link--1"
                 onClick={linkClick}
               >
                 Home
@@ -46,7 +46,7 @@ function Navbar(props) {
               <NavLink
                 to="/tasks"
                 activeClassName="nav__selected"
-                className="nav__link--2 nav__link"
+                className="nav__link nav__link--2"
                 onClick={linkClick}
               >
                 Tasks
@@ -57,7 +57,7 @@ function Navbar(props) {
               <NavLink
                 to="/guidebook"
                 activeClassName="nav__selected"
-                className="nav__link--1 nav__link"
+                className="nav__link nav__link--3"
                 onClick={linkClick}
               >
                 Guidebook
@@ -68,7 +68,7 @@ function Navbar(props) {
               <NavLink
                 to="/profile"
                 activeClassName="nav__selected"
-                className="nav__link--2 nav__link"
+                className="nav__link nav__link--4"
                 onClick={linkClick}
               >
                 Profile
@@ -76,7 +76,7 @@ function Navbar(props) {
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/logout" className="nav__link--1 nav__link">
+              <NavLink to="/logout" className="nav__link nav__link--5">
                 Logout
               </NavLink>
             </li>
