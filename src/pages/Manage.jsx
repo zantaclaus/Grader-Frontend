@@ -1,7 +1,7 @@
 import React from "react";
-import { BiImageAlt } from "react-icons/bi";
-import { BiUserPin } from "react-icons/bi";
-import { BiKey } from "react-icons/bi";
+import { IoKeyOutline } from "react-icons/io5";
+import { IoImageOutline } from "react-icons/io5";
+import { FiUser } from "react-icons/fi";
 import "../css/manage.css";
 
 function Manage(props) {
@@ -14,23 +14,23 @@ function Manage(props) {
     <div className="manage__container">
       <div className="manage__box" onClick={() => linkClick("managePassword")}>
         <div className="manage__iconBx">
-          <BiImageAlt size="20rem" color="black" />
+          <IoImageOutline size="17rem" color="black" />
         </div>
         <div className="manage__content content__bx1">
           <div className="manage__content__icon">
-            <BiImageAlt size="15rem" />
+            <IoImageOutline size="15rem" color="white" />
           </div>
-          <h3>Change User Image</h3>
+          <h3>Change Image</h3>
         </div>
       </div>
 
       <div className="manage__box" onClick={() => linkClick("managePassword")}>
         <div className="manage__iconBx">
-          <BiUserPin size="20rem" />
+          <FiUser size="17rem" />
         </div>
         <div className="manage__content content__bx2">
           <div className="manage__content__icon">
-            <BiUserPin size="15rem" />
+            <FiUser size="15rem" color="white" />
           </div>
           <h3>Change Nickname</h3>
         </div>
@@ -38,11 +38,11 @@ function Manage(props) {
 
       <div className="manage__box" onClick={() => linkClick("managePassword")}>
         <div className="manage__iconBx">
-          <BiKey size="20rem" />
+          <IoKeyOutline size="17rem" />
         </div>
         <div className="manage__content content__bx3">
           <div className="manage__content__icon">
-            <BiKey size="15rem" />
+            <IoKeyOutline size="15rem" color="white" />
           </div>
           <h3>Change Password</h3>
         </div>
