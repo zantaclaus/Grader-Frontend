@@ -24,7 +24,7 @@ function Manage(props) {
         </div>
       </div>
 
-      <div className="manage__box" onClick={() => linkClick("managePassword")}>
+      <div className="manage__box" onClick={() => linkClick("manageNickname")}>
         <div className="manage__iconBx">
           <FiUser size="17rem" />
         </div>
