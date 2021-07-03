@@ -11,11 +11,8 @@ function ManageNickname(props) {
     setText(text);
   };
 
-  const handlePasswordSubmit = () => {
-    // console.log("password:", password);
-    // console.log("newPassword:", newPassword);
-    // console.log("confirmPassword:", confirmPassword);
-    // window.location = "/profile";
+  const handleNicknameSubmit = () => {
+    window.location = "/profile";
   };
 
   return (
@@ -35,7 +32,7 @@ function ManageNickname(props) {
             Nickname
           </label>
           <Link to="/profile">
-            <div className="nickname__btn" onClick={handlePasswordSubmit}>
+            <div className="nickname__btn" onClick={handleNicknameSubmit}>
               Submit
             </div>
           </Link>

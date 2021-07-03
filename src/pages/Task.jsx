@@ -7,10 +7,10 @@ import TaskQuestion from "../components/TaskQuestion";
 import TaskDetail from "../components/TaskDetail";
 import TaskEditor from "../components/TaskEditor";
 import BtnUpload from "../components/BtnUpload";
-import "../css/task.css";
 import TaskSubmit from "../components/TaskSubmit";
 import BtnDownload from "../components/BtnDownload";
 import Loading from "../components/Loading";
+import "../css/task.css";
 
 function Task(props) {
   const [code, setCode] = useState(`#include<stdio.h>

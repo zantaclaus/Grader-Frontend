@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import user from "../images/user.png";
 import "../css/profileBox.css";
 import { useSelector } from "react-redux";
 
-function ProfileBox(props) {
+function ProfileBox({ toggleModal }) {
   const userDetail = useSelector((state) => state.userDetail.user);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <div data-aos="flip-right">
       <div className="card card__profile profile__box">
@@ -33,9 +34,12 @@ function ProfileBox(props) {
               Team : <span>{userDetail.group}</span>
             </h2>
           </div>
-          <Link to="/manage" className="profile__btn">
+          <div className="profile__btn" onClick={toggleModal}>
             Account Manage
-          </Link>
+          </div>
+          {/* <Link to="/manage" className="profile__btn">
+            Account Manage
+          </Link> */}
         </div>
       </div>
     </div>
