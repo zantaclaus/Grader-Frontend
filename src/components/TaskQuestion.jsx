@@ -14,6 +14,7 @@ function TaskQuestion(props) {
   const arrOutput3 = task.str_output_3.replaceAll(" ", "&nbsp;").split("\n");
   const arrQ_input = task.q_input.replaceAll(" ", "&nbsp;").split("\n");
   const arrQ_output = task.q_output.replaceAll(" ", "&nbsp;").split("\n");
+  const arrDetail = task.detail.replaceAll(" ", "&nbsp;").split("\n");
 
   return (
     <div className="pdf__container">
@@ -52,6 +53,14 @@ function TaskQuestion(props) {
         {(task.str_input_3 || task.str_output_3) && (
           <TaskTable number="3" input={arrInput3} output={arrOutput3} />
         )}
+      </div>
+      <div className="pattern">
+        <div className="task__label">เพิ่มเติม</div>
+        <div className="pattern__detail">
+          {arrDetail.map((line) => (
+            <div dangerouslySetInnerHTML={{ __html: line }} />
+          ))}
+        </div>
       </div>
     </div>
   );
