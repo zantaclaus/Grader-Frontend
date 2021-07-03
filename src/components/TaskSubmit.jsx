@@ -1,17 +1,22 @@
 import React from "react";
 import "../css/taskSubmit.css";
 import { FaLocationArrow } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setCode } from "../redux/actions/codeAction";
 // import axios from "axios";
 
-function TaskSubmit({ code, taskId, input, output }) {
+function TaskSubmit({ code, taskId, input, output, setforceRender }) {
   const user = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
 
   const refreshPage = () => {
-    window.location.reload();
+    setforceRender({});
+    // window.location.reload();
   };
 
   const handleCodeSubmit = async () => {
+    dispatch(setCode(code));
+
     const data = {
       questionId: taskId,
       userId: user.id,

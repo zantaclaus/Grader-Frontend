@@ -3,6 +3,7 @@ import { taskReducer, selectedTaskReducer } from "./taskReducer";
 import { userReducer, userDetailReducer } from "./userReducer";
 import { pageReducer } from "./pageReducer";
 import { dropdownReducer } from "./dropdownReducer";
+import { codeReducer } from "./codeReducer";
 
 const reducers = combineReducers({
   user: userReducer,
@@ -11,6 +12,7 @@ const reducers = combineReducers({
   task: selectedTaskReducer,
   page: pageReducer,
   selectedUnit: dropdownReducer,
+  code: codeReducer,
 });
 
 export default reducers;

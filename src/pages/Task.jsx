@@ -13,12 +13,17 @@ import Loading from "../components/Loading";
 import "../css/task.css";
 
 function Task(props) {
-  const [code, setCode] = useState(`#include<stdio.h>
+  const [forceRender, setforceRender] = useState({});
+  const codeStore = useSelector((state) => state.code);
+  const codeStater = codeStore
+    ? codeStore
+    : `#include<stdio.h>
 int main() 
 {
-
+  
     return 0;
-}`);
+}`;
+  const [code, setCode] = useState(codeStater);
 
   let task = useSelector((state) => state.task);
   const { linkPDF } = task;
@@ -46,7 +51,7 @@ int main()
     return () => {
       dispatch(removeSelectedTasks());
     };
-  }, [dispatch, userId, taskId]);
+  }, [dispatch, userId, taskId, forceRender]);
 
   return (
     <React.Fragment>
@@ -86,6 +91,7 @@ int main()
                     taskId={taskId}
                     input={task.input}
                     output={task.output}
+                    setforceRender={setforceRender}
                   />
                 </div>
               </div>
