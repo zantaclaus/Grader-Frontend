@@ -8,7 +8,7 @@ import { BsStar } from "react-icons/bs";
 import "../css/card.css";
 
 function Card({ task, titleColor }) {
-  let blackStar = [1, 2, 3, 4, 5];
+  let blackStar = [];
   let halfStar = [];
   let whiteStar = [];
   const rank = task.rank / 2.0;
