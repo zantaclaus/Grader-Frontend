@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTasks } from "../redux/actions/taskAction";
 import TasksContainer from "../components/TasksContainer";
+import Loading from "../components/Loading";
 import "../css/tasks.css";
 
 function Tasks(props) {
@@ -18,11 +19,7 @@ function Tasks(props) {
 
   return (
     <div className="tasks__background">
-      {Object.keys(tasks).length === 0 ? (
-        <h1>Loading...</h1>
-      ) : (
-        <TasksContainer />
-      )}
+      {Object.keys(tasks).length === 0 ? <Loading /> : <TasksContainer />}
     </div>
   );
 }

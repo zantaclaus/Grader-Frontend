@@ -1,26 +1,10 @@
-/* body {
-  font-family: sans-serif;
-  margin: 200px 200px;
-  display: flex;
-  justify-content: space-around;
-  background: rgb(95, 93, 86);
-} */
-
 .loading__container {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 6.2rem);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* 
-* {
-  margin: 20;
-}
-
-body {
-  background-color: black;
-} */
 
 .spinee {
   position: relative;
@@ -34,7 +18,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: animate 2s linear infinite;
 }
 
 .spinee .span1 {
@@ -126,112 +109,121 @@ body {
   width: 15px;
   background: rgb(104, 198, 230);
   border-radius: 50%;
+  animation: scaleAnimate 1s linear infinite;
+  visibility: hidden;
 }
 
 .spinee span.span1::before {
-  animation-delay: 0.1s;
-  background-color: tomato;
+  animation-delay: 0.05s;
 }
 
 .spinee span.span2::before {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .spinee span.span3::before {
-  animation-delay: 0.3s;
+  animation-delay: 0.15s;
 }
 
 .spinee span.span4::before {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 
 .spinee span.span5::before {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
 }
 
 .spinee span.span6::before {
-  animation-delay: 0.6s;
+  animation-delay: 0.3s;
 }
 
 .spinee span.span7::before {
-  animation-delay: 0.7s;
+  animation-delay: 0.35s;
 }
 
 .spinee span.span8::before {
-  animation-delay: 0.8s;
+  animation-delay: 0.4s;
 }
 
 .spinee span.span9::before {
-  animation-delay: 0.9s;
+  animation-delay: 0.45s;
 }
 
 .spinee span.span10::before {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 
 .spinee span.span11::before {
-  animation-delay: 1.1s;
+  animation-delay: 0.55s;
 }
 
 .spinee span.span12::before {
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 }
 
 .spinee span.span13::before {
-  animation-delay: 1.3s;
+  animation-delay: 0.65s;
 }
 
 .spinee span.span14::before {
-  animation-delay: 1.4s;
+  animation-delay: 0.7s;
 }
 
 .spinee span.span15::before {
-  animation-delay: 1.5s;
+  animation-delay: 0.75s;
 }
 
 .spinee span.span16::before {
-  animation-delay: 1.6s;
+  animation-delay: 0.8s;
 }
 
 .spinee span.span17::before {
-  animation-delay: 1.7s;
+  animation-delay: 0.85s;
 }
 
 .spinee span.span18::before {
-  animation-delay: 1.8s;
+  animation-delay: 0.9s;
 }
 
 .spinee span.span19::before {
-  animation-delay: 1.9s;
+  animation-delay: 0.95s;
 }
 
 .spinee span.span20::before {
-  animation-delay: 2s;
+  animation-delay: 1s;
+}
+
+@keyframes scaleAnimate {
+  0% {
+    transform: scale(0);
+    visibility: visible;
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  80%,
+  100% {
+    transform: scale(0);
+  }
 }
 
 .shark {
   position: absolute;
-  top: -20;
-  left: -20;
-  width: 120%;
-  height: 120%;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
   color: rgb(18, 179, 233);
-  transform: rotate(170deg);
-  animation: rotating 2s linear infinite;
+  animation: rotating 1s linear infinite;
+  /* background-color: tomato; */
 }
 
-/* @keyframes animate {
-  0% {
-    transform: rotate(0);
-  }
-  10% {
-    transform: rotate(20deg);
-  }
-  80%,
-  100% {
-    transform: rotate(200deg);
-  }
-} */
+.shark .shark__icon {
+  transform: rotate(-70deg);
+  position: relative;
+  top: -40px;
+  left: -40px;
+}
 
 @keyframes rotating {
   0% {
