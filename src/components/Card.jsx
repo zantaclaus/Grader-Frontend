@@ -1,34 +1,74 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import _ from "lodash";
-import { AiFillStar } from "react-icons/ai";
-import { AiOutlineStar } from "react-icons/ai";
+import { BsStarFill } from "react-icons/bs";
+import { BsStarHalf } from "react-icons/bs";
+import { IoSkullSharp } from "react-icons/io5";
+import { BsStar } from "react-icons/bs";
 import "../css/card.css";
 
 function Card({ task, titleColor }) {
-  const blackStar = _.range(1, task.rank + 1);
-  const whiteStar = _.range(task.rank + 1, 6);
+  let blackStar = [1, 2, 3, 4, 5];
+  let halfStar = [];
+  let whiteStar = [];
+  const rank = task.rank / 2.0;
+  const isGodMode = rank === 5.0 ? true : false;
+
+  const isInt = (n) => {
+    return n % 1 === 0;
+  };
+
+  if (isInt(rank)) {
+    blackStar = _.range(1, rank + 1);
+    whiteStar = _.range(rank + 1, 6);
+  } else {
+    blackStar = _.range(1, rank - 0.5 + 1);
+    halfStar = [1];
+    whiteStar = _.range(rank - 0.5 + 1, 5);
+  }
 
   return (
     <React.Fragment>
       <div>
-        <div className={titleColor}>
-          <Link to={`/tasks/${task._id}`} className="card__link">
-            <div className="card__task__title">{task.title}</div>
-            <div className="card__task__content">
-              <div className="unit">{task.unit}</div>
-              <div className="passed">{task.finished}</div>
-              <div className="star">
-                {blackStar.map((rank) => (
-                  <AiFillStar key={rank} size="2.3rem" />
-                ))}
-                {whiteStar.map((rank) => (
-                  <AiOutlineStar key={rank} size="2.3rem" />
-                ))}
+        {!isGodMode && (
+          <div className={titleColor}>
+            <Link to={`/tasks/${task._id}`} className="card__link">
+              <div className="card__task__title">{task.title}</div>
+              <div className="card__task__content">
+                <div className="unit">{task.unit}</div>
+                <div className="passed">{task.finished}</div>
+                <div className="star">
+                  {blackStar.map((rank) => (
+                    <BsStarFill key={rank} size="2rem" />
+                  ))}
+                  {halfStar.map((rank) => (
+                    <BsStarHalf key={rank} size="2rem" />
+                  ))}
+                  {whiteStar.map((rank) => (
+                    <BsStar key={rank} size="2rem" />
+                  ))}
+                </div>
               </div>
-            </div>
-          </Link>
-        </div>
+            </Link>
+          </div>
+        )}
+
+        {isGodMode && (
+          <div className={titleColor}>
+            <Link to={`/tasks/${task._id}`} className="card__link">
+              <div className="card__task__title">{task.title}</div>
+              <div className="card__task__content">
+                <div className="unit">{task.unit}</div>
+                <div className="passed">{task.finished}</div>
+                <div className="star">
+                  {blackStar.map((rank) => (
+                    <IoSkullSharp key={rank} size="2.5rem" color="white" />
+                  ))}
+                </div>
+              </div>
+            </Link>
+          </div>
+        )}
       </div>
     </React.Fragment>
   );
