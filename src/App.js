@@ -9,7 +9,6 @@ import Profile from "./pages/Profile";
 import Logout from "./pages/Logout";
 import GuideBook from "./pages/GuideBook";
 import Manage from "./pages/Manage";
-import ManagePassword from "./pages/ManagePassword";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
@@ -41,7 +40,6 @@ function App(props) {
           <ProtectedRoute path="/tasks" component={Tasks} />
           <ProtectedRoute path="/guidebook" component={GuideBook} />
           <ProtectedRoute path="/profile" component={Profile} />
-          <ProtectedRoute path="/managePassword" component={ManagePassword} />
           <ProtectedRoute path="/manage" component={Manage} />
           <ProtectedRoute path="/home" component={Home} />
           <Redirect path="/" exact to="/home" />

@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
-
-// import { Link } from "react-router-dom";
-import user from "../images/user.png";
 import "../css/profileBox.css";
+import team2 from "../images/team2.webp";
+
 import { useSelector } from "react-redux";
 
-function ProfileBox({ toggleModal }) {
+function ProfileBox({ toggleModalNickname, toggleModalPassword }) {
   const userDetail = useSelector((state) => state.userDetail.user);
 
   useEffect(() => {
@@ -21,7 +20,7 @@ function ProfileBox({ toggleModal }) {
         </div>
         <div className="card__content profile__content">
           <div className="profile__image">
-            <img src={user} alt="" />
+            <img src={team2} alt="" />
           </div>
           <div className="profile__details">
             <h2>
@@ -34,9 +33,15 @@ function ProfileBox({ toggleModal }) {
               Team : <span>{userDetail.group}</span>
             </h2>
           </div>
-          <div className="profile__btn" onClick={toggleModal}>
-            Account Manage
+          <div className="btn__row">
+            <div className="profile__btn" onClick={toggleModalNickname}>
+              Nickname
+            </div>
+            <div className="profile__btn" onClick={toggleModalPassword}>
+              Password
+            </div>
           </div>
+
           {/* <Link to="/manage" className="profile__btn">
             Account Manage
           </Link> */}

@@ -9,6 +9,7 @@ import { fetchUserDetail } from "../redux/actions/userAction";
 import Loading from "../components/Loading";
 import ModalNickname from "../components/ModalNickname";
 import { useState } from "react";
+import ModalPassword from "../components/ModalPassword";
 
 function Profile(props) {
   const user = useSelector((state) => state.user.user);
@@ -16,10 +17,17 @@ function Profile(props) {
 
   const dispatch = useDispatch();
 
-  const [modal, setModal] = useState(false);
-  const toggleModal = () => {
-    console.log("modal:", modal);
-    setModal(!modal);
+  const [modalNickname, setModalNickname] = useState(false);
+  const [modalPassword, setModalPassword] = useState(false);
+
+  const toggleModalNickname = () => {
+    console.log("Nickname");
+    setModalNickname(!modalNickname);
+  };
+
+  const toggleModalPassword = () => {
+    console.log("Password");
+    setModalPassword(!modalPassword);
   };
 
   useEffect(() => {
@@ -35,13 +43,23 @@ function Profile(props) {
       ) : (
         <div className="profile__background">
           <div className="profile__container">
-            <ProfileBox toggleModal={toggleModal} />
+            <ProfileBox
+              toggleModalNickname={toggleModalNickname}
+              toggleModalPassword={toggleModalPassword}
+            />
             <div className="profile__propoties">
               <ProfileRank />
               <ProfileProgress />
             </div>
           </div>
-          <ModalNickname modal={modal} toggleModal={toggleModal} />
+          <ModalNickname
+            modal={modalNickname}
+            toggleModal={toggleModalNickname}
+          />
+          <ModalPassword
+            modal={modalPassword}
+            toggleModal={toggleModalPassword}
+          />
         </div>
       )}
     </React.Fragment>
