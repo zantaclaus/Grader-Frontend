@@ -19,27 +19,30 @@ function TaskQuestion(props) {
         <div className="pattern__detail">{task.q_output}</div>
       </div>
       <div className="tastcase">
-        <TaskTable
-          number="1"
-          input={task.str_input_1}
-          output={task.str_output_1}
-        />
-        <TaskTable
-          number="2"
-          input={task.str_input_2}
-          output={task.str_output_2}
-        />
-        <TaskTable
-          number="3"
-          input={task.str_input_3}
-          output={task.str_output_3}
-        />
+        {(task.str_input_1 || task.str_output_1) && (
+          <TaskTable
+            number="1"
+            input={task.str_input_1}
+            output={task.str_output_1}
+          />
+        )}
+
+        {(task.str_input_2 || task.str_output_2) && (
+          <TaskTable
+            number="2"
+            input={task.str_input_2}
+            output={task.str_output_2}
+          />
+        )}
+
+        {(task.str_input_3 || task.str_output_3) && (
+          <TaskTable
+            number="3"
+            input={task.str_input_3}
+            output={task.str_output_3}
+          />
+        )}
       </div>
-      <h1>
-        <a href={task.linkPDF} target="_blank" rel="noreferrer">
-          click
-        </a>
-      </h1>
     </div>
   );
 }
