@@ -1,0 +1,94 @@
+.nickname__container {
+  background: var(--color-background);
+  height: calc(100vh - var(--navbar-height));
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nickname__box {
+  width: 40rem;
+  height: 10rem;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  position: relative;
+  /* border: 3px solid #fff;
+  box-shadow: 0 0 10px greenyellow; */
+}
+
+.form {
+  position: relative;
+  width: 30rem;
+  height: 5rem;
+}
+
+.nickname__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  color: white;
+  font-size: 2.1rem;
+}
+
+.nickname__input:hover {
+  border-color: #adffff;
+}
+
+.nickname__input:focus {
+  border-color: #18ffff;
+}
+
+.nickname__label {
+  position: absolute;
+  font-size: 2.1rem;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: white;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  background: var(--color-background);
+}
+
+.nickname__input:focus ~ .nickname__label,
+.nickname__input:not(:placeholder-shown).nickname__input:not(:focus)
+  ~ .nickname__label {
+  top: -1rem;
+  left: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.nickname__btn {
+  position: absolute;
+  top: 45px;
+  right: 60px;
+  width: 18rem;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  padding: 1.3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: white;
+  background: var(--btn-background);
+  transition: 0.3s;
+}
+
+.nickname__btn:hover {
+  background: var(--btn-hover);
+}

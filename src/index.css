@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
+  --navbar-height: 5.44rem;
+
   --scroll-bar-color: #252f6b;
   --scroll-bar-background: #fbfefd;
 
@@ -109,8 +111,8 @@
   --tasks-container-background: #1b222e;
   --tasks-bar: #2b2490;
   --tasks-card-shadow: #1b222e;
-  --tasks-card-header-background: #0840a8;
-  --tasks-card-header-background-hover: #2a4ce6;
+  --tasks-card-header-background: #2a4ce6;
+  --tasks-card-header-background-hover: #2ad6e6;
   --tasks-card-header: #fff;
   --tasks-card-content-background: var(--color-background);
   --tasks-card-content: #fbfefd;
@@ -118,8 +120,15 @@
   --scroll-bar-color: #fff;
   --scroll-bar-background: #fff;
 
-  --btn-background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
-  --btn-hover: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
+  /* --btn-background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%); */
+  --btn-background: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
+  --btn-hover: linear-gradient(45deg, #0093e9 30%, #80d0c7 100%);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --navbar-height: 6.2rem;
+  }
 }
 
 *,

@@ -1,12 +1,8 @@
 .tasks__container {
-  --container-height: calc(100vh - 3.5rem);
+  --container-height: calc(100vh - var(--navbar-height));
 }
 
 @media screen and (min-width: 768px) {
-  .tasks__container {
-    --container-height: calc(100vh - 6.2rem);
-  }
-
   .tasks__header {
     justify-content: left;
   }
@@ -21,11 +17,5 @@
 
   .filterBox {
     display: block;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  .tasks__container {
-    --container-height: calc(100vh - 6.2rem);
   }
 }

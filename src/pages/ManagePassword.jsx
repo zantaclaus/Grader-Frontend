@@ -30,6 +30,7 @@ function ManagePassword(props) {
             className="password__input"
             type="password"
             value={password}
+            placeholder="password"
             onChange={(e) => handleInput(e.currentTarget.value, setPassword)}
           />
         </div>
@@ -40,6 +41,7 @@ function ManagePassword(props) {
             className="password__input"
             type="password"
             value={newPassword}
+            placeholder="new password"
             onChange={(e) => handleInput(e.currentTarget.value, setNewPassword)}
           />
         </div>
@@ -50,6 +52,7 @@ function ManagePassword(props) {
             className="password__input"
             type="password"
             value={confirmPassword}
+            placeholder="confirm new password"
             onChange={(e) =>
               handleInput(e.currentTarget.value, setConfirmPassword)
             }
