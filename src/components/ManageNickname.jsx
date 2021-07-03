@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 import "../css/manageNickname.css";
 
@@ -31,11 +30,10 @@ function ManageNickname(props) {
           <label htmlFor="nickname" className="nickname__label">
             Nickname
           </label>
-          <Link to="/profile">
-            <div className="nickname__btn" onClick={handleNicknameSubmit}>
-              Submit
-            </div>
-          </Link>
+
+          <div className="nickname__btn" onClick={handleNicknameSubmit}>
+            Submit
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "../css/managePassword.css";
 
 function ManagePassword(props) {
@@ -13,6 +12,7 @@ function ManagePassword(props) {
   };
 
   const handlePasswordSubmit = () => {
+    window.location = "/profile";
     console.log("password:", password);
     console.log("newPassword:", newPassword);
     console.log("confirmPassword:", confirmPassword);
@@ -59,11 +59,9 @@ function ManagePassword(props) {
           />
         </div>
 
-        <Link to="/profile">
-          <div className="password__btn" onClick={handlePasswordSubmit}>
-            Submit
-          </div>
-        </Link>
+        <div className="password__btn" onClick={handlePasswordSubmit}>
+          Submit
+        </div>
       </div>
     </div>
   );
