@@ -6,9 +6,9 @@ import "../css/taskQuestion.css";
 function TaskQuestion(props) {
   const task = useSelector((state) => state.task);
   const arrQuestion = task.question.replaceAll(" ", "&nbsp;").split("\n");
-  const arrInput1 = task.str_output_1.replaceAll(" ", "&nbsp;").split("\n");
-  const arrInput2 = task.str_output_2.replaceAll(" ", "&nbsp;").split("\n");
-  const arrInput3 = task.str_output_3.replaceAll(" ", "&nbsp;").split("\n");
+  const arrInput1 = task.str_input_1.replaceAll(" ", "&nbsp;").split("\n");
+  const arrInput2 = task.str_input_2.replaceAll(" ", "&nbsp;").split("\n");
+  const arrInput3 = task.str_input_3.replaceAll(" ", "&nbsp;").split("\n");
   const arrOutput1 = task.str_output_1.replaceAll(" ", "&nbsp;").split("\n");
   const arrOutput2 = task.str_output_2.replaceAll(" ", "&nbsp;").split("\n");
   const arrOutput3 = task.str_output_3.replaceAll(" ", "&nbsp;").split("\n");
