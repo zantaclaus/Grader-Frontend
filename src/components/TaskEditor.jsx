@@ -9,7 +9,7 @@ import "prismjs/components/prism-c";
 
 function TaskEditor({ code, setCode }) {
   return (
-    <div className="editor__container">
+    <div className="editor__container scrollbar-hidden">
       <Editor
         value={code}
         onValueChange={(code) => setCode(code)}
