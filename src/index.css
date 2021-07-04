@@ -139,16 +139,16 @@
   --pagination-color: #1b222e;
 
   --task-background: var(--color-background);
-  --task-title-color: #6c54f3;
+  --task-title-color: rgb(165, 69, 230);
   --task-pdf-background: #1b222e;
   --task-pdf-color: rgb(174, 225, 245);
-  --task-pdf-chaya: rgb(93, 108, 246);
+  --task-pdf-chaya: #f360ac;
   --task-pdf-label: rgb(223, 223, 223);
   --task-pdf-table: rgb(119, 119, 119);
   --task-resulted-background: #1b222e;
   --task-resulted-title: rgb(13, 184, 147);
-  --task-resulted-content: rgb(8, 156, 167);
-  --task-finished-color: rgb(8, 156, 167);
+  --task-resulted-content: rgb(174, 225, 245);
+  --task-finished-color: rgb(174, 225, 245);
   --task-editor-background: #1b222e;
   --task-border: var(--color-background);
 
