@@ -10,7 +10,7 @@
 }
 
 .pdf__container .title {
-  margin-top: 2.5rem;
+  margin-top: 3.3rem;
   line-height: 1.1;
   font-size: 5rem;
   font-weight: 600;
@@ -48,6 +48,6 @@
 
 @media screen and (min-width: 1700px) {
   .pdf__container .title {
-    margin-top: 2rem;
+    margin-top: 3.3rem;
   }
 }
