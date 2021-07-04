@@ -11,8 +11,9 @@ function Card({ task, titleColor }) {
   let blackStar = [];
   let halfStar = [];
   let whiteStar = [];
+  const godModeStar = [1, 2, 3, 4, 5];
   const rank = task.rank / 2.0;
-  const isGodMode = rank === 5.0 ? true : false;
+  const isGodMode = task.unit.trim() === "God Mode" ? true : false;
 
   const isInt = (n) => {
     return n % 1 === 0;
@@ -61,7 +62,7 @@ function Card({ task, titleColor }) {
                 <div className="unit">{task.unit}</div>
                 <div className="passed">{task.finished}</div>
                 <div className="star">
-                  {blackStar.map((rank) => (
+                  {godModeStar.map((rank) => (
                     <IoSkullSharp key={rank} size="2.5rem" color="white" />
                   ))}
                 </div>
