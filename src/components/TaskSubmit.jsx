@@ -42,7 +42,7 @@ function TaskSubmit({ code, taskId, input, output, setforceRender }) {
   };
 
   return (
-    <div className="task__submit">
+    <div className="task__submit btn--hover">
       <button id="submit" type="submit" onClick={handleCodeSubmit}>
         Submit
       </button>

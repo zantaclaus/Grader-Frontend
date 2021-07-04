@@ -5,7 +5,7 @@ import { AiOutlineLink } from "react-icons/ai";
 function BtnDownload({ linkPDF }) {
   return (
     <a href={linkPDF} target="_blank" rel="noreferrer">
-      <div className="download__btn">
+      <div className="download__btn btn--hover">
         <label htmlFor="" className="file__label">
           <AiOutlineLink size="2.3rem" className="download__logo" />
           Link PDF

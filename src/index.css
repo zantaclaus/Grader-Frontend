@@ -292,6 +292,10 @@ a {
   background: var(--btn-hover);
 }
 
+.btn--hover:hover {
+  background: var(--btn-hover);
+}
+
 @media screen and (min-width: 768px) {
   .btn {
     padding: 1.8rem 4.5rem;
