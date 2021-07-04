@@ -70,6 +70,7 @@ int main()
                   detail={task.result}
                   header="header"
                   content="resulted"
+                  setforceRender={setforceRender}
                 />
                 <TaskDetail
                   title="Finished"

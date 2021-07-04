@@ -1,4 +1,5 @@
 .task__detail {
+  position: relative;
   margin: 2rem;
   border: 5px solid var(--task-border);
   border-radius: 20px;
@@ -22,4 +23,12 @@
 .task__detail .finished {
   font-size: 4.5rem;
   color: var(--task-finished-color);
+}
+
+.refresh {
+  position: absolute;
+  color: #fff;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
 }
