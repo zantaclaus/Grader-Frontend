@@ -5,7 +5,7 @@
   /* max-height: calc(100vh - var(--navbar-height)); */
 }
 .profile__container {
-  overflow: hidden;
+  /* overflow: hidden; */
   /* height: calc(100vh - var(--navbar-height)); */
 
   --card-profile-height: 41rem;
