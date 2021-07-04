@@ -139,9 +139,9 @@
   --dropdown-background: #1b222e;
 
   --task-background: var(--color-background);
-  --task-title-color: #9c59f3;
+  --task-title-color: #6c54f3;
   --task-pdf-background: #1b222e;
-  --task-pdf-color: rgb(125, 212, 246);
+  --task-pdf-color: rgb(174, 225, 245);
   --task-pdf-chaya: rgb(93, 108, 246);
   --task-pdf-label: rgb(223, 223, 223);
   --task-pdf-table: rgb(119, 119, 119);

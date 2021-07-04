@@ -10,7 +10,7 @@
 }
 
 .pdf__container .title {
-  margin-top: 1.7rem;
+  margin-top: 2.5rem;
   line-height: 1.1;
   font-size: 5rem;
   font-weight: 600;
@@ -41,6 +41,13 @@
 }
 
 .pattern .pattern__detail {
+  margin-bottom: 2rem;
   font-size: 1.8rem;
   color: var(--task-pdf-color);
+}
+
+@media screen and (min-width: 1700px) {
+  .pdf__container .title {
+    margin-top: 2rem;
+  }
 }

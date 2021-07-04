@@ -9,7 +9,7 @@ import "../css/navbar.css";
 import { useEffect } from "react";
 
 function Navbar(props) {
-  const [isLight, setIsLight] = useState(true);
+  const [isLight, setIsLight] = useState(false);
 
   useEffect(() => {
     const theme = getTheme();

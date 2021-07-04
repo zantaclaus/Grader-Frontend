@@ -7,7 +7,7 @@ const apiEndpoint = apiUrl + "/login";
 export async function login(username, password) {
   const { data: jwt } = await axios.post(apiEndpoint, { username, password });
   localStorage.setItem("token", jwt.token);
-  localStorage.setItem("theme", "light");
+  localStorage.setItem("theme", "dark");
 }
 
 export function logout() {
