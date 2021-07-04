@@ -37,7 +37,7 @@ function TaskQuestion(props) {
     .replaceAll("\n", "<br/>");
 
   return (
-    <div className="pdf__container">
+    <div className="pdf__container scrollbar-hidden">
       <div className="title">{task.title}</div>
       <div className="chaya">{task.chaya}</div>
       <div className="question">

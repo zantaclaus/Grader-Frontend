@@ -1,18 +1,20 @@
 .pdf__container {
   height: 85vh;
   margin: 2rem;
-  padding: 0 1rem;
-  border: 5px solid var(--border-primary);
-  border-radius: 10px;
+  padding: 0 1.5rem;
+  border: 5px solid var(--task-border);
+  border-radius: 20px;
   position: relative;
   overflow: auto;
+  background: var(--task-pdf-background);
 }
 
 .pdf__container .title {
-  margin-top: 2.5rem;
+  margin-top: 1.7rem;
+  line-height: 1.1;
   font-size: 5rem;
   font-weight: 600;
-  color: var(--task-font-color);
+  color: var(--task-title-color);
 }
 
 .pdf__container .chaya {
@@ -20,13 +22,14 @@
   font-weight: 600;
   position: absolute;
   top: 1rem;
-  right: 1rem;
-  /* text-align: center; */
+  right: 2rem;
+  color: var(--task-pdf-chaya);
 }
 
 .pdf__container .question {
   font-size: 1.8rem;
   margin-top: 1rem;
+  color: var(--task-pdf-color);
 }
 
 .task__label {
@@ -34,9 +37,10 @@
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: var(--task-font-color);
+  color: var(--task-pdf-label);
 }
 
 .pattern .pattern__detail {
   font-size: 1.8rem;
+  color: var(--task-pdf-color);
 }

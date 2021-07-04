@@ -1,25 +1,25 @@
 .task__detail {
   margin: 2rem;
-  background-color: #fff;
-  border: 5px solid var(--border-primary);
-  border-radius: 10px;
+  border: 5px solid var(--task-border);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: var(--task-resulted-background);
 }
 
 .task__detail .header {
   font-size: 2.2rem;
   font-weight: 500;
-  color: var(--task-font-color);
+  color: var(--task-resulted-title);
 }
 
 .task__detail .resulted {
   font-size: 4rem;
-  color: var(--task-font-color);
+  color: var(--task-resulted-content);
 }
 .task__detail .finished {
   font-size: 4.5rem;
-  color: var(--task-font-color);
+  color: var(--task-finished-color);
 }

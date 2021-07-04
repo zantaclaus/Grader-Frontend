@@ -1,5 +1,7 @@
 .task__form {
   min-width: 1190px;
+  background: var(--task-background);
+  height: calc(100vh - var(--navbar-height));
 }
 
 .task__grid {

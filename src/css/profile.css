@@ -1,5 +1,8 @@
 /* ======= Variables ======== */
-
+.profile__background {
+  background-color: var(--profile-background);
+  height: calc(100vh - var(--navbar-height));
+}
 .profile__container {
   overflow: hidden;
   --card-profile-height: 41rem;
