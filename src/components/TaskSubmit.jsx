@@ -20,10 +20,7 @@ function TaskSubmit({ code, taskId, input, output, setforceRender }) {
     const data = {
       questionId: taskId,
       userId: user.id,
-      rank: 1,
       code: code,
-      input: input,
-      output: output,
     };
 
     await fetch(`https://compiler.ceboostup.com/check_result`, {
