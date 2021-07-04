@@ -20,7 +20,7 @@ function Task(props) {
     : `#include<stdio.h>
 int main() 
 {
-  
+    
     return 0;
 }`;
   const [code, setCode] = useState(codeStater);
