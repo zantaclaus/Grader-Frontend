@@ -5,6 +5,8 @@
 }
 .profile__container {
   overflow: hidden;
+  height: calc(100vh - var(--navbar-height));
+
   --card-profile-height: 41rem;
   --card-profile-img: 15rem;
   --card-profile-label: 1.8rem;
