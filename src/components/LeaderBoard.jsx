@@ -24,7 +24,7 @@ function LeaderBoard(props) {
             <div className="face back">
               <div className="back__content">
                 <img src={team1} alt="" />
-                <h1>zantaclaus</h1>
+                <h1>เทพจ๊ากซ่า1</h1>
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ function LeaderBoard(props) {
             <div className="face back">
               <div className="back__content">
                 <img src={team2} alt="" />
-                <h1>zantaclaus</h1>
+                <h1>เทพจ๊ากซ่า2</h1>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ function LeaderBoard(props) {
             <div className="face back">
               <div className="back__content">
                 <img src={team3} alt="" />
-                <h1>zantaclaus</h1>
+                <h1>เทพจ๊ากซ่า3</h1>
               </div>
             </div>
           </div>
