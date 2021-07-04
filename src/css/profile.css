@@ -1,12 +1,12 @@
 /* ======= Variables ======== */
 .profile__background {
   background-color: var(--profile-background);
-  height: calc(100vh - var(--navbar-height));
-  max-height: calc(100vh - var(--navbar-height));
+  /* height: calc(100vh - var(--navbar-height)); */
+  /* max-height: calc(100vh - var(--navbar-height)); */
 }
 .profile__container {
   overflow: hidden;
-  height: calc(100vh - var(--navbar-height));
+  /* height: calc(100vh - var(--navbar-height)); */
 
   --card-profile-height: 41rem;
   --card-profile-img: 15rem;
