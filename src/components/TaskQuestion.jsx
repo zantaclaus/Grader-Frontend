@@ -69,10 +69,14 @@ function TaskQuestion(props) {
         )}
       </div>
       <div className="pattern">
-        <div className="task__label">เพิ่มเติม</div>
-        <div className="pattern__detail">
-          <div dangerouslySetInnerHTML={{ __html: jsxDetail }} />
-        </div>
+        {!(task.detail === "-") && (
+          <React.Fragment>
+            <div className="task__label">เพิ่มเติม</div>
+            <div className="pattern__detail">
+              <div dangerouslySetInnerHTML={{ __html: jsxDetail }} />
+            </div>
+          </React.Fragment>
+        )}
       </div>
     </div>
   );
