@@ -1,16 +1,27 @@
 import React from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 import "../css/manageNickname.css";
 
 function ManageNickname(props) {
   const [nickname, setNickname] = useState("");
+  const user = useSelector((state) => state.user.user);
 
   const handleInput = (text, setText) => {
     setText(text);
   };
 
-  const handleNicknameSubmit = () => {
+  const handleNicknameSubmit = async () => {
+    const data = {
+      nickName: nickname,
+    };
+
+    await fetch(`https://api.ceboostup.com/api/user/${user.id}`, {
+      method: "PUT",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" },
+    });
     window.location = "/profile";
   };
 

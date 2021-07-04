@@ -1,22 +1,32 @@
 import React from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "../css/managePassword.css";
 
 function ManagePassword(props) {
   const [password, setPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const user = useSelector((state) => state.user.user);
 
   const handleInput = (text, setText) => {
     setText(text);
   };
 
-  const handlePasswordSubmit = () => {
+  const handlePasswordSubmit = async () => {
+    const data = {
+      oldPassword: password,
+      password: newPassword,
+      password2: confirmPassword,
+    };
+
+    await fetch(`https://api.ceboostup.com/api/password/${user.id}`, {
+      method: "PUT",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" },
+    });
+
     window.location = "/profile";
-    console.log("password:", password);
-    console.log("newPassword:", newPassword);
-    console.log("confirmPassword:", confirmPassword);
-    // window.location = "/profile";
   };
 
   return (
