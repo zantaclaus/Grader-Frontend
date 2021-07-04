@@ -135,8 +135,8 @@
   --search-placeholder: #fff;
   --search-line: #fff;
   --search-icon: #fff;
-
   --dropdown-background: #1b222e;
+  --pagination-color: #1b222e;
 
   --task-background: var(--color-background);
   --task-title-color: #6c54f3;

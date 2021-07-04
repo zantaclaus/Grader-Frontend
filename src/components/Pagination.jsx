@@ -28,7 +28,6 @@ function Pagination({ lastPage }) {
       {currentPage !== 1 ? (
         <IoMdArrowDropleftCircle
           size="3.8rem"
-          color="white"
           className="arrow arrow__left"
           onClick={pageDecrease}
         />
@@ -36,7 +35,6 @@ function Pagination({ lastPage }) {
       {currentPage !== lastPage ? (
         <IoMdArrowDroprightCircle
           size="3.8rem"
-          color="white"
           className="arrow arrow__right"
           onClick={pageIncrease}
         />

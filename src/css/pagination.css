@@ -8,6 +8,7 @@
 .arrow {
   margin: 0 0.5rem;
   cursor: pointer;
+  color: var(--pagination-color);
 }
 
 @media screen and (min-width: 768px) {
