@@ -1,5 +1,6 @@
 .profile__box {
-  margin: 3rem auto;
+  padding-top: 2rem;
+  margin: 0 auto;
 }
 
 .profile__content {

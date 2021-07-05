@@ -27,11 +27,7 @@ function App(props) {
 
   return (
     <React.Fragment>
-      {user && (
-        <div>
-          <Navbar />
-        </div>
-      )}
+      {user && <Navbar />}
       <div className="content__container">
         <Switch>
           <Route path="/login" component={Login} />

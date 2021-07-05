@@ -1,13 +1,9 @@
 /* ======= Variables ======== */
 .profile__background {
   background-color: var(--profile-background);
-  /* height: calc(100vh - var(--navbar-height)); */
-  /* max-height: calc(100vh - var(--navbar-height)); */
+  min-height: calc(100vh - var(--navbar-height));
 }
 .profile__container {
-  /* overflow: hidden; */
-  /* height: calc(100vh - var(--navbar-height)); */
-
   --card-profile-height: 41rem;
   --card-profile-img: 15rem;
   --card-profile-label: 1.8rem;
@@ -113,9 +109,4 @@
 }
 .profile__propoties {
   transform: translateX(var(--card-propoties-position));
-}
-
-.modal__absolute {
-  position: absolute;
-  background-color: blue;
 }
