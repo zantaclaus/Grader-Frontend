@@ -5,7 +5,7 @@ import ManageNickname from "./ManageNickname";
 
 function ModalNickname({ modal, toggleModal }) {
   return (
-    <div>
+    <React.Fragment>
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
@@ -20,7 +20,7 @@ function ModalNickname({ modal, toggleModal }) {
           </div>
         </div>
       )}
-    </div>
+    </React.Fragment>
   );
 }
 

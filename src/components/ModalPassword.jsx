@@ -5,7 +5,7 @@ import ManagePassword from "./ManagePassword";
 
 function ModalPassword({ modal, toggleModal }) {
   return (
-    <div>
+    <React.Fragment>
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
@@ -20,7 +20,7 @@ function ModalPassword({ modal, toggleModal }) {
           </div>
         </div>
       )}
-    </div>
+    </React.Fragment>
   );
 }
 

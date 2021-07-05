@@ -114,3 +114,8 @@
 .profile__propoties {
   transform: translateX(var(--card-propoties-position));
 }
+
+.modal__absolute {
+  position: absolute;
+  background-color: blue;
+}
