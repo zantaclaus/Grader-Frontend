@@ -23,7 +23,11 @@ function App(props) {
     dispatch(setUser(user));
   }, [dispatch]);
 
-  console.log("App user:", user);
+  useEffect(() => {
+    document.title = "CE BoostUp #9";
+  });
+
+  // console.log("App user:", user);
 
   return (
     <React.Fragment>
