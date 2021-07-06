@@ -1,9 +1,5 @@
-/* .possibleResult {
-  display: flex;
-  justify-content: center;
-} */
-
 .possibleResult__title {
+  padding-top: 3rem;
   text-align: center;
   font-size: 5rem;
   font-weight: 600;
@@ -13,4 +9,12 @@
 .possibleResult__content {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .possibleResult__title {
+    padding-top: 5rem;
+    font-size: 7.5rem;
+  }
 }

@@ -1,13 +1,22 @@
 import React from "react";
 import "../css/possibleResult.css";
 import BoxList from "./BoxList";
+import { getResults } from "../services/resultSevice";
 
 function PossibleResult(props) {
+  const results = getResults();
   return (
-    <div className="block container possibleResult">
+    <div className="container possibleResult">
       <div className="possibleResult__title">Possible Result</div>
       <div className="possibleResult__content">
-        <BoxList icon="P" title="Pass" content="Pass one testcase." />
+        {results.map((result) => (
+          <BoxList
+            key={result.id}
+            icon={result.icon}
+            title={result.title}
+            content={result.content}
+          />
+        ))}
       </div>
     </div>
   );
