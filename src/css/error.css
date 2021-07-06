@@ -1,3 +1,13 @@
-.login_page p {
+.error__container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+.error__content {
+  font-size: 1.5rem;
+  font-weight: 500;
   color: tomato;
+  margin-left: 1rem;
+  position: relative;
+  /* top: 0.2rem; */
 }
