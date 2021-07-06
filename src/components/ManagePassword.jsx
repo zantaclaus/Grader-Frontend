@@ -40,23 +40,6 @@ function ManagePassword(props) {
         setError(errors);
       }
     }
-
-    // await fetch(`https://api.ceboostup.com/api/password/${user.id}`, {
-    //   method: "PUT",
-    //   body: JSON.stringify(data),
-    //   headers: { "Content-type": "application/json" },
-    // }).catch((ex) => {
-    //   if (ex.response) {
-    //     const errors = { ...error };
-    //     errors.username = ex.response.data.IncorrectOldPassword;
-    //     errors.password = ex.response.data.password;
-    //     errors.password2 = ex.response.data.password2;
-    //     setError(error);
-    //   }
-    // });
-    // console.log("Hello");
-
-    // window.location = "/profile";
   };
 
   return (
