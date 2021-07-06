@@ -1,9 +1,22 @@
+.possibleResult {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
 .possibleResult__title {
   padding-top: 3rem;
   text-align: center;
   font-size: 5rem;
   font-weight: 600;
   color: #fff;
+}
+
+.possibleResult__tagline {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .possibleResult__content {
