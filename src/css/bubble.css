@@ -56,3 +56,21 @@
     opacity: 0;
   }
 }
+
+@media screen and (min-width: 1700px) {
+  .bubbles img {
+    width: 60px;
+  }
+  .bubbles img:nth-child(1) {
+    width: 40px;
+  }
+  .bubbles img:nth-child(3) {
+    width: 45px;
+  }
+  .bubbles img:nth-child(6) {
+    width: 35px;
+  }
+  .bubbles img:nth-child(7) {
+    width: 50px;
+  }
+}
