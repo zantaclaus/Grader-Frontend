@@ -6,7 +6,6 @@ import "../css/manageNickname.css";
 
 function ManageNickname(props) {
   const [nickname, setNickname] = useState("");
-  const [errors, setErrors] = useState({});
   const user = useSelector((state) => state.user.user);
 
   const handleInput = (text, setText) => {
@@ -18,18 +17,12 @@ function ManageNickname(props) {
       nickName: nickname,
     };
 
-    try {
-      await fetch(`https://api.ceboostup.com/api/user/${user.id}`, {
-        method: "PUT",
-        body: JSON.stringify(data),
-        headers: { "Content-type": "application/json" },
-      });
-      window.location = "/profile";
-    } catch (ex) {
-      if (ex.response && ex.response.status === 400) {
-        console.log(ex.response.data);
-      }
-    }
+    await fetch(`https://api.ceboostup.com/api/user/${user.id}`, {
+      method: "PUT",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" },
+    });
+    window.location = "/profile";
   };
 
   return (

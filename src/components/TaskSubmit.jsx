@@ -3,15 +3,15 @@ import "../css/taskSubmit.css";
 import { FaLocationArrow } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setCode } from "../redux/actions/codeAction";
-// import axios from "axios";
+import { useState } from "react";
 
-function TaskSubmit({ code, taskId, input, output, setforceRender }) {
+function TaskSubmit({ code, taskId, setforceRender }) {
   const user = useSelector((state) => state.user.user);
+  const [inQueue, setInQueue] = useState({});
   const dispatch = useDispatch();
 
   const refreshPage = () => {
     setforceRender({});
-    // window.location.reload();
   };
 
   const handleCodeSubmit = async () => {
@@ -23,18 +23,18 @@ function TaskSubmit({ code, taskId, input, output, setforceRender }) {
       code: code,
     };
 
-    await fetch(`https://compiler.ceboostup.com/check_result`, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: { "Content-type": "application/json" },
-    });
-    // await axios.post(`https://compiler.ceboostup.com/check_result`, {
-    //   questionId: taskId,
-    //   userId: user.id,
-    //   code: code,
-    //   input: input,
-    //   output: output,
-    // });
+    const response = await fetch(
+      `https://compiler.ceboostup.com/check_result`,
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-type": "application/json" },
+      }
+    );
+
+    const result = await response.json();
+    setInQueue(result);
+
     refreshPage();
   };
 
@@ -53,3 +53,11 @@ function TaskSubmit({ code, taskId, input, output, setforceRender }) {
 }
 
 export default TaskSubmit;
+
+// await axios.post(`https://compiler.ceboostup.com/check_result`, {
+//   questionId: taskId,
+//   userId: user.id,
+//   code: code,
+//   input: input,
+//   output: output,
+// });

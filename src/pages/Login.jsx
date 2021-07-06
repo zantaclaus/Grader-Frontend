@@ -110,6 +110,7 @@ class Login extends Component {
                 name="username"
                 type="text"
                 placeholder="username"
+                autoComplete="off"
                 autoFocus
               />
               <Error error={errors.username} />
@@ -124,6 +125,7 @@ class Login extends Component {
                 name="password"
                 type="password"
                 placeholder="password"
+                autoComplete="off"
               />
               <Error error={errors.password} />
             </div>
