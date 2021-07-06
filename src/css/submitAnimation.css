@@ -1,0 +1,17 @@
+.submit__animation {
+  /* width: 30rem;
+  height: 30rem; */
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: rgb(12, 40, 177); */
+}
+
+.submit__animation h1 {
+  color: white;
+  font-size: 6rem;
+}

@@ -10,10 +10,12 @@ import BtnUpload from "../components/BtnUpload";
 import TaskSubmit from "../components/TaskSubmit";
 import BtnDownload from "../components/BtnDownload";
 import Loading from "../components/Loading";
+import SubmitAnimation from "../components/SubmitAnimation";
 import "../css/task.css";
 
 function Task(props) {
   const [forceRender, setforceRender] = useState({});
+  const [isDone, setIsDone] = useState(false);
   const codeStore = useSelector((state) => state.code);
   const codeStater = codeStore
     ? codeStore
@@ -58,47 +60,52 @@ int main()
       {Object.keys(task).length === 0 ? (
         <Loading />
       ) : (
-        <div className="task__form">
-          <div className="task__grid">
-            <div className="task__left">
-              <TaskQuestion />
-            </div>
-            <div className="task__right">
-              <div className="detail__container">
-                <TaskDetail
-                  title="Submitted Resulted"
-                  detail={task.result}
-                  header="header"
-                  content="resulted"
-                  setforceRender={setforceRender}
-                />
-                <TaskDetail
-                  title="Finished"
-                  detail={task.finished}
-                  header="header"
-                  content="finished"
-                />
+        <React.Fragment>
+          <div className="task__form">
+            <div className="task__grid">
+              <div className="task__left">
+                <TaskQuestion />
               </div>
-              <TaskEditor code={code} setCode={setCode} />
-              <div className="btn__container">
-                <BtnDownload linkPDF={linkPDF} />
-                <div className="task__btn__right">
-                  <BtnUpload
-                    handleFileChange={handleFileChange}
-                    onInputClick={onInputClick}
-                  />
-                  <TaskSubmit
-                    code={code}
-                    taskId={taskId}
-                    input={task.input}
-                    output={task.output}
+              <div className="task__right">
+                <div className="detail__container">
+                  <TaskDetail
+                    title="Submitted Resulted"
+                    detail={task.result}
+                    header="header"
+                    content="resulted"
                     setforceRender={setforceRender}
                   />
+                  <TaskDetail
+                    title="Finished"
+                    detail={task.finished}
+                    header="header"
+                    content="finished"
+                  />
+                </div>
+                <TaskEditor code={code} setCode={setCode} />
+                <div className="btn__container">
+                  <BtnDownload linkPDF={linkPDF} />
+                  <div className="task__btn__right">
+                    <BtnUpload
+                      handleFileChange={handleFileChange}
+                      onInputClick={onInputClick}
+                    />
+                    <TaskSubmit
+                      code={code}
+                      taskId={taskId}
+                      input={task.input}
+                      output={task.output}
+                      setforceRender={setforceRender}
+                      isDone={isDone}
+                      setIsDone={setIsDone}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          {isDone ? <SubmitAnimation /> : null}
+        </React.Fragment>
       )}
     </React.Fragment>
   );

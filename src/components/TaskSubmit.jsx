@@ -5,13 +5,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCode } from "../redux/actions/codeAction";
 import { useState } from "react";
 
-function TaskSubmit({ code, taskId, setforceRender }) {
+function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
   const user = useSelector((state) => state.user.user);
   const [inQueue, setInQueue] = useState({});
   const dispatch = useDispatch();
 
   const refreshPage = () => {
-    setforceRender({});
+    setIsDone(true);
+    setTimeout(() => {
+      setIsDone(false);
+      setforceRender({});
+    }, 2000);
   };
 
   const handleCodeSubmit = async () => {
@@ -47,7 +51,6 @@ function TaskSubmit({ code, taskId, setforceRender }) {
         <FaLocationArrow size="1.8rem" className="submit__icon" />
         Submit
       </label>
-      {/* {response ? <h1>{response}</h1> : null} */}
     </div>
   );
 }
