@@ -38,18 +38,3 @@ function ManageNickname(props) {
 }
 
 export default ManageNickname;
-
-{
-  /* <input
-            type="text"
-            id="nickname"
-            className="nickname__input"
-            placeholder=" "
-            autoComplete="off"
-            value={nickname}
-            onChange={(e) => handleInput(e.currentTarget.value, setNickname)}
-          />
-          <label htmlFor="nickname" className="nickname__label">
-            Nickname
-          </label> */
-}

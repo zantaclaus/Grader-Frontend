@@ -13,10 +13,6 @@ function ManagePassword(props) {
   const user = useSelector((state) => state.user.user);
   const [error, setError] = useState({});
 
-  const handleInput = (text, setText) => {
-    setText(text);
-  };
-
   const handlePasswordSubmit = async () => {
     try {
       const data = {
