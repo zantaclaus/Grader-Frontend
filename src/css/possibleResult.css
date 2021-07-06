@@ -1,0 +1,16 @@
+.possibleResult {
+  /* display: flex;
+  justify-content: center; */
+}
+
+.possibleResult__title {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.possibleResult__content {
+  display: flex;
+  justify-content: center;
+}

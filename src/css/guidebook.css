@@ -1,0 +1,4 @@
+.guide__page {
+  background: var(--color-background);
+  min-height: calc(100vh - var(--navbar-height));
+}
