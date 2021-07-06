@@ -49,7 +49,6 @@ function ManagePassword(props) {
         <div className="password__title">Change Password</div>
 
         <div className="password__inputBx">
-          {/* <span className="password__label">Password</span> */}
           <InputForm
             id="password"
             value={password}
@@ -57,6 +56,7 @@ function ManagePassword(props) {
             label="password"
             type="password"
           />
+          {/* <span className="password__label">Password</span> */}
           {/* <input
             className="password__input"
             type="password"
@@ -68,14 +68,14 @@ function ManagePassword(props) {
         </div>
 
         <div className="password__inputBx">
-          {/* <span className="password__label">New Password</span> */}
           <InputForm
-            id="password"
+            id="newPassword"
             value={newPassword}
             setValue={setNewPassword}
             label="New Password"
             type="password"
           />
+          {/* <span className="password__label">New Password</span> */}
           {/* <input
             className="password__input"
             type="password"
@@ -86,14 +86,14 @@ function ManagePassword(props) {
         </div>
 
         <div className="password__inputBx">
-          {/* <span className="password__label">Confirm Password</span> */}
           <InputForm
-            id="password"
+            id="comfirmPassword"
             value={confirmPassword}
             setValue={setConfirmPassword}
             label="Confirm Password"
             type="password"
           />
+          {/* <span className="password__label">Confirm Password</span> */}
           {/* <input
             className="password__input"
             type="password"
