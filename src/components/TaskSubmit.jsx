@@ -11,7 +11,6 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
   const dispatch = useDispatch();
 
   const refreshPage = () => {
-    setIsDone(true);
     setTimeout(() => {
       setIsDone(false);
       setforceRender({});
@@ -19,6 +18,7 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
   };
 
   const handleCodeSubmit = async () => {
+    setIsDone(true);
     dispatch(setCode(code));
 
     const data = {
