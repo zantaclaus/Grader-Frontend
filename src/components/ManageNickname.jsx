@@ -8,10 +8,6 @@ function ManageNickname(props) {
   const [nickname, setNickname] = useState("");
   const user = useSelector((state) => state.user.user);
 
-  const handleInput = (text, setText) => {
-    setText(text);
-  };
-
   const handleNicknameSubmit = async () => {
     const data = {
       nickName: nickname,
@@ -26,7 +22,7 @@ function ManageNickname(props) {
         <div className="password__title">Change NIckname</div>
 
         <InputForm
-          id="password"
+          id="nickname"
           value={nickname}
           setValue={setNickname}
           label="Nickname"
