@@ -13,7 +13,7 @@ function ModalPassword({ modal, toggleModal }) {
             <ManagePassword />
             <IoCloseSharp
               size="3rem"
-              color="black"
+              color="white"
               className="close-modal"
               onClick={toggleModal}
             />

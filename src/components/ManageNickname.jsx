@@ -1,9 +1,8 @@
 import axios from "axios";
 import React from "react";
+import InputForm from "./InputForm";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-
-import "../css/manageNickname.css";
 
 function ManageNickname(props) {
   const [nickname, setNickname] = useState("");
@@ -17,17 +16,35 @@ function ManageNickname(props) {
     const data = {
       nickName: nickname,
     };
-
     await axios.put(`https://api.ceboostup.com/api/user/${user.id}`, data);
-
     window.location = "/profile";
   };
 
   return (
-    <div className="nickname__container">
-      <div className="nickname__box">
-        <div className="form">
-          <input
+    <div className="password__container">
+      <div className="password__box">
+        <div className="password__title">Change NIckname</div>
+
+        <InputForm
+          id="password"
+          value={nickname}
+          setValue={setNickname}
+          label="Nickname"
+          type="text"
+        />
+
+        <div className="password__btn" onClick={handleNicknameSubmit}>
+          Submit
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ManageNickname;
+
+{
+  /* <input
             type="text"
             id="nickname"
             className="nickname__input"
@@ -38,15 +55,5 @@ function ManageNickname(props) {
           />
           <label htmlFor="nickname" className="nickname__label">
             Nickname
-          </label>
-
-          <div className="nickname__btn" onClick={handleNicknameSubmit}>
-            Submit
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+          </label> */
 }
-
-export default ManageNickname;

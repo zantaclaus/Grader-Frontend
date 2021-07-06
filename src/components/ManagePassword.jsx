@@ -1,5 +1,6 @@
 import React from "react";
 import Error from "./Error";
+import InputForm from "./InputForm";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import "../css/managePassword.css";
@@ -48,30 +49,52 @@ function ManagePassword(props) {
         <div className="password__title">Change Password</div>
 
         <div className="password__inputBx">
-          <span className="password__label">Password</span>
-          <input
+          {/* <span className="password__label">Password</span> */}
+          <InputForm
+            id="password"
+            value={password}
+            setValue={setPassword}
+            label="password"
+            type="password"
+          />
+          {/* <input
             className="password__input"
             type="password"
             value={password}
             placeholder="password"
+            autoFocus
             onChange={(e) => handleInput(e.currentTarget.value, setPassword)}
-          />
+          /> */}
         </div>
 
         <div className="password__inputBx">
-          <span className="password__label">New Password</span>
-          <input
+          {/* <span className="password__label">New Password</span> */}
+          <InputForm
+            id="password"
+            value={newPassword}
+            setValue={setNewPassword}
+            label="New Password"
+            type="password"
+          />
+          {/* <input
             className="password__input"
             type="password"
             value={newPassword}
             placeholder="new password"
             onChange={(e) => handleInput(e.currentTarget.value, setNewPassword)}
-          />
+          /> */}
         </div>
 
         <div className="password__inputBx">
-          <span className="password__label">Confirm Password</span>
-          <input
+          {/* <span className="password__label">Confirm Password</span> */}
+          <InputForm
+            id="password"
+            value={confirmPassword}
+            setValue={setConfirmPassword}
+            label="Confirm Password"
+            type="password"
+          />
+          {/* <input
             className="password__input"
             type="password"
             value={confirmPassword}
@@ -79,14 +102,13 @@ function ManagePassword(props) {
             onChange={(e) =>
               handleInput(e.currentTarget.value, setConfirmPassword)
             }
-          />
+          /> */}
         </div>
 
         <div className="password__validate">
           <Error error={error.IncorrectOldPassword} />
           <Error error={error.password} />
           <Error error={error.password2} />
-          {/* {error && <h1> Hello{error.password2}</h1>} */}
         </div>
 
         <div className="password__btn" onClick={handlePasswordSubmit}>
