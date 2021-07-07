@@ -3,6 +3,7 @@ import Aos from "aos";
 import team2 from "../images/team2.webp";
 import "../css/profileRank.css";
 import { useSelector } from "react-redux";
+import { BsQuestionCircleFill } from "react-icons/bs";
 
 function ProfileRank(props) {
   const userDetail = useSelector((state) => state.userDetail.user);
@@ -19,7 +20,8 @@ function ProfileRank(props) {
         <div className="card__content rank__content">
           <div className="rank__team">
             <h3>You are</h3>
-            <img className="team__logo" src={team2} alt="" />
+            <BsQuestionCircleFill className="rank__rank" />
+            {/* <img className="team__logo" src={team2} alt="" /> */}
           </div>
           <div className="rank__score">
             <h3>Your score</h3>

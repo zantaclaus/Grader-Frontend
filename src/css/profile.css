@@ -16,6 +16,7 @@
   --card-percent-size: 2.3rem;
   --card-unit-right: 10px;
   --card-unit-top: 12px;
+  --card-rank-rank: 7rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -60,6 +61,7 @@
     --card-percent-size: 2.7rem;
     --card-unit-right: 0px;
     --card-unit-top: 17px;
+    --card-rank-rank: 12rem;
   }
 }
 
@@ -78,6 +80,7 @@
     --card-propoties-position: -5.3rem;
     --card-unit-right: -3px;
     --card-unit-top: 35px;
+    --card-rank-rank: 13rem;
   }
 }
 @media screen and (min-width: 1700px) {

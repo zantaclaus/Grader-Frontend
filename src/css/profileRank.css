@@ -21,8 +21,13 @@
 
 .team__logo {
   margin-top: 0.3rem;
-  width: var(--card-team-img);
-  /* border-radius: 50%; */
+  width: 3rem;
+}
+
+.rank__rank {
+  margin-top: 1rem;
+  height: var(--card-rank-rank);
+  width: var(--card-rank-rank);
 }
 
 .rank__score {
