@@ -69,7 +69,7 @@ int main()
               <div className="task__right">
                 <div className="detail__container">
                   <TaskDetail
-                    title="Submitted Resulted"
+                    title={task.status === 0 ? "Submitted Resulted" : task.time}
                     detail={task.result}
                     header="header"
                     content="resulted"

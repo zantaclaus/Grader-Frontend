@@ -7,7 +7,7 @@ function TaskDetail({ title, detail, header, content, setforceRender }) {
     <div className="task__detail">
       <div className={header}>{title}</div>
       <div className={content}>{detail}</div>
-      {title === "Submitted Resulted" && (
+      {title !== "Finished" && (
         <IoRefreshOutline
           className="refresh"
           size="3rem"
