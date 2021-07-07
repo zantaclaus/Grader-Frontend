@@ -4,30 +4,8 @@
   padding-bottom: 3rem;
 }
 
-.possibleResult__title {
-  padding-top: 3rem;
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.possibleResult__tagline {
-  color: #fff;
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 .possibleResult__content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-@media screen and (min-width: 768px) {
-  .possibleResult__title {
-    padding-top: 5rem;
-    font-size: 7.5rem;
-  }
 }

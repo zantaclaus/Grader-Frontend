@@ -2,3 +2,25 @@
   background: var(--color-background);
   min-height: calc(100vh - var(--navbar-height));
 }
+
+.guideBook__title {
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.guideBook__tagline {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .guideBook__title {
+    padding-top: 5rem;
+    font-size: 7.5rem;
+  }
+}

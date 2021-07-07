@@ -7,8 +7,8 @@ function PossibleResult(props) {
   const results = getResults();
   return (
     <div className="possibleResult">
-      <div className="possibleResult__title">Possible Result</div>
-      <div className="possibleResult__tagline">
+      <div className="guideBook__title">Possible Result</div>
+      <div className="guideBook__tagline">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
         perspiciatis dolorum!
       </div>
