@@ -39,7 +39,7 @@ function TaskQuestion(props) {
   return (
     <div className="pdf__container scrollbar-hidden">
       <div className="title">
-        {task.title} #{task.number}
+        #{task.number} {task.title}
       </div>
       <div className="chaya">{task.chaya}</div>
       <div className="question">
