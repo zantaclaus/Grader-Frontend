@@ -102,11 +102,11 @@ function Navbar(props) {
           </ul>
         </div>
         <div className="nav__toggle" id="nav-toggle">
-          {isLight ? (
-            <GiHamburgerMenu size="3rem" color="black" onClick={menuClick} />
-          ) : (
-            <GiHamburgerMenu size="3rem" color="white" onClick={menuClick} />
-          )}
+          <GiHamburgerMenu
+            size="3rem"
+            color={isLight ? "black" : "white"}
+            onClick={menuClick}
+          />
         </div>
         <div className="theme__toggle" id="theme-toggle" onClick={themeClick}>
           {isLight ? (
