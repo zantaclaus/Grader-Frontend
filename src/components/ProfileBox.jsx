@@ -45,10 +45,6 @@ function ProfileBox({ toggleModalNickname, toggleModalPassword }) {
               Password
             </div>
           </div>
-
-          {/* <Link to="/manage" className="profile__btn">
-            Account Manage
-          </Link> */}
         </div>
       </div>
     </div>
