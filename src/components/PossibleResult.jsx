@@ -9,8 +9,8 @@ function PossibleResult(props) {
     <div className="possibleResult">
       <div className="guideBook__title">Possible Result</div>
       <div className="guideBook__tagline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
-        perspiciatis dolorum!
+        Is a result you will be received after a code submission. A different
+        character means a different result.
       </div>
       <div className="possibleResult__content">
         {results.map((result) => (

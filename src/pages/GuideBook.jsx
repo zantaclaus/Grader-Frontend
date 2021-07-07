@@ -15,12 +15,12 @@ function GuideBook(props) {
       <PossibleResult />
       <Banned
         title="Banned Library"
-        tagline=" Lorem ipsum dolor sit amet consectetur dolorum!"
+        tagline="Libraries that you can't use in your code even if it's commented."
         lists={bannedLibrary}
       />
       <Banned
         title="Banned Function"
-        tagline=" Lorem ipsum dolor sit amet consectetur dolorum!"
+        tagline="Functions that couldn't be called in your code."
         lists={bannedFunction}
       />
     </div>
