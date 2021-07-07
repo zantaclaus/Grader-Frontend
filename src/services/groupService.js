@@ -8,5 +8,5 @@ export const groups = [
 ];
 
 export function getGroup(id) {
-  return groups.filter((i) => id == i.id);
+  return groups.filter((i) => id === i.id);
 }

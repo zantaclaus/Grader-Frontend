@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
-import team2 from "../images/team2.webp";
 import "../css/profileRank.css";
 import { useSelector } from "react-redux";
 import { BsQuestionCircleFill } from "react-icons/bs";
