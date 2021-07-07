@@ -9,6 +9,7 @@
   align-items: center;
   border-radius: 10px;
   overflow: hidden;
+  cursor: default;
 }
 
 .boxList__iconBx {

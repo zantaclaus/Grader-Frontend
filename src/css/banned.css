@@ -17,6 +17,12 @@
   margin: 1rem;
   border: 1px solid #fff;
   border-radius: 20px;
+  cursor: default;
+}
+
+.banned__list:hover {
+  /* color: #18ffff; */
+  border-color: #18ffff;
 }
 
 .banned__last {
