@@ -79,7 +79,7 @@ function Navbar(props) {
                 className="nav__link nav__link--3"
                 onClick={linkClick}
               >
-                Guidebook
+                Guide
                 <span />
               </NavLink>
             </li>
