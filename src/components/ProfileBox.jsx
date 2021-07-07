@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "../css/profileBox.css";
+import ProfileGroup from "./ProfileGroup";
 import team1 from "../images/team1.webp";
 import team2 from "../images/team2.webp";
 import team3 from "../images/team3.webp";
 import team4 from "../images/team4.webp";
 import team5 from "../images/team5.webp";
-
 import { useSelector } from "react-redux";
 
 function ProfileBox({ toggleModalNickname, toggleModalPassword }) {
@@ -24,7 +24,7 @@ function ProfileBox({ toggleModalNickname, toggleModalPassword }) {
         </div>
         <div className="card__content profile__content">
           <div className="profile__image">
-            <img src={team2} alt="" />
+            <ProfileGroup userDetail={userDetail} />
           </div>
           <div className="profile__details">
             <h2>
