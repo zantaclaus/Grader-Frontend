@@ -3,11 +3,11 @@ import "../css/taskSubmit.css";
 import { FaLocationArrow } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { setCode } from "../redux/actions/codeAction";
-import { useState } from "react";
+// import { useState } from "react";
 
 function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
   const user = useSelector((state) => state.user.user);
-  const [inQueue, setInQueue] = useState({});
+  // const [inQueue, setInQueue] = useState({});
   const dispatch = useDispatch();
 
   const refreshPage = () => {
@@ -27,17 +27,14 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
       code: code,
     };
 
-    const response = await fetch(
-      `https://compiler.ceboostup.com/check_result`,
-      {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-type": "application/json" },
-      }
-    );
+    await fetch(`https://compiler.ceboostup.com/check_result`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json" },
+    });
 
-    const result = await response.json();
-    setInQueue(result);
+    // const result = await response.json();
+    // setInQueue(result);
 
     refreshPage();
   };

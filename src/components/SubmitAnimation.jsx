@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "react-lottie";
 import * as shark from "../images/shark-2.json";
-import * as done from "../images/done.json";
+// import * as done from "../images/done.json";
 import "../css/submitAnimation.css";
 
 const defaultOptions = {
