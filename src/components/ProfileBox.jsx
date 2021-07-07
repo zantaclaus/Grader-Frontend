@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "../css/profileBox.css";
 import ProfileGroup from "./ProfileGroup";
+import { getGroup } from "../services/groupService";
 import { useSelector } from "react-redux";
 
 function ProfileBox({ toggleModalNickname, toggleModalPassword }) {
   const userDetail = useSelector((state) => state.userDetail.user);
+  const group = getGroup(userDetail.group)[0];
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -29,7 +31,7 @@ function ProfileBox({ toggleModalNickname, toggleModalPassword }) {
               Nickname : <span>{userDetail.nickName}</span>
             </h2>
             <h2>
-              Team : <span>{userDetail.group}</span>
+              Team : <span>{group.name}</span>
             </h2>
           </div>
           <div className="btn__row">
