@@ -89,6 +89,7 @@ int main()
                     <BtnUpload
                       handleFileChange={handleFileChange}
                       onInputClick={onInputClick}
+                      isDone={isDone}
                     />
                     <TaskSubmit
                       code={code}

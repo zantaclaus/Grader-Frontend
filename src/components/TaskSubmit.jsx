@@ -41,7 +41,12 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
 
   return (
     <div className="task__submit btn--hover">
-      <button id="submit" type="submit" onClick={handleCodeSubmit}>
+      <button
+        id="submit"
+        type="submit"
+        onClick={handleCodeSubmit}
+        disabled={isDone}
+      >
         Submit
       </button>
       <label htmlFor="submit" className="submit__label">
