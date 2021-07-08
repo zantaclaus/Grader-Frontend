@@ -38,6 +38,9 @@
   --navbar-link-3: #252f6b;
   --navbar-link-4: #252f6b;
   --navbar-link-5: #252f6b;
+  --navbar-logout-color: #fff;
+  --navbar-logout-background: rgba(0, 136, 169, 1);
+  --navbar-logout-background-hover: rgba(0, 136, 169, 0.8);
   --navbar-link-hover: #8bc7ff;
   --navbar-selected: #252f6b;
 
@@ -47,7 +50,7 @@
   --hero-tagline: #4b4b4b;
   --hero-plain: #0000cd;
   --hero-flower-1: #20b2aa;
-  --hero-flower-2: #0084a4;
+  --hero-flower-2: #101111;
   --hero-bar-1: #665cf7;
   --hero-bar-2: #b86ef1;
   --hero-bar-3: #f46dfb;
@@ -131,6 +134,10 @@
   --navbar-link-3: #f46dfb;
   --navbar-link-4: #f360ac;
   --navbar-link-5: #fff;
+  --navbar-logout-color: #fff;
+  --navbar-logout-background: rgba(0, 136, 169, 1);
+  --navbar-logout-background-hover: rgba(0, 136, 169, 0.8);
+
   --navbar-link-hover: var(--color-primary);
   --navbar-selected: var(--color-primary);
 
@@ -223,7 +230,7 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --navbar-height: 6.2rem;
+    --navbar-height: 6.5rem;
   }
 }
 

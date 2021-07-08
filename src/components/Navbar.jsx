@@ -95,7 +95,7 @@ function Navbar(props) {
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink to="/logout" className="nav__link nav__link--5">
+              <NavLink to="/logout" className="nav__link nav__logout">
                 Logout
               </NavLink>
             </li>

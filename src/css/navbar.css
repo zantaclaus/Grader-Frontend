@@ -28,6 +28,8 @@
 
 .nav__link {
   font-size: var(--font-list);
+  transition: 0.3s ease 0s;
+
   /* color: var(--navbar-link); */
 }
 
@@ -118,7 +120,17 @@
   }
 
   .nav__logout {
-    display: block;
+    color: var(--navbar-logout-color);
+    padding: 0.72rem 2rem;
+    border: none;
+    background-color: var(--navbar-logout-background);
+    border-radius: 5rem;
+    transition: 0.3s ease 0s;
+  }
+
+  .nav__logout:hover {
+    color: var(--navbar-logout-color);
+    background-color: var(--navbar-logout-background-hover);
   }
 
   .nav__toggle {
