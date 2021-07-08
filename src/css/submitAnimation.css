@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: progress;
   /* background: rgb(12, 40, 177); */
 }
 
