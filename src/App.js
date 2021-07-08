@@ -23,10 +23,6 @@ function App(props) {
     dispatch(setUser(user));
   }, [dispatch]);
 
-  useEffect(() => {
-    document.title = "CE BoostUp #9";
-  });
-
   // console.log("App user:", user);
 
   return (
