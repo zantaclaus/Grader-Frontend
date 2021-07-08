@@ -30,6 +30,9 @@
   --navbar-link: #393939;
   --navbar-link-1: #252f6b;
   --navbar-link-2: #252f6b;
+  --navbar-link-3: #252f6b;
+  --navbar-link-4: #252f6b;
+  --navbar-link-5: #252f6b;
   --navbar-link-hover: #8bc7ff;
   --navbar-selected: #252f6b;
 
@@ -60,14 +63,37 @@
   --tasks-card-header: #fff;
   --tasks-card-content-background: #fbfefd;
   --tasks-card-content: #000;
+  --tasks-card-passed: #0ea572;
 
-  --task-font-color: #252f6b;
+  --search-background: #fff;
+  --search-color: #000;
+  --search-placeholder: rgb(83, 79, 79);
+  --search-line: #252f6b;
+  --search-icon: #252f6b;
+  --dropdown-background: #ffffff;
+  --dropdown-color: #000;
+  --pagination-color: #fff;
+
+  --task-background: var(--color-background);
+  --task-title-color: var(--color-primary);
+  --task-pdf-background: var(--color-background);
+  --task-pdf-color: var(--color-primary);
+  --task-pdf-chaya: var(--color-primary);
+  --task-pdf-label: var(--color-primary);
+  --task-pdf-table: var(--color-primary);
+  --task-resulted-background: var(--color-background);
+  --task-resulted-title: var(--color-primary);
+  --task-resulted-content: var(--color-primary);
+  --task-finished-color: var(--color-primary);
+  --task-editor-background: var(--color-background);
   --task-border: var(--color-primary);
+  --editor-color: #000;
 
   --profile-header-background: #252f6b;
   --profile-header: #fff;
   --profile-content-background: #fbfefd;
   --profile-content: #252f6b;
+  --profile-box-shadow: #c4c4c4;
 
   /* ======= Typography ======== */
   --font-semi-bold: 400;
@@ -108,14 +134,6 @@
   --leader-card: #f7fcff;
   --leader-user: #5cccf7;
 
-  /*
-  --tasks-card-header-background: #14887e;
-  --tasks-card-header-background-hover: #2ad6e6;
-  --tasks-card-header: #fff;
-  --tasks-card-content-background: #1b222e;
-  --tasks-card-content: #13d8bd;
-  --tasks-card-passed: #a2ecff; */
-
   --tasks-background: var(--color-background);
   --tasks-container-background: #111929;
   --tasks-bar: #6c54f3;
@@ -133,6 +151,7 @@
   --search-line: #fff;
   --search-icon: #fff;
   --dropdown-background: #1b222e;
+  --dropdown-color: #fff;
   --pagination-color: #1b222e;
 
   --task-background: var(--color-background);
@@ -148,12 +167,14 @@
   --task-finished-color: rgb(174, 225, 245);
   --task-editor-background: #1b222e;
   --task-border: var(--color-background);
+  --editor-color: #fff;
 
   --profile-background: var(--color-background);
   --profile-header-background: #089ca1;
   --profile-header: #fff;
   --profile-content-background: #3f3f413a;
   --profile-content: #ffffff;
+  --profile-box-shadow: var(--color-background);
 
   --scroll-bar-color: #fff;
   --scroll-bar-background: #fff;
@@ -164,6 +185,14 @@
 }
 
 .status--passed {
+  --tasks-card-header-background: #07be81;
+  --tasks-card-header-background-hover: #2ad6e6;
+  --tasks-card-header: #fff;
+  --tasks-card-content-background: #ffffff;
+  --tasks-card-content: #00a06baf;
+}
+
+.dark__mode .status--passed {
   --tasks-card-header-background: #09d1b0;
   --tasks-card-header-background-hover: #2ad6e6;
   --tasks-card-header: #fff;
@@ -332,7 +361,7 @@ a {
 .card {
   /* border: 1px solid #000; */
   border-radius: 10px;
-  /* box-shadow: 0 4px 4px #c4c4c4; */
+  box-shadow: 0 4px 4px var(--profile-box-shadow);
 }
 
 .card__title {
