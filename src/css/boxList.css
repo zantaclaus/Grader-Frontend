@@ -15,13 +15,12 @@
 .boxList__iconBx {
   width: 100%;
   height: 100%;
-
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  background-color: #1b222e;
+  color: var(--boxList-icon-color);
+  background-color: var(--boxList-background);
   transition: 0.5s;
   transform: translateY(0);
 }
@@ -35,11 +34,10 @@
 }
 
 .boxList__content {
-  background-color: #35b3b8;
+  background-color: var(--boxList-content-background);
   position: relative;
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +48,7 @@
 }
 
 .boxList__content__icon {
-  color: #fff;
+  color: var(--boxList-content-color);
   font-size: 8rem;
 }
 
@@ -59,7 +57,7 @@
 }
 
 .boxList__content h3 {
-  color: #fff;
+  color: var(--boxList-content-color);
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -67,7 +65,7 @@
 }
 
 .boxList__content h4 {
-  color: #fff;
+  color: var(--boxList-content-color);
   margin-top: 0.3rem;
   font-size: 1.6rem;
   font-weight: 500;

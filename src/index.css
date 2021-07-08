@@ -23,6 +23,11 @@
   --color-btn-title: #fff;
   --color-card-title: #fff;
 
+  --boxList-background: #111b53;
+  --boxList-icon-color: #fff;
+  --boxList-content-background: #06ce9c;
+  --boxList-content-color: #fff;
+
   --login-forgot-hover: #252f6b;
 
   --navbar-background: #fbfefd;
@@ -89,6 +94,11 @@
   --task-border: var(--color-primary);
   --editor-color: #000;
 
+  --guidebook-title: var(--color-primary);
+  --guidebook-tagline: rgb(77, 77, 77);
+  --guidebook-banned-list: var(--color-primary);
+  --guidebook-banned-list-hover: #06ce9c;
+
   --profile-header-background: #252f6b;
   --profile-header: #fff;
   --profile-content-background: #fbfefd;
@@ -104,6 +114,14 @@
   --color-background: #050d1a;
   --color-primary: #3e64ff;
   --color-btn-title: #fff;
+
+  --scroll-bar-color: #3e64ff;
+  --scroll-bar-background: var(--color-background);
+
+  --boxList-background: #1b222e;
+  --boxList-icon-color: #fff;
+  --boxList-content-background: #35b3b8;
+  --boxList-content-color: #fff;
 
   --navbar-background: var(--color-background);
   --navbar-logo: #5cccf7;
@@ -135,7 +153,7 @@
   --leader-user: #5cccf7;
 
   --tasks-background: var(--color-background);
-  --tasks-container-background: #111929;
+  --tasks-container-background: #050d1a;
   --tasks-bar: #6c54f3;
   --tasks-card-shadow: #000;
   --tasks-card-header-background: #4193b9;
@@ -169,15 +187,17 @@
   --task-border: var(--color-background);
   --editor-color: #fff;
 
+  --guidebook-title: #fff;
+  --guidebook-tagline: #fff;
+  --guidebook-banned-list: #fff;
+  --guidebook-banned-list-hover: #18ffff;
+
   --profile-background: var(--color-background);
   --profile-header-background: #089ca1;
   --profile-header: #fff;
   --profile-content-background: #3f3f413a;
   --profile-content: #ffffff;
   --profile-box-shadow: var(--color-background);
-
-  --scroll-bar-color: #fff;
-  --scroll-bar-background: #fff;
 
   /* --btn-background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%); */
   --btn-background: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
