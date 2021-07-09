@@ -22,22 +22,6 @@ export function encrypts(text) {
   return iv.toString("hex") + ":" + encrypted.toString("hex");
 }
 
-function decrypt(text) {
-  let textParts = text.split(":");
-  let iv = Buffer.from(textParts.shift(), "hex");
-  let encryptedText = Buffer.from(textParts.join(":"), "hex");
-  let decipher = crypto.createDecipheriv(
-    "aes-256-cbc",
-    Buffer.from(ENCRYPTION_KEY),
-    iv
-  );
-  let decrypted = decipher.update(encryptedText);
-
-  decrypted = Buffer.concat([decrypted, decipher.final()]);
-
-  return decrypted.toString();
-}
-
 export async function login(usernameCheck, passwordCheck) {
   const username = encrypts(usernameCheck);
   const password = encrypts(passwordCheck);
