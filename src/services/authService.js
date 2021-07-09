@@ -45,7 +45,7 @@ export async function login(usernameCheck, passwordCheck) {
   console.log(username, password);
   const { data: jwt } = await axios.post(apiEndpoint, { username, password });
 
-  localStorage.setItem("token", decrypt(jwt.token));
+  localStorage.setItem("token", jwt.token);
   localStorage.setItem("theme", "dark");
 }
 
