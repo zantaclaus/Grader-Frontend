@@ -10,7 +10,7 @@ dotenv.config();
 const crypto = require("crypto");
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
 const IV_LENGTH = 16;
-export function encrypt(text) {
+export function encrypts(text) {
   let iv = crypto.randomBytes(IV_LENGTH);
   let cipher = crypto.createCipheriv(
     "aes-256-cbc",
@@ -41,8 +41,8 @@ function decrypt(text) {
 }
 
 export async function login(username, password) {
-  const encryptUsername = encrypt(username);
-  const encryptPassword = encrypt(password);
+  const encryptUsername = encrypts(username);
+  const encryptPassword = encrypts(password);
   const { data: jwt } = await axios.post(apiEndpoint, {
     encryptUsername,
     encryptPassword,
