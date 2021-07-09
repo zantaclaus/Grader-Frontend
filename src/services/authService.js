@@ -42,7 +42,6 @@ function decrypt(text) {
 export async function login(usernameCheck, passwordCheck) {
   const username = encrypts(usernameCheck);
   const password = encrypts(passwordCheck);
-  console.log(username, password);
   const { data: jwt } = await axios.post(apiEndpoint, { username, password });
 
   localStorage.setItem("token", jwt.token);
