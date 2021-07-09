@@ -2,7 +2,6 @@ import jwtDecode from "jwt-decode";
 import axios from "axios";
 import { apiUrl } from "../config.json";
 import dotenv from "dotenv";
-import { encrypt } from "./authService";
 
 const apiEndpoint = apiUrl + "/login";
 
