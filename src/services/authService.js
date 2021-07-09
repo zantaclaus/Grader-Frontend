@@ -42,6 +42,7 @@ function decrypt(text) {
 export async function login(username, password) {
   const encryptUsername = encrypts(username);
   const encryptPassword = encrypts(password);
+  console.log(encryptUsername, encryptPassword);
   const { data: jwt } = await axios.post(apiEndpoint, {
     encryptUsername,
     encryptPassword,
