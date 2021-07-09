@@ -39,14 +39,10 @@ function decrypt(text) {
   return decrypted.toString();
 }
 
-export async function login(username, password) {
-  const encryptUsername = encrypts(username);
-  const encryptPassword = encrypts(password);
-  console.log(encryptUsername, encryptPassword);
-  const { data: jwt } = await axios.post(apiEndpoint, {
-    encryptUsername,
-    encryptPassword,
-  });
+export async function login(usernameCheck, passwordCheck) {
+  const username = encrypts(usernameCheck);
+  const password = encrypts(passwordCheck);
+  const { data: jwt } = await axios.post(apiEndpoint, { username, password });
 
   localStorage.setItem("token", decrypt(jwt.token));
   localStorage.setItem("theme", "dark");
