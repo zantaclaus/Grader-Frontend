@@ -46,17 +46,3 @@ function App(props) {
 }
 
 export default App;
-
-/* <Switch>
-  <Route path="/login" component={Login} />
-  <React.Fragment>
-    <div className="navbar__container">
-      <Navbar />
-    </div>
-    <div className="content__container">
-      <Route path="/logout" component={Logout} />
-      <Route path="/" component={Home} />
-      <Redirect path="/" exact to="/home" />
-    </div>
-  </React.Fragment>
-</Switch> */
