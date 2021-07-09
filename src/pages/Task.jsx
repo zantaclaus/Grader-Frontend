@@ -71,14 +71,14 @@ int main()
                   <TaskDetail
                     title={task.status === 0 ? "Submitted Resulted" : task.time}
                     detail={task.result}
-                    header="header"
+                    header="header header--resulted"
                     content="resulted"
                     setforceRender={setforceRender}
                   />
                   <TaskDetail
                     title="Finished"
                     detail={task.finished}
-                    header="header"
+                    header="header header--finished"
                     content="finished"
                   />
                 </div>

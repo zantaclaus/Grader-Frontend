@@ -91,6 +91,7 @@
   --task-pdf-table: var(--color-primary);
   --task-resulted-background: var(--color-background);
   --task-resulted-title: var(--color-primary);
+  --task-finished-title: var(--color-primary);
   --task-resulted-content: var(--color-primary);
   --task-finished-color: var(--color-primary);
   --task-editor-background: var(--color-background);
@@ -180,16 +181,17 @@
   --pagination-color: #1b222e;
 
   --task-background: var(--color-background);
-  --task-title-color: rgb(7, 231, 157);
+  --task-title-color: #b86ef1;
   --task-pdf-background: #1b222e;
-  --task-pdf-color: rgb(107, 250, 231);
+  --task-pdf-color: #abffff;
   --task-pdf-chaya: #f360ac;
   --task-pdf-label: rgb(255, 255, 255);
   --task-pdf-table: rgb(119, 119, 119);
   --task-resulted-background: #1b222e;
-  --task-resulted-title: rgb(13, 184, 147);
-  --task-resulted-content: rgb(174, 225, 245);
-  --task-finished-color: rgb(174, 225, 245);
+  --task-resulted-title: #fc8e6c;
+  --task-finished-title: #2ecbb9;
+  --task-resulted-content: #fe9898;
+  --task-finished-color: #a793ff;
   --task-editor-background: #1b222e;
   --task-border: var(--color-background);
   --editor-color: #fff;

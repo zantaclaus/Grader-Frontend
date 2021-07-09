@@ -13,7 +13,14 @@
 .task__detail .header {
   font-size: 2.2rem;
   font-weight: 500;
+}
+
+.header--resulted {
   color: var(--task-resulted-title);
+}
+
+.header--finished {
+  color: var(--task-finished-title);
 }
 
 .task__detail .resulted {
