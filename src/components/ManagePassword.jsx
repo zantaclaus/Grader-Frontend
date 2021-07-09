@@ -49,7 +49,7 @@ function ManagePassword(props) {
             id="password"
             value={password}
             setValue={setPassword}
-            label="password"
+            label="Password"
             type="password"
           />
           {/* <span className="password__label">Password</span> */}
