@@ -1,13 +1,12 @@
 import jwtDecode from "jwt-decode";
 import axios from "axios";
 import { apiUrl } from "../config.json";
-import dotenv from "dotenv";
+import { notKey } from "../notKey";
 
 const apiEndpoint = apiUrl + "/login";
 
-dotenv.config();
 const crypto = require("crypto");
-const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
+const ENCRYPTION_KEY = notKey;
 const IV_LENGTH = 16;
 export function encrypts(text) {
   let iv = crypto.randomBytes(IV_LENGTH);
