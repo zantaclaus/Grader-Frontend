@@ -61,7 +61,12 @@ function Card({ task, titleColor }) {
 
         {isGodMode && (
           <div className={titleColor}>
-            <Link to={`/tasks/${task._id}`} className="card__link">
+            <Link
+              to={`/tasks/${task._id}`}
+              className={
+                task.status === 2 ? "card__link status--passed" : "card__link"
+              }
+            >
               <div className="card__task__title">{task.title}</div>
               <div className="card__task__content">
                 <div className="unit">{task.unit}</div>
