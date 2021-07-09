@@ -7,7 +7,7 @@ const apiEndpoint = apiUrl + "/login";
 
 dotenv.config();
 const crypto = require("crypto");
-const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
+const ENCRYPTION_KEY = "5497dkohsf&8d*frrgsa!kfoejsb5wef";
 const IV_LENGTH = 16;
 export function encrypts(text) {
   let iv = crypto.randomBytes(IV_LENGTH);
