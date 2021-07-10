@@ -7,6 +7,8 @@ import Error from "../components/Error";
 import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
 import { delClass } from "../services/toggleService";
+import Forgot from "../components/Forgot";
+import ModalForgot from "./../components/ModalForgot";
 
 class Login extends Component {
   state = {
@@ -129,9 +131,10 @@ class Login extends Component {
               />
               <Error error={errors.password} />
             </div>
-            <Link to="/" className="forgot">
+            <Forgot />
+            {/* <Link to="/" className="forgot">
               Forgot Password?
-            </Link>
+            </Link> */}
             <button className="login-button" disabled={this.validate()}>
               Login
             </button>
