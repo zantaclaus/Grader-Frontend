@@ -1,8 +1,7 @@
 import React from "react";
-import { IoCloseSharp } from "react-icons/io5";
 import "../css/modal.css";
 
-import line from "../images/line.jpg";
+import line from "../images/line.webp";
 
 function ModalForgot({ modal, toggleModal }) {
   return (
