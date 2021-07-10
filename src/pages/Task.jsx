@@ -82,7 +82,11 @@ int main()
                     content="finished"
                   />
                 </div>
-                <TaskEditor code={code} setCode={setCode} />
+                <TaskEditor
+                  code={code}
+                  setCode={setCode}
+                  status={task.status}
+                />
                 <div className="btn__container">
                   <BtnDownload linkPDF={linkPDF} />
                   <div className="task__btn__right">

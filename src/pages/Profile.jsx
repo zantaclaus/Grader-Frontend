@@ -21,12 +21,10 @@ function Profile(props) {
   const [modalPassword, setModalPassword] = useState(false);
 
   const toggleModalNickname = () => {
-    console.log("Nickname");
     setModalNickname(!modalNickname);
   };
 
   const toggleModalPassword = () => {
-    console.log("Password");
     setModalPassword(!modalPassword);
   };
 
