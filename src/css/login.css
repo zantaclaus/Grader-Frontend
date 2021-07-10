@@ -90,8 +90,8 @@
   border-radius: 25px;
   font-size: var(--font-login-input);
   color: var(--color-btn-title);
-  background-color: var(--btn-background);
-  border-color: var(--btn-background);
+  background: var(--btn-login-background);
+  border-color: var(--btn-login-background);
   cursor: pointer;
 }
 
