@@ -14,7 +14,7 @@ function ModalCodeBoard({ modal, toggleModal }) {
             <IoCloseSharp
               size="3rem"
               color="white"
-              className="close-modal"
+              className="close-modal close-modal--codeBoard"
               onClick={toggleModal}
             />
           </div>

@@ -48,3 +48,8 @@
   right: 10px;
   cursor: pointer;
 }
+
+.close-modal--codeBoard {
+  top: 1.5rem;
+  right: 1.5rem;
+}

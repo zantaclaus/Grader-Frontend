@@ -1,5 +1,5 @@
 import React from "react";
-import { SiVisualstudiocode } from "react-icons/si";
+import { BsFileEarmarkCode } from "react-icons/bs";
 import "../css/taskEditor.css";
 
 import Editor from "react-simple-code-editor";
@@ -26,7 +26,7 @@ function TaskEditor({ code, setCode, status }) {
         className="editor"
       />
       {status === 2 && (
-        <SiVisualstudiocode
+        <BsFileEarmarkCode
           color="white"
           size="3rem"
           className="code__icon"
