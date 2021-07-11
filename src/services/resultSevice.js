@@ -7,7 +7,12 @@ export const results = [
   { id: "6", icon: "P", title: "Pass", content: "Pass testcase." },
   { id: "7", icon: "T", title: "Time out", content: "Max time out is 1s" },
   { id: "8", icon: "W", title: "Testcase Error", content: "Contact Admin" },
-  { id: "9", icon: "X", title: "Runtime Error", content: "Contact Admin" },
+  {
+    id: "9",
+    icon: "X",
+    title: "Runtime Error",
+    content: "Error occur while running",
+  },
   { id: "10", icon: "Y", title: "Grader Error", content: "Contact Admin" },
   { id: "11", icon: "-", title: "Not Pass", content: "Not pass testcase" },
 ];
