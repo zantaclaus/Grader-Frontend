@@ -27,60 +27,150 @@ function Card({ task, titleColor }) {
     halfStar = [1];
     whiteStar = _.range(rank - 0.5 + 1, 5);
   }
-
+  // card__link status--passed
   return (
     <React.Fragment>
-      <div>
-        {!isGodMode && (
-          <div className={titleColor}>
-            <Link
-              to={`/tasks/${task._id}`}
-              className={
-                task.status === 2 ? "card__link status--passed" : "card__link"
-              }
-            >
-              <div className="card__task__title">{task.title}</div>
-              <div className="card__task__content">
-                <div className="unit">{task.unit}</div>
-                <div className="passed">{task.finished}</div>
-                <div className="star">
-                  {blackStar.map((rank) => (
-                    <BsStarFill key={rank} size="2rem" />
-                  ))}
-                  {halfStar.map((rank) => (
-                    <BsStarHalf key={rank} size="2rem" />
-                  ))}
-                  {whiteStar.map((rank) => (
-                    <BsStar key={rank} size="2rem" />
-                  ))}
+      {task.status === 0 && (
+        <div>
+          {!isGodMode && (
+            <div className={titleColor}>
+              <Link to={`/tasks/${task._id}`} className="card__link">
+                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__content">
+                  <div className="unit">{task.unit}</div>
+                  <div className="passed">{task.finished}</div>
+                  <div className="star">
+                    {blackStar.map((rank) => (
+                      <BsStarFill key={rank} size="2rem" />
+                    ))}
+                    {halfStar.map((rank) => (
+                      <BsStarHalf key={rank} size="2rem" />
+                    ))}
+                    {whiteStar.map((rank) => (
+                      <BsStar key={rank} size="2rem" />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        )}
+              </Link>
+            </div>
+          )}
 
-        {isGodMode && (
-          <div className={titleColor}>
-            <Link
-              to={`/tasks/${task._id}`}
-              className={
-                task.status === 2 ? "card__link status--passed" : "card__link"
-              }
-            >
-              <div className="card__task__title">{task.title}</div>
-              <div className="card__task__content">
-                <div className="unit">{task.unit}</div>
-                <div className="passed">{task.finished}</div>
-                <div className="star">
-                  {godModeStar.map((rank) => (
-                    <IoSkullSharp key={rank} size="2.5rem" color="white" />
-                  ))}
+          {isGodMode && (
+            <div className={titleColor}>
+              <Link to={`/tasks/${task._id}`} className="card__link">
+                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__content">
+                  <div className="unit">{task.unit}</div>
+                  <div className="passed">{task.finished}</div>
+                  <div className="star">
+                    {godModeStar.map((rank) => (
+                      <IoSkullSharp key={rank} size="2.5rem" />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        )}
-      </div>
+              </Link>
+            </div>
+          )}
+        </div>
+      )}
+      {task.status === 1 && (
+        <div>
+          {!isGodMode && (
+            <div className={titleColor}>
+              <Link
+                to={`/tasks/${task._id}`}
+                className="card__link status--error"
+              >
+                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__content">
+                  <div className="unit">{task.unit}</div>
+                  <div className="passed">{task.finished}</div>
+                  <div className="star">
+                    {blackStar.map((rank) => (
+                      <BsStarFill key={rank} size="2rem" />
+                    ))}
+                    {halfStar.map((rank) => (
+                      <BsStarHalf key={rank} size="2rem" />
+                    ))}
+                    {whiteStar.map((rank) => (
+                      <BsStar key={rank} size="2rem" />
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
+
+          {isGodMode && (
+            <div className={titleColor}>
+              <Link
+                to={`/tasks/${task._id}`}
+                className="card__link status--error"
+              >
+                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__content">
+                  <div className="unit">{task.unit}</div>
+                  <div className="passed">{task.finished}</div>
+                  <div className="star">
+                    {godModeStar.map((rank) => (
+                      <IoSkullSharp key={rank} size="2.5rem" />
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
+        </div>
+      )}
+      {task.status === 2 && (
+        <div>
+          {!isGodMode && (
+            <div className={titleColor}>
+              <Link
+                to={`/tasks/${task._id}`}
+                className="card__link status--passed"
+              >
+                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__content">
+                  <div className="unit">{task.unit}</div>
+                  <div className="passed">{task.finished}</div>
+                  <div className="star">
+                    {blackStar.map((rank) => (
+                      <BsStarFill key={rank} size="2rem" />
+                    ))}
+                    {halfStar.map((rank) => (
+                      <BsStarHalf key={rank} size="2rem" />
+                    ))}
+                    {whiteStar.map((rank) => (
+                      <BsStar key={rank} size="2rem" />
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
+
+          {isGodMode && (
+            <div className={titleColor}>
+              <Link
+                to={`/tasks/${task._id}`}
+                className="card__link status--passed"
+              >
+                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__content">
+                  <div className="unit">{task.unit}</div>
+                  <div className="passed">{task.finished}</div>
+                  <div className="star">
+                    {godModeStar.map((rank) => (
+                      <IoSkullSharp key={rank} size="2.5rem" />
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            </div>
+          )}
+        </div>
+      )}
     </React.Fragment>
   );
 }

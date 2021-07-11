@@ -214,6 +214,23 @@
   --btn-hover: linear-gradient(45deg, #0093e9 30%, #80d0c7 100%);
 }
 
+.status--error {
+  --tasks-card-header-background: rgb(226, 90, 66);
+  --tasks-card-header-background-hover: tomato;
+  --tasks-card-header: #fff;
+  --tasks-card-content-background: #ffffff;
+  --tasks-card-content: rgb(226, 90, 66);
+}
+
+.dark__mode .status--error {
+  --tasks-card-header-background: rgb(226, 90, 66);
+  --tasks-card-header-background-hover: tomato;
+  --tasks-card-header: #fff;
+  --tasks-card-content-background: #1b222e;
+  --tasks-card-content: rgb(226, 90, 66);
+  --tasks-card-passed: rgb(226, 90, 66);
+}
+
 .status--passed {
   --tasks-card-header-background: #07be81;
   --tasks-card-header-background-hover: #2ad6e6;
@@ -223,12 +240,12 @@
 }
 
 .dark__mode .status--passed {
-  --tasks-card-header-background: #09d1b0;
-  --tasks-card-header-background-hover: #2ad6e6;
+  --tasks-card-header-background: #0cddba;
+  --tasks-card-header-background-hover: #21f5d2;
   --tasks-card-header: #fff;
   --tasks-card-content-background: #1b222e;
   --tasks-card-content: #13d8bd;
-  --tasks-card-passed: #a2ecff;
+  --tasks-card-passed: #13d8bd;
 }
 
 @media screen and (min-width: 768px) {

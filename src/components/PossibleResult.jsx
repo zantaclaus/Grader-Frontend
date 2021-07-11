@@ -9,7 +9,7 @@ function PossibleResult(props) {
     <div className="possibleResult">
       <div className="guideBook__title">Possible Result</div>
       <div className="guideBook__tagline">
-        Is a result you will be received after a code submission. A different
+        A result you will be received after a code submission. A different
         character means a different result.
       </div>
       <div className="possibleResult__content">

@@ -19,7 +19,7 @@ function ManageNickname(props) {
   return (
     <div className="password__container">
       <div className="password__box">
-        <div className="password__title">Change NIckname</div>
+        <div className="password__title">Change Nickname</div>
 
         <InputForm
           id="nickname"
