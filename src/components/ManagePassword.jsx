@@ -37,7 +37,6 @@ function ManagePassword(props) {
       window.location = "/profile";
     } catch (ex) {
       if (ex.response) {
-        console.log("yo");
         const errors = { ...error };
         errors.IncorrectOldPassword = ex.response.data.IncorrectOldPassword;
         errors.password = ex.response.data.password;
