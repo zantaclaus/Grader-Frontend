@@ -1,0 +1,10 @@
+.tooltip__container {
+  position: absolute;
+  background-color: #1b222e;
+  color: #fff;
+  top: 100px;
+  left: 70%;
+  opacity: 0;
+  transition: 0.3s ease-in;
+  font-size: 1.5rem;
+}

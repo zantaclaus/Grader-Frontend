@@ -19,6 +19,10 @@
   color: var(--task-resulted-title);
 }
 
+.task__detail:hover .tooltip__container {
+  opacity: 1;
+}
+
 .header--finished {
   color: var(--task-finished-title);
 }
