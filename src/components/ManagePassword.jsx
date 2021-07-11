@@ -14,7 +14,13 @@ function ManagePassword(props) {
   const [error, setError] = useState({});
 
   const handlePasswordSubmit = async () => {
+    const token = localStorage.getItem("token");
     try {
+      const header = {
+        headers: {
+          Authorization: token,
+        },
+      };
       const data = {
         oldPassword: password,
         password: newPassword,
@@ -23,7 +29,8 @@ function ManagePassword(props) {
 
       await axios.put(
         `https://api.ceboostup.com/api/password/${user.id}`,
-        data
+        data,
+        header
       );
 
       window.location = "/profile";

@@ -17,8 +17,15 @@ function CodeBoard(props) {
 
   useEffect(() => {
     const fetch = async () => {
-      const result = await axios(
-        `https://api.ceboostup.com/api/finish-sub?questionId=${task._id}`
+      const token = localStorage.getItem("token");
+      const header = {
+        headers: {
+          Authorization: token,
+        },
+      };
+      const result = await axios.get(
+        `https://api.ceboostup.com/api/finish-sub?questionId=${task._id}`,
+        header
       );
 
       const arrCode = _.range(1, result.data.length + 1);
