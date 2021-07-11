@@ -19,12 +19,12 @@ function Tooltip({ detail }) {
     if (detail.includes("Y")) result.push("Y: Grader Error");
     if (detail.includes("-")) result.push("-: Not Pass");
     setTooltip(result);
-  }, [detail, tooltip]);
+  }, []);
 
   return (
     <div className="tooltip__container">
       {tooltip.map((text) => (
-        <div>{text}</div>
+        <div key={text}>{text}</div>
       ))}
     </div>
   );
