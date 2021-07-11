@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Joi from "joi-browser";
 import Aos from "aos";
 import auth from "../services/authService";
@@ -8,7 +8,6 @@ import loginImage from "../images/loginImage.svg";
 import "../css/login.css";
 import { delClass } from "../services/toggleService";
 import Forgot from "../components/Forgot";
-import ModalForgot from "./../components/ModalForgot";
 
 class Login extends Component {
   state = {
@@ -132,9 +131,6 @@ class Login extends Component {
               <Error error={errors.password} />
             </div>
             <Forgot />
-            {/* <Link to="/" className="forgot">
-              Forgot Password?
-            </Link> */}
             <button className="login-button" disabled={this.validate()}>
               Login
             </button>
