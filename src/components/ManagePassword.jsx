@@ -1,6 +1,7 @@
 import React from "react";
 import Error from "./Error";
 import InputForm from "./InputForm";
+import { encrypts } from "../services/authService";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import "../css/managePassword.css";
@@ -22,9 +23,9 @@ function ManagePassword(props) {
         },
       };
       const data = {
-        oldPassword: password,
-        password: newPassword,
-        password2: confirmPassword,
+        oldPassword: encrypts(password),
+        password: encrypts(newPassword),
+        password2: encrypts(confirmPassword),
       };
 
       await axios.put(
