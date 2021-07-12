@@ -12,7 +12,10 @@ function LeaderBoard(props) {
     const fetch = async () => {
       const reasult = await axios.get(`https://api.ceboostup.com/api/leader`);
       const scoreBoard = reasult.data.scoreBoard;
-      const topLeader = [scoreBoard[0], scoreBoard[1], scoreBoard[2]];
+      const topLeader =
+        scoreBoard.length <= 1
+          ? []
+          : [scoreBoard[0], scoreBoard[1], scoreBoard[2]];
       setLeader(topLeader);
     };
     fetch();
