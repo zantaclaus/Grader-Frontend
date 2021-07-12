@@ -5,6 +5,7 @@ import TasksContainer from "../components/TasksContainer";
 import Loading from "../components/Loading";
 import "../css/tasks.css";
 import { setCode } from "../redux/actions/codeAction";
+import { setTasks } from "./../redux/actions/taskAction";
 
 function Tasks(props) {
   const user = useSelector((state) => state.user.user);
@@ -15,6 +16,7 @@ function Tasks(props) {
   useEffect(() => {
     if (userId) {
       dispatch(setCode(""));
+      dispatch(setTasks({}));
       dispatch(fetchTasks(userId));
     }
   }, [dispatch, userId]);
