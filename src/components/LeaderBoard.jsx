@@ -4,11 +4,23 @@ import team1 from "../images/team1.webp";
 import team2 from "../images/team2.webp";
 import team3 from "../images/team3.webp";
 import "../css/leaderBoard.css";
+// import axios from "axios";
 
 function LeaderBoard(props) {
+  // useEffect(() => {
+  //   const fetch = async () => {
+  //     const leaderBoard = await axios.get(
+  //       `https://api.ceboostup.com/api/leader`
+  //     );
+  //     console.log(leaderBoard.data);
+  //   };
+  //   fetch();
+  // });
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
   return (
     <div className="leader__block">
       <div data-aos="zoom-in-up" className="container">
