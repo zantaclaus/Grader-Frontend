@@ -237,6 +237,8 @@
   --tooltip-color: #fff;
   --tooltip-background: #1b222e;
 
+  --submission-loading-text: #fff;
+
   /* --btn-background: linear-gradient(90deg, #74ebd5 0%, #9face6 100%); */
   --btn-background: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
   --btn-hover: linear-gradient(45deg, #0093e9 30%, #80d0c7 100%);

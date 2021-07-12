@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--submission-loading-text);
   font-size: 3rem;
 }
 
