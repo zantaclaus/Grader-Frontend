@@ -74,9 +74,20 @@ function Navbar(props) {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/guidebook"
+                to="/submission"
                 activeClassName="nav__selected"
                 className="nav__link nav__link--3"
+                onClick={linkClick}
+              >
+                Submission
+                <span />
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/guidebook"
+                activeClassName="nav__selected"
+                className="nav__link nav__link--4"
                 onClick={linkClick}
               >
                 Guide
@@ -87,7 +98,7 @@ function Navbar(props) {
               <NavLink
                 to="/profile"
                 activeClassName="nav__selected"
-                className="nav__link nav__link--4"
+                className="nav__link nav__link--5"
                 onClick={linkClick}
               >
                 Profile
@@ -98,7 +109,7 @@ function Navbar(props) {
               <a
                 href="https://drive.google.com/file/d/1Y2UB6OWv_gUpVIeMxi73FDwxWWlU6RCb/view"
                 target="_blank"
-                className="nav__link nav__link--5"
+                className="nav__link nav__link--6"
                 rel="noreferrer"
               >
                 Ebook

@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
 import { setUser } from "./redux/actions/userAction";
+import Submission from "./pages/Submission";
 
 function App(props) {
   const user = useSelector((state) => state.user.user);
@@ -34,6 +35,7 @@ function App(props) {
           <ProtectedRoute path="/logout" component={Logout} />
           <ProtectedRoute path="/tasks/:id" exact component={Task} />
           <ProtectedRoute path="/tasks" component={Tasks} />
+          <ProtectedRoute path="/submission" component={Submission} />
           <ProtectedRoute path="/guidebook" component={GuideBook} />
           <ProtectedRoute path="/profile" component={Profile} />
           <ProtectedRoute path="/manage" component={Manage} />

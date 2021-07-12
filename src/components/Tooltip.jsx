@@ -19,7 +19,7 @@ function Tooltip({ detail }) {
     if (detail.includes("Y")) result.push("Y: Grader Error");
     if (detail.includes("-")) result.push("-: Not Pass");
     setTooltip(result);
-  }, []);
+  }, [detail]);
 
   return (
     <div className="tooltip__container">
