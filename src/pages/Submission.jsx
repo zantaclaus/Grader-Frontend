@@ -35,7 +35,14 @@ function Submission(props) {
   return (
     <React.Fragment>
       {Object.keys(submission).length === 0 ? (
-        <Loading />
+        <div className="submission__loading__page">
+          <h1>
+            No Submission
+            <span className="loadingDot dot1"> .</span>
+            <span className="loadingDot dot2">.</span>
+            <span className="loadingDot dot3">.</span>
+          </h1>
+        </div>
       ) : (
         <React.Fragment>
           <div className="submission__page">

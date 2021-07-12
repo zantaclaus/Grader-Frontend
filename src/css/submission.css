@@ -14,16 +14,6 @@
   background: var(--submission-bar);
 }
 
-.submission__header {
-  height: 1rem;
-  color: rgb(243, 233, 233);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 3rem;
-  font-size: 1.6rem;
-}
-
 .submission__footer {
   height: 1rem;
 }
@@ -42,4 +32,40 @@
 
 .submission__page .tasks__content {
   height: calc(100% - 4rem);
+}
+
+.submission__loading__page {
+  background: var(--color-background);
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.loadingDot {
+  animation: submissionLoad 1s linear infinite;
+}
+
+.dot2 {
+  animation-delay: 0.1s;
+}
+.dot3 {
+  animation-delay: 0.2s;
+}
+
+@keyframes submissionLoad {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
 }
