@@ -8,11 +8,11 @@ import Loading from "./../components/Loading";
 
 function Submission(props) {
   const user = useSelector((state) => state.user.user);
+  const userId = user.id;
   const [submission, setSubmission] = useState([]);
 
   useEffect(() => {
     const fetch = async () => {
-      console.log("fetch");
       const token = localStorage.getItem("token");
       const header = {
         headers: {
@@ -20,14 +20,13 @@ function Submission(props) {
         },
       };
       const submission = await axios.get(
-        `https://api.ceboostup.com/api/history?id=${user.id}`,
+        `https://api.ceboostup.com/api/history?id=${userId}`,
         header
       );
-      console.log("data", submission);
       setSubmission(submission.data);
     };
-    if (user) fetch();
-  }, [user]);
+    if (userId) fetch();
+  }, [userId]);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
