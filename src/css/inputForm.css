@@ -17,7 +17,7 @@
   padding: 1.25rem;
   padding-left: 1.3rem;
   background: none;
-  color: white;
+  color: var(--inputForm-color);
   font-size: 2rem;
   border-radius: 10px;
 }
@@ -49,5 +49,5 @@
   top: -1rem;
   left: 0.6rem;
   font-size: 1.4rem;
-  color: white;
+  color: var(--inputForm-color);
 }
