@@ -100,7 +100,7 @@ class Login extends Component {
             onSubmit={this.handleSubmit}
           >
             <h1>Welcome to Grader!</h1>
-            <h3>Register your account</h3>
+            <h3>Login your account</h3>
             <div className="login-input username-input">
               <label htmlFor="" className="">
                 Username
