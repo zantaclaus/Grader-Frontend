@@ -42,7 +42,10 @@ function Submission(props) {
             <div className="submission__container">
               <div className="submission__bar submission__header"></div>
               <div className="tasks__content">
-                <div data-aos="zoom-out" className="tasks__content__container">
+                <div
+                  data-aos="fade-right"
+                  className="tasks__content__container"
+                >
                   {submission.map((submit) => (
                     <SubmissionCard
                       key={submit.time}
