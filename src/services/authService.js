@@ -1,30 +1,12 @@
 import jwtDecode from "jwt-decode";
 import axios from "axios";
 import { apiUrl } from "../config.json";
-import { notKey } from "../notKey";
 
 const apiEndpoint = apiUrl + "/login";
 
-const crypto = require("crypto");
-const ENCRYPTION_KEY = notKey;
-const IV_LENGTH = 16;
-export function encrypts(text) {
-  let iv = crypto.randomBytes(IV_LENGTH);
-  let cipher = crypto.createCipheriv(
-    "aes-256-cbc",
-    Buffer.from(ENCRYPTION_KEY),
-    iv
-  );
-  let encrypted = cipher.update(text);
-
-  encrypted = Buffer.concat([encrypted, cipher.final()]);
-
-  return iv.toString("hex") + ":" + encrypted.toString("hex");
-}
-
 export async function login(usernameCheck, passwordCheck) {
-  const username = encrypts(usernameCheck);
-  const password = encrypts(passwordCheck);
+  const username = usernameCheck;
+  const password = passwordCheck;
   const { data: jwt } = await axios.post(apiEndpoint, { username, password });
 
   localStorage.setItem("token", jwt.token);
