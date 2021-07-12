@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import "../css/submission.css";
 import { useSelector } from "react-redux";
 import SubmissionCard from "../components/SubmissionCard";
-import Loading from "./../components/Loading";
 
 function Submission(props) {
   const user = useSelector((state) => state.user.user);
