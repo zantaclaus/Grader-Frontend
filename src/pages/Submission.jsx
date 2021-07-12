@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../css/submission.css";
 import { useSelector } from "react-redux";
-// import { IoChevronDownOutline } from "react-icons/io5";
 import SubmissionCard from "../components/SubmissionCard";
 import Loading from "./../components/Loading";
 
@@ -35,7 +34,9 @@ function Submission(props) {
         <React.Fragment>
           <div className="submission__page">
             <div className="submission__container">
-              <div className="submission__bar"></div>
+              <div className="submission__bar submission__header">
+                {/* <h1>Submission</h1> */}
+              </div>
               <div className="tasks__content">
                 <div className="tasks__content__container">
                   {submission.map((submit) => (
@@ -44,11 +45,12 @@ function Submission(props) {
                       title={submit.title}
                       result={submit.result}
                       time={submit.time}
+                      status={submit.status}
                     />
                   ))}
                 </div>
               </div>
-              <div className="submission__bar"></div>
+              <div className="submission__bar submission__footer"></div>
             </div>
           </div>
         </React.Fragment>

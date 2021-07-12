@@ -48,6 +48,9 @@
 .nav__link--5 {
   color: var(--navbar-link-5);
 }
+.nav__link--6 {
+  color: var(--navbar-link-6);
+}
 
 .nav__link:hover {
   color: var(--navbar-link-hover);

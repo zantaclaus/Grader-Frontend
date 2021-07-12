@@ -12,7 +12,6 @@ import ModalCodeBoard from "./ModalCodeBoard";
 
 function TaskEditor({ code, setCode, status }) {
   const [modalCode, setModalCode] = useState(false);
-  const theme = localStorage.getItem("theme");
   const toggleModalCode = () => {
     setModalCode(!modalCode);
   };

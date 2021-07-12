@@ -144,7 +144,8 @@
   --navbar-link-2: #b86ef1;
   --navbar-link-3: #f46dfb;
   --navbar-link-4: #f360ac;
-  --navbar-link-5: #ffa500;
+  --navbar-link-5: #ff8559;
+  --navbar-link-6: #f09d04;
   --navbar-logout-color: #fff;
   --navbar-logout-background: rgba(0, 136, 169, 1);
   --navbar-logout-background-hover: rgba(0, 136, 169, 0.8);
@@ -206,6 +207,8 @@
   --task-border: var(--color-background);
   --editor-color: #fff;
 
+  --submission-bar: #665cf7;
+
   --guidebook-title: #fff;
   --guidebook-tagline: #fff;
   --guidebook-banned-list: #fff;
@@ -253,7 +256,7 @@
 }
 
 .status--passed {
-  --tasks-card-header-background: #07be81;
+  --tasks-card-header-background: #96a19d;
   --tasks-card-header-background-hover: #2ad6e6;
   --tasks-card-header: #fff;
   --tasks-card-content-background: #ffffff;
@@ -261,7 +264,7 @@
 }
 
 .dark__mode .status--passed {
-  --tasks-card-header-background: #0cddba;
+  --tasks-card-header-background: #08a58b;
   --tasks-card-header-background-hover: #21f5d2;
   --tasks-card-header: #fff;
   --tasks-card-content-background: #1b222e;
