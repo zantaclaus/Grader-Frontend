@@ -1,12 +1,13 @@
 import jwtDecode from "jwt-decode";
 import axios from "axios";
 import { apiUrl } from "../config.json";
+import { sha256 } from "js-sha256";
 
 const apiEndpoint = apiUrl + "/login";
 
 export async function login(usernameCheck, passwordCheck) {
   const username = usernameCheck;
-  const password = passwordCheck;
+  const password = sha256(passwordCheck);
   const { data: jwt } = await axios.post(apiEndpoint, { username, password });
 
   localStorage.setItem("token", jwt.token);
