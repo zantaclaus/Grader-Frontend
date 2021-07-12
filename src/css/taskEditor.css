@@ -15,6 +15,7 @@
 }
 
 .code__icon {
+  color: rgb(128, 126, 126);
   position: absolute;
   top: 1.5rem;
   right: 2rem;

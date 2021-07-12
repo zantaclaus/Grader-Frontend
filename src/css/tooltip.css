@@ -1,7 +1,7 @@
 .tooltip__container {
   position: absolute;
-  background-color: #1b222e;
-  color: #fff;
+  background: var(--tooltip-background);
+  color: var(--tooltip-color);
   top: 100px;
   left: 70%;
   opacity: 0;

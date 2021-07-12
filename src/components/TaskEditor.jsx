@@ -12,6 +12,7 @@ import ModalCodeBoard from "./ModalCodeBoard";
 
 function TaskEditor({ code, setCode, status }) {
   const [modalCode, setModalCode] = useState(false);
+  const theme = localStorage.getItem("theme");
   const toggleModalCode = () => {
     setModalCode(!modalCode);
   };
@@ -27,7 +28,6 @@ function TaskEditor({ code, setCode, status }) {
       />
       {status === 2 && (
         <BsFileEarmarkCode
-          color="white"
           size="3rem"
           className="code__icon"
           onClick={toggleModalCode}
