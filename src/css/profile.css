@@ -36,6 +36,10 @@
     --card-unit-top: 17px;
   }
 
+  .profile__box {
+    margin: 3rem auto;
+  }
+
   .profile__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
