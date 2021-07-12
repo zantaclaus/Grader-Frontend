@@ -1,4 +1,5 @@
 import axios from "axios";
+import Aos from "aos";
 import React, { useEffect, useState } from "react";
 import "../css/submission.css";
 import { useSelector } from "react-redux";
@@ -10,13 +11,14 @@ function Submission(props) {
   const [submission, setSubmission] = useState([]);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const header = {
-      headers: {
-        Authorization: token,
-      },
-    };
     const fetch = async () => {
+      console.log("fetch");
+      const token = localStorage.getItem("token");
+      const header = {
+        headers: {
+          Authorization: token,
+        },
+      };
       const submission = await axios.get(
         `https://api.ceboostup.com/api/history?id=${user.id}`,
         header
@@ -27,18 +29,21 @@ function Submission(props) {
     if (user) fetch();
   }, [user]);
 
-  // console.log("log", submission);
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <React.Fragment>
-      {submission && (
+      {Object.keys(submission).length === 0 ? (
+        <Loading />
+      ) : (
         <React.Fragment>
           <div className="submission__page">
             <div className="submission__container">
-              <div className="submission__bar submission__header">
-                {/* <h1>Submission</h1> */}
-              </div>
+              <div className="submission__bar submission__header"></div>
               <div className="tasks__content">
-                <div className="tasks__content__container">
+                <div data-aos="zoom-out" className="tasks__content__container">
                   {submission.map((submit) => (
                     <SubmissionCard
                       key={submit.time}
@@ -55,7 +60,6 @@ function Submission(props) {
           </div>
         </React.Fragment>
       )}
-      {!submission && <Loading />}
     </React.Fragment>
   );
 }
