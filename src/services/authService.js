@@ -4,6 +4,7 @@ import { apiUrl } from "../config.json";
 import { sha256 } from "js-sha256";
 
 const apiEndpoint = apiUrl + "/login";
+const apiDestroy = apiUrl + "/destroy-token";
 
 export async function login(usernameCheck, passwordCheck) {
   const username = usernameCheck;
@@ -15,6 +16,14 @@ export async function login(usernameCheck, passwordCheck) {
 }
 
 export function logout() {
+  const token = localStorage.getItem("token");
+  const header = {
+    headers: {
+      Authorization: token,
+    },
+  };
+  axios.post(apiDestroy, header);
+
   localStorage.removeItem("token");
   localStorage.removeItem("theme");
 }
