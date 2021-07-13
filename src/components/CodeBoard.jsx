@@ -43,7 +43,6 @@ function CodeBoard(props) {
           );
         }
         setSaveCode(saveCode);
-        console.log(saveCode[0]);
       } catch (ex) {
         if (ex.response && ex.response.status === 401) {
           window.location = "/logout";
