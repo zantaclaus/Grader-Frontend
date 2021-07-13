@@ -34,7 +34,7 @@ function ManagePassword(props) {
         header
       );
 
-      window.location = "/profile";
+      window.location = "/logout";
     } catch (ex) {
       if (ex.response) {
         const errors = { ...error };
