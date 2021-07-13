@@ -14,6 +14,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
 import { setUser } from "./redux/actions/userAction";
 import Submission from "./pages/Submission";
+// import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function App(props) {
   const user = useSelector((state) => state.user.user);
@@ -43,6 +44,7 @@ function App(props) {
           <Redirect path="/" exact to="/home" />
         </Switch>
       </div>
+      {/* <MessengerCustomerChat pageId="<PAGE_ID>" appId="<APP_ID>" /> */}
     </React.Fragment>
   );
 }
