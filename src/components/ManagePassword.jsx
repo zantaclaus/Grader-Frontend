@@ -15,8 +15,16 @@ function ManagePassword(props) {
   const [error, setError] = useState({});
 
   const handlePasswordSubmit = async () => {
-    const token = localStorage.getItem("token");
+    if (newPassword.length < 8 || confirmPassword.length < 8) {
+      const errors = { ...error };
+      errors.password = "Password must longer than 8 characters";
+      setError(errors);
+
+      return;
+    }
+
     try {
+      const token = localStorage.getItem("token");
       const header = {
         headers: {
           Authorization: token,
@@ -38,7 +46,7 @@ function ManagePassword(props) {
     } catch (ex) {
       if (ex.response && ex.response.status === 401) {
         window.location = "/logout";
-      } else if (ex.response && ex.response.staus === 400) {
+      } else if (ex.response && ex.response.status === 400) {
         const errors = { ...error };
         errors.IncorrectOldPassword = ex.response.data.IncorrectOldPassword;
         errors.password = ex.response.data.password;
@@ -61,15 +69,6 @@ function ManagePassword(props) {
             label="Old Password"
             type="password"
           />
-          {/* <span className="password__label">Password</span> */}
-          {/* <input
-            className="password__input"
-            type="password"
-            value={password}
-            placeholder="password"
-            autoFocus
-            onChange={(e) => handleInput(e.currentTarget.value, setPassword)}
-          /> */}
         </div>
 
         <div className="password__inputBx">
@@ -80,14 +79,6 @@ function ManagePassword(props) {
             label="New Password"
             type="password"
           />
-          {/* <span className="password__label">New Password</span> */}
-          {/* <input
-            className="password__input"
-            type="password"
-            value={newPassword}
-            placeholder="new password"
-            onChange={(e) => handleInput(e.currentTarget.value, setNewPassword)}
-          /> */}
         </div>
 
         <div className="password__inputBx">
@@ -98,16 +89,6 @@ function ManagePassword(props) {
             label="Confirm Password"
             type="password"
           />
-          {/* <span className="password__label">Confirm Password</span> */}
-          {/* <input
-            className="password__input"
-            type="password"
-            value={confirmPassword}
-            placeholder="confirm new password"
-            onChange={(e) =>
-              handleInput(e.currentTarget.value, setConfirmPassword)
-            }
-          /> */}
         </div>
 
         <div className="password__validate">
