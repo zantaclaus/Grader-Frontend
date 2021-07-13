@@ -26,10 +26,10 @@ function App(props) {
 
   useEffect(() => {
     var chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", "103668084746155");
+    chatbox.setAttribute("page_id", "111202361234818");
     chatbox.setAttribute("attribution", "biz_inbox");
+
     window.fbAsyncInit = function () {
-      const FB = window.FB;
       FB.init({
         xfbml: true,
         version: "v11.0",
