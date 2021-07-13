@@ -14,7 +14,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
 import { setUser } from "./redux/actions/userAction";
 import Submission from "./pages/Submission";
-import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function App(props) {
   const user = useSelector((state) => state.user.user);
@@ -68,7 +67,6 @@ function App(props) {
         </Switch>
       </div>
 
-      {/* <MessengerCustomerChat pageId="124345517760136" appId="652608665659417" /> */}
       <div id="fb-root"></div>
       <div id="fb-customer-chat" className="fb-customerchat"></div>
     </React.Fragment>

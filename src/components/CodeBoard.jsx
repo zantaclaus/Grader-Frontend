@@ -58,6 +58,7 @@ function CodeBoard(props) {
           <ul className="codeBoard__link__group">
             {arrCode.map((code) => (
               <li
+                key={code}
                 onClick={() => toggleLink(code)}
                 className={
                   code === linkActive
