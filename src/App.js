@@ -25,26 +25,28 @@ function App(props) {
     dispatch(setUser(user));
   }, [dispatch]);
 
-  var chatbox = document.getElementById("fb-customer-chat");
-  chatbox.setAttribute("page_id", "103668084746155");
-  chatbox.setAttribute("attribution", "biz_inbox");
+  useEffect(() => {
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "103668084746155");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    window.fbAsyncInit = function () {
+      const FB = window.FB;
+      FB.init({
+        xfbml: true,
+        version: "v11.0",
+      });
+    };
 
-  window.fbAsyncInit = function () {
-    FB.init({
-      xfbml: true,
-      version: "v11.0",
-    });
-  };
-
-  (function (d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, "script", "facebook-jssdk");
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  });
 
   // console.log("App user:", user);
 
@@ -68,7 +70,7 @@ function App(props) {
 
       {/* <MessengerCustomerChat pageId="124345517760136" appId="652608665659417" /> */}
       <div id="fb-root"></div>
-      <div id="fb-customer-chat" class="fb-customerchat"></div>
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
     </React.Fragment>
   );
 }
