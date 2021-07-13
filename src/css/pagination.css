@@ -1,7 +1,7 @@
 .pagination__container {
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 768px) {
   .pagination__container {
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     margin-right: 2rem;
   }
 }

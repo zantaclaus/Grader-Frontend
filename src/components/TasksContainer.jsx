@@ -45,18 +45,21 @@ function TasksContainer(props) {
     <div>
       <div data-aos="zoom-in" className="tasks__container">
         <div className="tasks__bar tasks__header">
-          <div className="tasks__logo">
-            <RiMoonClearFill className="logo" color="gold" size="3rem" />
+          <div className="tasks__header">
+            <div className="tasks__logo">
+              <RiMoonClearFill className="logo" color="gold" size="3rem" />
+            </div>
+            <div className="tasks__title"></div>
+            <span className="line" />
+            <div className="tasks__search">
+              <SearchBox value={searchQuery} onChange={handleSearch} />
+            </div>
+            <span className="line" />
+            <div className="tasks__filter">
+              <FilterBox setSearchQuery={setSearchQuery} />
+            </div>
           </div>
-          <div className="tasks__title"></div>
-          <span className="line" />
-          <div className="tasks__search">
-            <SearchBox value={searchQuery} onChange={handleSearch} />
-          </div>
-          <span className="line" />
-          <div className="tasks__filter">
-            <FilterBox setSearchQuery={setSearchQuery} />
-          </div>
+          <Pagination lastPage={lastPage} />
         </div>
         <div className="tasks__content" id="tasks__content">
           <div className="tasks__content__container">
@@ -66,7 +69,7 @@ function TasksContainer(props) {
           </div>
         </div>
         <div className="tasks__bar tasks__footer">
-          <Pagination lastPage={lastPage} />
+          {/* <Pagination lastPage={lastPage} /> */}
         </div>
       </div>
     </div>

@@ -4,7 +4,11 @@
 
 @media screen and (min-width: 768px) {
   .tasks__header {
-    justify-content: left;
+    justify-content: space-between;
+  }
+
+  .tasks__logo {
+    display: block;
   }
 
   .line {
