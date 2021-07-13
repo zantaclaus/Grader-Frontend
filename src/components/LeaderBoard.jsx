@@ -20,7 +20,7 @@ function LeaderBoard(props) {
     };
     fetch();
   }, []);
-  console.log(leader);
+  // console.log(leader);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
