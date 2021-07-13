@@ -37,10 +37,13 @@ function CodeBoard(props) {
           saveCode.push(
             result.data[i].code
               .replaceAll(" ", "&nbsp;")
+              .replaceAll("<", "&lt")
+              .replaceAll(">", "&gt")
               .replaceAll("\n", "<br/>")
           );
         }
         setSaveCode(saveCode);
+        console.log(saveCode[0]);
       } catch (ex) {
         if (ex.response && ex.response.status === 401) {
           window.location = "/logout";
