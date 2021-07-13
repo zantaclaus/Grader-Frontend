@@ -9,21 +9,27 @@ function ManageNickname(props) {
   const user = useSelector((state) => state.user.user);
 
   const handleNicknameSubmit = async () => {
-    const token = localStorage.getItem("token");
-    const header = {
-      headers: {
-        Authorization: token,
-      },
-    };
-    const data = {
-      nickName: nickname,
-    };
-    await axios.put(
-      `https://api.ceboostup.com/api/user/${user.id}`,
-      data,
-      header
-    );
-    window.location = "/profile";
+    try {
+      const token = localStorage.getItem("token");
+      const header = {
+        headers: {
+          Authorization: token,
+        },
+      };
+      const data = {
+        nickName: nickname,
+      };
+      await axios.put(
+        `https://api.ceboostup.com/api/user/${user.id}`,
+        data,
+        header
+      );
+      window.location = "/profile";
+    } catch (ex) {
+      if (ex.response && ex.response.status === 401) {
+        window.location = "/logout";
+      }
+    }
   };
 
   return (

@@ -36,7 +36,9 @@ function ManagePassword(props) {
 
       window.location = "/logout";
     } catch (ex) {
-      if (ex.response) {
+      if (ex.response && ex.response.status === 401) {
+        window.location = "/logout";
+      } else if (ex.response && ex.response.staus === 400) {
         const errors = { ...error };
         errors.IncorrectOldPassword = ex.response.data.IncorrectOldPassword;
         errors.password = ex.response.data.password;

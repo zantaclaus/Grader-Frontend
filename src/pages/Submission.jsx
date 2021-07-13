@@ -12,17 +12,23 @@ function Submission(props) {
 
   useEffect(() => {
     const fetch = async () => {
-      const token = localStorage.getItem("token");
-      const header = {
-        headers: {
-          Authorization: token,
-        },
-      };
-      const submission = await axios.get(
-        `https://api.ceboostup.com/api/history?id=${userId}`,
-        header
-      );
-      setSubmission(submission.data);
+      try {
+        const token = localStorage.getItem("token");
+        const header = {
+          headers: {
+            Authorization: token,
+          },
+        };
+        const submission = await axios.get(
+          `https://api.ceboostup.com/api/history?id=${userId}`,
+          header
+        );
+        setSubmission(submission.data);
+      } catch (ex) {
+        if (ex.response && ex.response.status === 401) {
+          window.location = "/logout";
+        }
+      }
     };
     if (userId) fetch();
   }, [userId]);

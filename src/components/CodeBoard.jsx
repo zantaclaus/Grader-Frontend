@@ -17,29 +17,35 @@ function CodeBoard(props) {
 
   useEffect(() => {
     const fetch = async () => {
-      const token = localStorage.getItem("token");
-      const header = {
-        headers: {
-          Authorization: token,
-        },
-      };
-      const result = await axios.get(
-        `https://api.ceboostup.com/api/finish-sub?questionId=${task._id}`,
-        header
-      );
-
-      const arrCode = _.range(1, result.data.length + 1);
-      setArrCode(arrCode);
-
-      const saveCode = [];
-      for (let i = 0; i < result.data.length; i++) {
-        saveCode.push(
-          result.data[i].code
-            .replaceAll(" ", "&nbsp;")
-            .replaceAll("\n", "<br/>")
+      try {
+        const token = localStorage.getItem("token");
+        const header = {
+          headers: {
+            Authorization: token,
+          },
+        };
+        const result = await axios.get(
+          `https://api.ceboostup.com/api/finish-sub?questionId=${task._id}`,
+          header
         );
+
+        const arrCode = _.range(1, result.data.length + 1);
+        setArrCode(arrCode);
+
+        const saveCode = [];
+        for (let i = 0; i < result.data.length; i++) {
+          saveCode.push(
+            result.data[i].code
+              .replaceAll(" ", "&nbsp;")
+              .replaceAll("\n", "<br/>")
+          );
+        }
+        setSaveCode(saveCode);
+      } catch (ex) {
+        if (ex.response && ex.response.status === 401) {
+          window.location = "/logout";
+        }
       }
-      setSaveCode(saveCode);
     };
     fetch();
   }, [task._id]);

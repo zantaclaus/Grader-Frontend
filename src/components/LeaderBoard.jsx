@@ -10,13 +10,19 @@ function LeaderBoard(props) {
 
   useEffect(() => {
     const fetch = async () => {
-      const reasult = await axios.get(`https://api.ceboostup.com/api/leader`);
-      const scoreBoard = reasult.data.scoreBoard;
-      const topLeader =
-        scoreBoard.length <= 1
-          ? []
-          : [scoreBoard[0], scoreBoard[1], scoreBoard[2]];
-      setLeader(topLeader);
+      try {
+        const reasult = await axios.get(`https://api.ceboostup.com/api/leader`);
+        const scoreBoard = reasult.data.scoreBoard;
+        const topLeader =
+          scoreBoard.length <= 1
+            ? []
+            : [scoreBoard[0], scoreBoard[1], scoreBoard[2]];
+        setLeader(topLeader);
+      } catch (ex) {
+        if (ex.response && ex.response.status === 401) {
+          window.location = "/logout";
+        }
+      }
     };
     fetch();
   }, []);

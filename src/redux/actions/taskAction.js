@@ -10,19 +10,31 @@ const header = {
 };
 
 export const fetchTasks = (userId) => async (dispatch) => {
-  const response = await axios.get(
-    `${apiUrl}/all-questions?id=${userId}`,
-    header
-  );
-  dispatch({ type: ActionTypes.FETCH_TASKS, payload: response.data });
+  try {
+    const response = await axios.get(
+      `${apiUrl}/all-questions?id=${userId}`,
+      header
+    );
+    dispatch({ type: ActionTypes.FETCH_TASKS, payload: response.data });
+  } catch (ex) {
+    if (ex.response && ex.response.status === 401) {
+      window.location = "/logout";
+    }
+  }
 };
 
 export const fetchTask = (userId, taskId) => async (dispatch) => {
-  const response = await axios.get(
-    `${apiUrl}/question-id/${userId}/${taskId}`,
-    header
-  );
-  dispatch({ type: ActionTypes.SELECTED_TASK, payload: response.data[0] });
+  try {
+    const response = await axios.get(
+      `${apiUrl}/question-id/${userId}/${taskId}`,
+      header
+    );
+    dispatch({ type: ActionTypes.SELECTED_TASK, payload: response.data[0] });
+  } catch (ex) {
+    if (ex.response && ex.response.status === 401) {
+      window.location = "/logout";
+    }
+  }
 };
 
 export const setTasks = (tasks) => {

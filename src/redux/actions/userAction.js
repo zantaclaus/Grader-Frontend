@@ -10,8 +10,14 @@ const header = {
 };
 
 export const fetchUserDetail = (userId) => async (dispatch) => {
-  const response = await axios.get(`${apiUrl}/user?id=${userId}`, header);
-  dispatch({ type: ActionTypes.SET_USER_DETAIL, payload: response.data });
+  try {
+    const response = await axios.get(`${apiUrl}/user?id=${userId}`, header);
+    dispatch({ type: ActionTypes.SET_USER_DETAIL, payload: response.data });
+  } catch (ex) {
+    if (ex.response && ex.response.status === 401) {
+      window.location = "/logout";
+    }
+  }
 };
 
 export const setUser = (user) => {
