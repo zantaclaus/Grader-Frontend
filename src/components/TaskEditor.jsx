@@ -34,7 +34,7 @@ function TaskEditor({ code, setCode, status }) {
         padding={10}
         className="editor"
       />
-      {!isUser && (
+      {!isUser && status === 2 && (
         <BsFileEarmarkCode
           size="3rem"
           className="code__icon"
