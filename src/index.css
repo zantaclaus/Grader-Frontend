@@ -472,3 +472,8 @@ a {
     padding: 0.7rem 0;
   }
 }
+
+.superAdmin {
+  height: 400px;
+  /* transform: scale(0.6); */
+}

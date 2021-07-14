@@ -7,10 +7,19 @@ import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-c";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ModalCodeBoard from "./ModalCodeBoard";
+import { useSelector } from "react-redux";
 
 function TaskEditor({ code, setCode, status }) {
+  const userDetail = useSelector((state) => state.userDetail.user);
+
+  const [isUser, setIsUser] = useState(false);
+
+  useEffect(() => {
+    if (userDetail) setIsUser(true);
+  }, []);
+
   const [modalCode, setModalCode] = useState(false);
   const toggleModalCode = () => {
     setModalCode(!modalCode);
@@ -25,7 +34,14 @@ function TaskEditor({ code, setCode, status }) {
         padding={10}
         className="editor"
       />
-      {status === 2 && (
+      {!isUser && (
+        <BsFileEarmarkCode
+          size="3rem"
+          className="code__icon"
+          onClick={toggleModalCode}
+        />
+      )}
+      {isUser && (status === 2 || userDetail.group === 6) && (
         <BsFileEarmarkCode
           size="3rem"
           className="code__icon"
