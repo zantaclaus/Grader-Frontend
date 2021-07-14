@@ -112,7 +112,7 @@ function Navbar(props) {
                 className="nav__link nav__link--6"
                 rel="noreferrer"
               >
-                Ebook
+                Learn
               </a>
             </li>
             <li className="nav__item">
