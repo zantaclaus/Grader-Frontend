@@ -105,7 +105,7 @@ function Navbar(props) {
                 <span />
               </NavLink>
             </li>
-            {/* <li className="nav__item">
+            <li className="nav__item">
               <a
                 href="https://drive.google.com/file/d/1Y2UB6OWv_gUpVIeMxi73FDwxWWlU6RCb/view"
                 target="_blank"
@@ -114,7 +114,7 @@ function Navbar(props) {
               >
                 Ebook
               </a>
-            </li> */}
+            </li>
             <li className="nav__item">
               <NavLink to="/logout" className="nav__link nav__logout">
                 Logout
