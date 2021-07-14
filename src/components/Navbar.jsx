@@ -107,7 +107,7 @@ function Navbar(props) {
             </li>
             <li className="nav__item">
               <a
-                href="https://drive.google.com/file/d/1Y2UB6OWv_gUpVIeMxi73FDwxWWlU6RCb/view"
+                href="https://bit.ly/bookceboostup"
                 target="_blank"
                 className="nav__link nav__link--6"
                 rel="noreferrer"
