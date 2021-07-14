@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import ProfileGroup from "./ProfileGroup";
-import Loading from "./Loading";
 import "../css/leaderBoard.css";
 import axios from "axios";
+import Loading from "../components/Loading";
 
-function LeaderBoard(props) {
+function LeaderBoard() {
   const [leader, setLeader] = useState([]);
   const [index, setIndex] = useState([0, 1, 2]);
 
   useEffect(() => {
     const fetch = async () => {
       try {
-        const result = await axios.get(`https://api.ceboostup.com/api/leader`);
-        // console.log(result);
-        const scoreBoard = result.data.scoreBoard;
-        const topLeader =
-          scoreBoard.length <= 1
-            ? []
-            : [scoreBoard[0], scoreBoard[1], scoreBoard[2]];
-        setLeader(topLeader);
+        const token = localStorage.getItem("token");
+        const header = {
+          headers: {
+            Authorization: token,
+          },
+        };
+        const result = await axios.get(
+          `https://api.ceboostup.com/api/score-board/user`,
+          header
+        );
+
+        const leader = result.data;
+        setLeader(leader);
       } catch (ex) {
         if (ex.response && ex.response.status === 401) {
           window.location = "/logout";
@@ -30,7 +35,7 @@ function LeaderBoard(props) {
     const array = index.sort(() => Math.random() - 0.5);
     setIndex(array);
   }, [index]);
-  // console.log(index);
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
