@@ -7,6 +7,7 @@ import axios from "axios";
 
 function LeaderBoard(props) {
   const [leader, setLeader] = useState([]);
+  const [index, setIndex] = useState([0, 1, 2]);
 
   useEffect(() => {
     const fetch = async () => {
@@ -25,8 +26,10 @@ function LeaderBoard(props) {
       }
     };
     fetch();
+    const array = index.sort(() => Math.random() - 0.5);
+    setIndex(array);
   }, []);
-  // console.log(leader);
+  console.log(index);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -50,8 +53,8 @@ function LeaderBoard(props) {
                 </div>
                 <div className="face back">
                   <div className="back__content">
-                    <ProfileGroup userDetail={leader[0]} />
-                    <h1>{leader[0].nickName}</h1>
+                    <ProfileGroup userDetail={leader[index[0]]} />
+                    <h1>{leader[index[0]].nickName}</h1>
                   </div>
                 </div>
               </div>
@@ -61,8 +64,8 @@ function LeaderBoard(props) {
                 </div>
                 <div className="face back">
                   <div className="back__content">
-                    <ProfileGroup userDetail={leader[1]} />
-                    <h1>{leader[1].nickName}</h1>
+                    <ProfileGroup userDetail={leader[index[1]]} />
+                    <h1>{leader[index[1]].nickName}</h1>
                   </div>
                 </div>
               </div>
@@ -72,8 +75,8 @@ function LeaderBoard(props) {
                 </div>
                 <div className="face back">
                   <div className="back__content">
-                    <ProfileGroup userDetail={leader[2]} />
-                    <h1>{leader[2].nickName}</h1>
+                    <ProfileGroup userDetail={leader[index[2]]} />
+                    <h1>{leader[index[2]].nickName}</h1>
                   </div>
                 </div>
               </div>
