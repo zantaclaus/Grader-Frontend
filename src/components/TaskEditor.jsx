@@ -18,7 +18,7 @@ function TaskEditor({ code, setCode, status }) {
 
   useEffect(() => {
     if (userDetail) setIsUser(true);
-  }, []);
+  }, [userDetail]);
 
   const [modalCode, setModalCode] = useState(false);
   const toggleModalCode = () => {

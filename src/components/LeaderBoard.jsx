@@ -12,8 +12,9 @@ function LeaderBoard(props) {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const reasult = await axios.get(`https://api.ceboostup.com/api/leader`);
-        const scoreBoard = reasult.data.scoreBoard;
+        const result = await axios.get(`https://api.ceboostup.com/api/leader`);
+        console.log(result);
+        const scoreBoard = result.data.scoreBoard;
         const topLeader =
           scoreBoard.length <= 1
             ? []
@@ -28,9 +29,8 @@ function LeaderBoard(props) {
     fetch();
     const array = index.sort(() => Math.random() - 0.5);
     setIndex(array);
-  }, []);
-  console.log(index);
-
+  }, [index]);
+  // console.log(index);
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
