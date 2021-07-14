@@ -1,9 +1,9 @@
 import React from "react";
 import "../css/scoreBoard.css";
-import { getGroup } from "../services/groupService";
+// import { getGroup } from "../services/groupService";
 
 function ScoreBoard({ data }) {
-  let number = 1;
+  // let number = 1;
   //   const team = data.map((user) => getGroup(user.group)[0]);
   //   console.log(team);
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Hero from "../components/Hero";
 import Bubbles from "../components/Bubbles";
 import LeaderBoard from "../components/LeaderBoard";
