@@ -13,7 +13,7 @@ function LeaderBoard(props) {
     const fetch = async () => {
       try {
         const result = await axios.get(`https://api.ceboostup.com/api/leader`);
-        console.log(result);
+        // console.log(result);
         const scoreBoard = result.data.scoreBoard;
         const topLeader =
           scoreBoard.length <= 1
