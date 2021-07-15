@@ -35,7 +35,9 @@ function Card({ task, titleColor }) {
           {!isGodMode && (
             <div className={titleColor}>
               <Link to={`/tasks/${task._id}`} className="card__link">
-                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__title">
+                  #{task.number} {task.title}
+                </div>
                 <div className="card__task__content">
                   <div className="unit">{task.unit}</div>
                   <div className="passed">{task.finished}</div>
@@ -58,7 +60,9 @@ function Card({ task, titleColor }) {
           {isGodMode && (
             <div className={titleColor}>
               <Link to={`/tasks/${task._id}`} className="card__link">
-                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__title">
+                  #{task.number} {task.title}
+                </div>
                 <div className="card__task__content">
                   <div className="unit">{task.unit}</div>
                   <div className="passed">{task.finished}</div>
@@ -81,7 +85,9 @@ function Card({ task, titleColor }) {
                 to={`/tasks/${task._id}`}
                 className="card__link status--error"
               >
-                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__title">
+                  #{task.number} {task.title}
+                </div>
                 <div className="card__task__content">
                   <div className="unit">{task.unit}</div>
                   <div className="passed">{task.finished}</div>
@@ -107,7 +113,9 @@ function Card({ task, titleColor }) {
                 to={`/tasks/${task._id}`}
                 className="card__link status--error"
               >
-                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__title">
+                  #{task.number} {task.title}
+                </div>
                 <div className="card__task__content">
                   <div className="unit">{task.unit}</div>
                   <div className="passed">{task.finished}</div>
@@ -130,7 +138,9 @@ function Card({ task, titleColor }) {
                 to={`/tasks/${task._id}`}
                 className="card__link status--passed"
               >
-                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__title">
+                  #{task.number} {task.title}
+                </div>
                 <div className="card__task__content">
                   <div className="unit">{task.unit}</div>
                   <div className="passed">{task.finished}</div>
@@ -156,7 +166,9 @@ function Card({ task, titleColor }) {
                 to={`/tasks/${task._id}`}
                 className="card__link status--passed"
               >
-                <div className="card__task__title">{task.title}</div>
+                <div className="card__task__title">
+                  #{task.number} {task.title}
+                </div>
                 <div className="card__task__content">
                   <div className="unit">{task.unit}</div>
                   <div className="passed">{task.finished}</div>
