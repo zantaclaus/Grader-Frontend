@@ -21,13 +21,13 @@ function TasksContainer(props) {
 
   let filtered = tasks;
   if (searchQuery) {
-    const queryTitle = tasks.filter((task) =>
-      task.title.toLowerCase().startsWith(searchQuery.toLowerCase())
-    );
     const queryNumber = tasks.filter((task) =>
       task.number.toString().startsWith(searchQuery)
     );
-    filtered = [...queryTitle, ...queryNumber];
+    const queryInclude = tasks.filter((task) =>
+      task.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    filtered = [...queryNumber, ...queryInclude];
   } else if (selectedUnit !== "All Units") {
     filtered = tasks.filter((u) => u.unit.trim() === selectedUnit);
   }
