@@ -27,7 +27,8 @@ function TasksContainer(props) {
     const queryInclude = tasks.filter((task) =>
       task.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    filtered = [...queryNumber, ...queryInclude];
+    filtered = queryNumber.concat(queryInclude);
+    filtered = [...new Set([...queryNumber, ...queryInclude])];
   } else if (selectedUnit !== "All Units") {
     filtered = tasks.filter((u) => u.unit.trim() === selectedUnit);
   }
