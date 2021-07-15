@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import Bubbles from "../components/Bubbles";
 import LeaderBoard from "../components/LeaderBoard";
-// import ScoreBoard from "../components/ScoreBoard";
+import ScoreBoard from "../components/ScoreBoard";
 
 function Home(props) {
   return (
@@ -10,7 +10,7 @@ function Home(props) {
       <Bubbles />
       <Hero />
       <LeaderBoard />
-      {/* <ScoreBoard data={scoreBoard} /> */}
+      <ScoreBoard />
     </React.Fragment>
   );
 }
