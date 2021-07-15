@@ -23,6 +23,9 @@ function GuideBook(props) {
         tagline="Functions that couldn't be called in your code."
         lists={bannedFunction}
       />
+      <h3 className="guidebook__compiler">
+        This grader use std C++ 14 compiler.
+      </h3>
     </div>
   );
 }

@@ -24,3 +24,11 @@
     font-size: 7.5rem;
   }
 }
+
+.guidebook__compiler {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--guidebook-compiler);
+  text-align: center;
+  padding-bottom: 2rem;
+}
