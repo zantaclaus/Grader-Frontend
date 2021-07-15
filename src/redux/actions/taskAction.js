@@ -15,11 +15,11 @@ export const fetchTasks = (userId) => async (dispatch) => {
       `${apiUrl}/all-questions?id=${userId}`,
       header
     );
-    const changeTitle = response.data.map((task) => ({
-      ...task,
-      title: `#${task.number} ${task.title}`,
-    }));
-    dispatch({ type: ActionTypes.FETCH_TASKS, payload: changeTitle });
+    // const changeTitle = response.data.map((task) => ({
+    //   ...task,
+    //   title: `#${task.number} ${task.title}`,
+    // }));
+    dispatch({ type: ActionTypes.FETCH_TASKS, payload: response.data });
   } catch (ex) {
     if (ex.response && ex.response.status === 401) {
       window.location = "/logout";

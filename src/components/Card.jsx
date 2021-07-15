@@ -11,6 +11,7 @@ function Card({ task, titleColor }) {
   let blackStar = [];
   let halfStar = [];
   let whiteStar = [];
+
   const godModeStar = [1, 2, 3, 4, 5];
   const rank = task.rank / 2.0;
   const isGodMode = task.unit.trim() === "God Mode" ? true : false;
@@ -27,7 +28,7 @@ function Card({ task, titleColor }) {
     halfStar = [1];
     whiteStar = _.range(rank - 0.5 + 1, 5);
   }
-  // card__link status--passed
+
   return (
     <React.Fragment>
       {task.status === 0 && (
