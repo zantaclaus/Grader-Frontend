@@ -33,11 +33,11 @@
   background: #ba86c8;
 }
 
-.scoreboard__content tfoot tr {
+/* .scoreboard__content tfoot tr {
 }
 
 .scoreboard__content tfoot td {
-}
+} */
 
 .scoreboard__content tbody tr:nth-child(even) {
   /* background: #292929; */
