@@ -85,14 +85,14 @@ function ScoreBoard() {
                   <tr>
                     <td colSpan={4}>
                       <div className="scoreboard__arrow__container">
-                        {currentPage != 1 && (
+                        {currentPage !== 1 && (
                           <IoMdArrowDropleftCircle
                             size="3.4rem"
                             className="scoreboard__arrow"
                             onClick={() => pageDecreaseHandle()}
                           />
                         )}
-                        {currentPage != lastPage && (
+                        {currentPage !== lastPage && (
                           <IoMdArrowDroprightCircle
                             size="3.4rem"
                             className="scoreboard__arrow"
