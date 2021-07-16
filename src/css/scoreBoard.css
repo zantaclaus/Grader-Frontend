@@ -9,14 +9,18 @@
   font-size: 2rem;
   border-collapse: collapse;
   border-spacing: 0;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(32, 32, 32, 0.3);
+  /* table-layout: fixed; */
+  width: 1000px;
+  height: 700px;
 }
 
 .scoreboard__content th,
 .scoreboard__content td {
   padding: 12px 30px;
+  cursor: default;
 }
 
 .scoreboard__content th {
@@ -25,7 +29,35 @@
   color: #fafafa;
 }
 
-.scoreboard__content tr:nth-child(even) {
-  /* background: #eeeeee; */
+.scoreboard__content tfoot {
+  background: #ba86c8;
+}
+
+.scoreboard__content tfoot tr {
+}
+
+.scoreboard__content tfoot td {
+}
+
+.scoreboard__content tbody tr:nth-child(even) {
+  /* background: #292929; */
   background: var(--color-background);
+}
+
+.scoreboard__arrow__container {
+  /* padding: 0.1rem; */
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  position: relative;
+  top: -2px;
+}
+
+.scoreboard__arrow {
+  color: white;
+  cursor: pointer;
+}
+
+.scoreboard__highlight {
+  color: rgb(79, 217, 251);
 }
