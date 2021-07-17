@@ -26,7 +26,7 @@ export const contacts = [
   {
     id: "3",
     name: "program",
-    section: "DevOps + Server Sponsor",
+    section: "DevOps",
     image: program,
     facebook: "https://www.facebook.com/gm.gerdchai",
     ig: "https://www.instagram.com/gmbehappy/",
