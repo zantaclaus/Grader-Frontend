@@ -3,7 +3,7 @@ import React from "react";
 import { RiFacebookFill } from "react-icons/ri";
 import { RiInstagramFill } from "react-icons/ri";
 import { RiGithubLine } from "react-icons/ri";
-import "../css/contact.css";
+import "../css/contactCard.css";
 
 function ContactCard({ name, section, image, facebook, ig, github }) {
   return (
