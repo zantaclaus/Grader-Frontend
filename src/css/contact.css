@@ -1,6 +1,7 @@
 .contact__block {
   background-color: var(--leader-background);
   color: #fff;
+  padding-bottom: 5rem;
 }
 
 .contact__container {
