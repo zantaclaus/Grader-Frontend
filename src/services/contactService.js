@@ -7,12 +7,12 @@ import pupz from "../images/pupz.jpg";
 export const contacts = [
   {
     id: "1",
-    name: "zantaclaus",
-    section: "Frontend Developer",
-    image: zan,
-    facebook: "https://www.facebook.com/zantacluse/",
-    ig: "https://www.instagram.com/zantaclaus/",
-    github: "https://github.com/zantaclaus",
+    name: "imfirn",
+    section: "Frontend Designer",
+    image: firn,
+    facebook: "https://www.facebook.com/firnkenk/",
+    ig: " https://github.com/Kunkanit",
+    github: "https://github.com/Kunkanit",
   },
   {
     id: "2",
@@ -34,12 +34,12 @@ export const contacts = [
   },
   {
     id: "4",
-    name: "imfirn",
-    section: "Frontend Designer",
-    image: firn,
-    facebook: "https://www.facebook.com/firnkenk/",
-    ig: " https://github.com/Kunkanit",
-    github: "https://github.com/Kunkanit",
+    name: "zantaclaus",
+    section: "Frontend Developer",
+    image: zan,
+    facebook: "https://www.facebook.com/zantacluse/",
+    ig: "https://www.instagram.com/zantaclaus/",
+    github: "https://github.com/zantaclaus",
   },
   {
     id: "5",
