@@ -21,6 +21,10 @@ function Contact(props) {
   const contacts = getContacts();
   return (
     <div className="contact__block">
+      <header className="leader__header">
+        <h1 className="contact__title">Admin Contact</h1>
+        {/* <p>Top 3 ranking doesn't sort by score.</p> */}
+      </header>
       <div className="container contact__container">
         <Swiper
           effect="coverflow"
