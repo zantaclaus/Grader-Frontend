@@ -5,7 +5,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { RiGithubLine } from "react-icons/ri";
 import "../css/contact.css";
 
-function ContactCard({ name, section, image }) {
+function ContactCard({ name, section, image, facebook, ig, github }) {
   return (
     <div className="contact__card">
       <div className="contact__imgBx">
@@ -21,17 +21,17 @@ function ContactCard({ name, section, image }) {
         </div>
         <ul className="contact__socialBx">
           <li className="contact__social social__1">
-            <a href="/#">
+            <a href={facebook} target="_blank" rel="noreferrer">
               <RiFacebookFill color="white" size="2.4rem" />
             </a>
           </li>
           <li className="contact__social social__2">
-            <a href="/#">
+            <a href={ig} target="_blank" rel="noreferrer">
               <RiInstagramFill color="white" size="2.4rem" />
             </a>
           </li>
           <li className="contact__social social__3">
-            <a href="/#">
+            <a href={github} target="_blank" rel="noreferrer">
               <RiGithubLine color="white" size="2.4rem" />
             </a>
           </li>

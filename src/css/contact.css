@@ -1,10 +1,12 @@
 .contact__block {
   background-color: var(--leader-background);
+  color: #fff;
 }
 
 .contact__container {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .contact__card {
@@ -95,3 +97,6 @@
 .contact__card .social__3 {
   transition-delay: 0.6s;
 }
+
+/* .slide {
+} */
