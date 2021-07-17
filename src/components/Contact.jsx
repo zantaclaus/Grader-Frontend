@@ -15,7 +15,7 @@ import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 import "swiper/swiper.scss";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function Contact(props) {
   const contacts = getContacts();
@@ -30,7 +30,8 @@ function Contact(props) {
           effect="coverflow"
           loop
           spaceBetween={50}
-          slidesPerView={3}
+          slidesOffsetBefore={0.5}
+          slidesPerView={3.5}
           // navigation
           // pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}

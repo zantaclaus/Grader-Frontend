@@ -3,15 +3,18 @@ import Hero from "../components/Hero";
 import Bubbles from "../components/Bubbles";
 import LeaderBoard from "../components/LeaderBoard";
 import Contact from "../components/Contact";
+import { useSelector } from "react-redux";
 // import ScoreBoard from "../components/ScoreBoard";
 
 function Home(props) {
+  const swap = useSelector((state) => state.swap);
+
   return (
     <React.Fragment>
       <Bubbles />
       <Hero />
-      <LeaderBoard />
-      <Contact />
+      {!swap && <LeaderBoard />}
+      {swap && <Contact />}
       {/* <ScoreBoard /> */}
     </React.Fragment>
   );
