@@ -4,6 +4,7 @@ import { userReducer, userDetailReducer } from "./userReducer";
 import { pageReducer } from "./pageReducer";
 import { dropdownReducer } from "./dropdownReducer";
 import { codeReducer } from "./codeReducer";
+import { easterEggReducer } from "./easterEggReducer";
 
 const reducers = combineReducers({
   user: userReducer,
@@ -13,6 +14,7 @@ const reducers = combineReducers({
   page: pageReducer,
   selectedUnit: dropdownReducer,
   code: codeReducer,
+  swap: easterEggReducer,
 });
 
 export default reducers;
