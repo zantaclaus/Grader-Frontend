@@ -3,6 +3,7 @@ import kawjaw from "../images/kawjaw.jpg";
 import firn from "../images/firn.jpg";
 import program from "../images/program.jpg";
 import pupz from "../images/pupz.jpg";
+import boom from "../images/boom.jpg";
 
 export const contacts = [
   {
@@ -49,6 +50,15 @@ export const contacts = [
     facebook: "https://www.facebook.com/profile.php?id=100006211907417",
     ig: "https://www.instagram.com/pupz._malaewja/",
     github: "https://github.com/Pupppppxz",
+  },
+  {
+    id: "6",
+    name: "Boom",
+    section: "Spacial Developer",
+    image: boom,
+    facebook: "https://www.facebook.com/Sirisap.Siripattanakul",
+    ig: "https://www.instagram.com/s_pattanakul/",
+    github: "https://github.com/Sirisap22",
   },
 ];
 

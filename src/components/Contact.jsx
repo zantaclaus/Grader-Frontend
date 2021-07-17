@@ -20,7 +20,7 @@ function Contact(props) {
 
     setContacts(shuffle);
     setIsShuffle(true);
-  }, []);
+  }, [contacts]);
 
   return (
     <React.Fragment>
