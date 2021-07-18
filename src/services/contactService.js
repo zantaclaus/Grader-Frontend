@@ -56,7 +56,7 @@ export const contacts = [
   {
     id: "6",
     name: "Boom",
-    section: "Spacial Developer",
+    section: "Technical Consultant",
     image: boom,
     facebook: "https://www.facebook.com/Sirisap.Siripattanakul",
     ig: "https://www.instagram.com/s_pattanakul/",
