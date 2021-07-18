@@ -28,7 +28,7 @@ function Contact(props) {
         {isShuffle && (
           <div data-aos="zoom-in-up">
             <header className="leader__header">
-              <h1 className="contact__title">Admin Contact</h1>
+              <h1 className="contact__title">Developer</h1>
               {/* <p>Top 3 ranking doesn't sort by score.</p> */}
             </header>
             <div className="container contact__container">
