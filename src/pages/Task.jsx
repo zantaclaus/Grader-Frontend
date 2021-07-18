@@ -16,16 +16,17 @@ import "../css/task.css";
 function Task(props) {
   const [forceRender, setforceRender] = useState({});
   const [isDone, setIsDone] = useState(false);
-  const codeStore = useSelector((state) => state.code);
-  const codeStater = codeStore
-    ? codeStore
-    : `#include<stdio.h>
-int main() 
-{
-    
-    return 0;
-}`;
-  const [code, setCode] = useState(codeStater);
+  // const codeStore = useSelector((state) => state.code);
+  //   const codeStater = codeStore
+  //     ? codeStore
+  //     : `#include<stdio.h>
+  // int main()
+  // {
+
+  //     return 0;
+  // }`;
+
+  const [code, setCode] = useState("");
 
   let task = useSelector((state) => state.task);
   const { linkPDF } = task;
@@ -54,6 +55,19 @@ int main()
       dispatch(removeSelectedTasks());
     };
   }, [dispatch, userId, taskId, forceRender]);
+
+  useEffect(() => {
+    if (task.code) {
+      setCode(task.code);
+    } else {
+      setCode(`#include<stdio.h>
+int main() 
+{
+          
+  return 0;
+}`);
+    }
+  }, [task.code]);
 
   return (
     <React.Fragment>
