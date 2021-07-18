@@ -176,6 +176,8 @@
   --leader-card: #f7fcff;
   --leader-user: #5cccf7;
 
+  --scoreboard-color: #fff;
+
   --tasks-background: var(--color-background);
   --tasks-container-background: #050d1a;
   --tasks-bar: #6c54f3;
@@ -501,40 +503,3 @@ a {
 .swiper-container-3d .swiper-slide-shadow-bottom {
   width: 80%;
 } */
-
-.mark {
-  padding: 0.3rem 0.8rem;
-  border-radius: 1rem;
-}
-
-.mark--blacktip {
-  background-color: #b5a7f0;
-}
-
-.mark--mako {
-  background-color: #ffab7b;
-}
-
-.mark--hammerhead {
-  background-color: #7fe4c2;
-}
-
-.mark--whale {
-  background-color: #72eef7;
-}
-
-.mark--lemon {
-  background-color: #f9d877;
-}
-
-.crown--gold {
-  color: #f2a900;
-}
-
-.crown--silver {
-  color: silver;
-}
-
-.crown--couper {
-  color: #9b442a;
-}

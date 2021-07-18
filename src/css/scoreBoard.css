@@ -1,5 +1,5 @@
 .scoreboard__content {
-  color: white;
+  color: var(--scoreboard-color);
 }
 
 .scoreboard__content table {
@@ -61,4 +61,41 @@
 .scoreboard__highlight {
   color: rgb(56, 219, 170);
   /* color: tomato; */
+}
+
+.mark {
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+}
+
+.mark--blacktip {
+  background-color: #b5a7f0;
+}
+
+.mark--mako {
+  background-color: #ffab7b;
+}
+
+.mark--hammerhead {
+  background-color: #7fe4c2;
+}
+
+.mark--whale {
+  background-color: #72eef7;
+}
+
+.mark--lemon {
+  background-color: #f9d877;
+}
+
+.crown--gold {
+  color: #f2a900;
+}
+
+.crown--silver {
+  color: silver;
+}
+
+.crown--couper {
+  color: #9b442a;
 }
