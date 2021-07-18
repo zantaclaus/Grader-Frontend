@@ -29,6 +29,10 @@ function Navbar(props) {
     delClass("navbar", "show__menu");
   };
 
+  const learnHandle = () => {
+    alert("*** Login with Kmitl Email ***");
+  };
+
   const themeClick = () => {
     addToggle("root", "dark__mode");
     setIsLight(!isLight);
@@ -107,13 +111,22 @@ function Navbar(props) {
             </li>
             <li className="nav__item">
               <a
+                className="nav__link nav__link--6"
+                onClick={learnHandle}
+                href="https://bit.ly/bookceboostup"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Learn
+              </a>
+              {/* <a
                 href="https://bit.ly/bookceboostup"
                 target="_blank"
                 className="nav__link nav__link--6"
                 rel="noreferrer"
               >
                 Learn
-              </a>
+              </a> */}
             </li>
             <li className="nav__item">
               <NavLink to="/logout" className="nav__link nav__logout">
