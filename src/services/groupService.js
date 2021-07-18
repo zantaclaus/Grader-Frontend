@@ -1,6 +1,6 @@
 export const groups = [
   { id: 0, name: "Blacktip reef Shark" },
-  { id: 1, name: "Moko Shark" },
+  { id: 1, name: "Mako Shark" },
   { id: 2, name: "Hammerhead Shark" },
   { id: 3, name: "Whale Shark" },
   { id: 4, name: "Lemon Shark" },

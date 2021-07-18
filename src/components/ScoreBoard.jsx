@@ -23,6 +23,21 @@ function ScoreBoard() {
     setCurrentPage(currentPage - 1);
   };
 
+  const markClass = (group) => {
+    switch (group) {
+      case 0:
+        return "mark mark--blacktip";
+      case 1:
+        return "mark mark--mako";
+      case 2:
+        return "mark mark--hammerhead";
+      case 3:
+        return "mark mark--whale";
+      case 4:
+        return "mark mark--lemon";
+    }
+  };
+
   useEffect(() => {
     const fetch = async () => {
       try {
@@ -52,8 +67,8 @@ function ScoreBoard() {
         <div className="leader__block">
           <div className="container">
             <header className="leader__header">
-              <h1 className="leader__title">Score Board</h1>
-              <p>Top 3 ranking doesn't sort by score.</p>
+              <h1 className="leader__title">Scoreboard</h1>
+              {/* <p>Top 3 ranking doesn't sort by score.</p> */}
             </header>
             <div className="leader__content scoreboard__content">
               <table className="noselect">
@@ -77,7 +92,11 @@ function ScoreBoard() {
                     >
                       <td>{user.id}</td>
                       <td>{user.nickName}</td>
-                      <td>{getGroup(user.group)[0].name}</td>
+                      <td>
+                        <mark className={markClass(user.group)}>
+                          {getGroup(user.group)[0].name}
+                        </mark>
+                      </td>
                       <td>{user.score}</td>
                     </tr>
                   ))}
