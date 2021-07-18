@@ -5,6 +5,7 @@ import program from "../images/program.jpg";
 import pupz from "../images/pupz.jpg";
 import boom from "../images/boom.jpg";
 import onn from "../images/onn.jpg";
+import james from "../images/james.jpg";
 
 export const contacts = [
   {
@@ -69,6 +70,15 @@ export const contacts = [
     facebook: "https://m.facebook.com/churairat.onn",
     ig: "https://www.instagram.com/charonyx_/",
     github: "https://github.com/Charonyx",
+  },
+  {
+    id: "8",
+    name: "James",
+    section: "Database",
+    image: james,
+    facebook: "https://www.facebook.com/chanon.tem",
+    ig: "https://www.instagram.com/james.crunzex/",
+    github: "https://github.com/CRUNZEX",
   },
 ];
 
