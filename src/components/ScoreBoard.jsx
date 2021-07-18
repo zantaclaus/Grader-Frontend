@@ -7,6 +7,7 @@ import Loading from "../components/Loading";
 import { paginate } from "../services/paginateService";
 import { IoMdArrowDropleftCircle } from "react-icons/io";
 import { IoMdArrowDroprightCircle } from "react-icons/io";
+import { FaCrown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 function ScoreBoard() {
@@ -35,6 +36,19 @@ function ScoreBoard() {
         return "mark mark--whale";
       case 4:
         return "mark mark--lemon";
+    }
+  };
+
+  const rankUser = (id) => {
+    switch (id) {
+      case 1:
+        return <FaCrown size="2.5rem" className="crown--gold" />;
+      case 2:
+        return <FaCrown size="2.5rem" className="crown--silver" />;
+      case 3:
+        return <FaCrown size="2.5rem" className="crown--couper" />;
+      default:
+        return id;
     }
   };
 
@@ -90,7 +104,8 @@ function ScoreBoard() {
                           : ""
                       }
                     >
-                      <td>{user.id}</td>
+                      {/* <td>{user.id}</td> */}
+                      <td>{rankUser(user.id)}</td>
                       <td>{user.nickName}</td>
                       <td>
                         <mark className={markClass(user.group)}>
