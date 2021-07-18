@@ -12,10 +12,16 @@ function TaskTable({ number, input, output }) {
         </div>
         <div className="tastcase__table">
           <div className="table table__detail detail__input">
-            <div dangerouslySetInnerHTML={{ __html: input }} />
+            <div
+              className="monospace"
+              dangerouslySetInnerHTML={{ __html: input }}
+            />
           </div>
           <div className="table table__detail detail__output">
-            <div dangerouslySetInnerHTML={{ __html: output }} />
+            <div
+              className="monospace"
+              dangerouslySetInnerHTML={{ __html: output }}
+            />
           </div>
         </div>
       </div>

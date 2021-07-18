@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --navbar-height: 5.44rem;
@@ -314,6 +315,10 @@
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+}
+
+div.monospace {
+  font-family: "Courier Prime", monospace !important;
 }
 
 html {
