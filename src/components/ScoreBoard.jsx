@@ -27,8 +27,9 @@ function ScoreBoard() {
     const fetch = async () => {
       try {
         const result = await axios.get(`https://api.ceboostup.com/api/leader`);
-        let newScoreBoard = result.data;
-        for (let i = 0; i < result.data.length; i++) {
+        console.log(result.data);
+        let newScoreBoard = result.data.scoreBoard;
+        for (let i = 0; i < result.data.scoreBoard.length; i++) {
           newScoreBoard[i] = { ...newScoreBoard[i], id: i + 1 };
         }
         setScoreBoard(newScoreBoard);
