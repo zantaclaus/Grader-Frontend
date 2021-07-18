@@ -24,6 +24,7 @@ function Submission(props) {
           header
         );
         setSubmission(submission.data);
+        console.log(submission.data);
       } catch (ex) {
         if (ex.response && ex.response.status === 401) {
           window.location = "/logout";
