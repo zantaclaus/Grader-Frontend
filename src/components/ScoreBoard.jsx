@@ -55,8 +55,10 @@ function ScoreBoard() {
   };
 
   const isUser = (nickname) => {
-    if (userDetail.nickName === nickname) return "scoreboard__highlight";
-    return "";
+    if (userDetail) {
+      if (userDetail.nickName === nickname) return "scoreboard__highlight";
+      return "";
+    }
   };
 
   useEffect(() => {
