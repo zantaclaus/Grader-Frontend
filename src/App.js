@@ -14,6 +14,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import auth from "./services/authService";
 import { setUser } from "./redux/actions/userAction";
 import Submission from "./pages/Submission";
+import { fetchUserDetail } from "./redux/actions/userAction";
 
 function App(props) {
   const user = useSelector((state) => state.user.user);
@@ -22,6 +23,9 @@ function App(props) {
   useEffect(() => {
     const user = auth.getCurrentUser();
     dispatch(setUser(user));
+    if (user.id) {
+      dispatch(fetchUserDetail(user.id));
+    }
   }, [dispatch]);
 
   useEffect(() => {

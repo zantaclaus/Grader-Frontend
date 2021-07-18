@@ -11,7 +11,7 @@ import { FaCrown } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 function ScoreBoard() {
-  const userDetail = useSelector((state) => state.user.user);
+  const userDetail = useSelector((state) => state.userDetail.user);
   const [scoreBoard, setScoreBoard] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
@@ -50,6 +50,11 @@ function ScoreBoard() {
       default:
         return id;
     }
+  };
+
+  const isUser = (nickname) => {
+    if (userDetail.nickName === nickname) return "scoreboard__highlight";
+    return "";
   };
 
   useEffect(() => {
@@ -96,14 +101,7 @@ function ScoreBoard() {
                 </thead>
                 <tbody>
                   {sliceProblems.map((user) => (
-                    <tr
-                      key={user.id}
-                      className={
-                        userDetail.nickName === user.nickName
-                          ? "scoreboard__highlight"
-                          : ""
-                      }
-                    >
+                    <tr key={user.id} className={isUser(user.nickName)}>
                       {/* <td>{user.id}</td> */}
                       <td>{rankUser(user.id)}</td>
                       <td>{user.nickName}</td>
