@@ -36,6 +36,8 @@ function ScoreBoard() {
         return "mark mark--whale";
       case 4:
         return "mark mark--lemon";
+      default:
+        return "";
     }
   };
 
