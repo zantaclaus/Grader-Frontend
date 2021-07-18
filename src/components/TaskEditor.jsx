@@ -1,19 +1,16 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import ModalCodeBoard from "./ModalCodeBoard";
 import { BsFileEarmarkCode } from "react-icons/bs";
 import "../css/taskEditor.css";
-
 import Editor from "react-simple-code-editor";
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-c";
-
+import { useState, useEffect } from "react";
+import ModalCodeBoard from "./ModalCodeBoard";
+import { useSelector } from "react-redux";
 function TaskEditor({ code, setCode, status }) {
   const userDetail = useSelector((state) => state.userDetail.user);
-
   const [isUser, setIsUser] = useState(false);
 
   useEffect(() => {
@@ -24,7 +21,6 @@ function TaskEditor({ code, setCode, status }) {
   const toggleModalCode = () => {
     setModalCode(!modalCode);
   };
-
   return (
     <div className="editor__container scrollbar-hidden">
       <Editor
@@ -52,5 +48,4 @@ function TaskEditor({ code, setCode, status }) {
     </div>
   );
 }
-
 export default TaskEditor;
