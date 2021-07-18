@@ -4,6 +4,7 @@ import firn from "../images/firn.jpg";
 import program from "../images/program.jpg";
 import pupz from "../images/pupz.jpg";
 import boom from "../images/boom.jpg";
+import onn from "../images/onn.jpg";
 
 export const contacts = [
   {
@@ -59,6 +60,15 @@ export const contacts = [
     facebook: "https://www.facebook.com/Sirisap.Siripattanakul",
     ig: "https://www.instagram.com/s_pattanakul/",
     github: "https://github.com/Sirisap22",
+  },
+  {
+    id: "7",
+    name: "Onn",
+    section: "Database",
+    image: onn,
+    facebook: "https://m.facebook.com/churairat.onn",
+    ig: "https://www.instagram.com/charonyx_/",
+    github: "https://github.com/Charonyx",
   },
 ];
 
