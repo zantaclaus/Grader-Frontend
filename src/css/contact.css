@@ -12,5 +12,5 @@
 
 .contact__title {
   margin-bottom: 2rem;
-  color: #ff8559;
+  color: var(--contact-title);
 }

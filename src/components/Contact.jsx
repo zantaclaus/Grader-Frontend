@@ -34,6 +34,7 @@ function Contact(props) {
             <div className="container contact__container">
               {contacts.map((admin) => (
                 <ContactCard
+                  key={admin.id}
                   name={admin.name}
                   section={admin.section}
                   image={admin.image}

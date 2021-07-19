@@ -58,11 +58,13 @@
   --hero-bar-3: #f46dfb;
 
   --leader-background: #fbfefd;
-  --leader-title: #000;
+  --leader-title: #252f6b;
   --leader-tagline: #4b4b4b;
   --leader-border: #252f6b;
   --leader-card: #252f6b;
   --leader-user: #252f6b;
+
+  --contact-title: #252f6b;
 
   --tasks-background: #fbfefd;
   --tasks-container-background: #fbfefd;
@@ -175,6 +177,8 @@
   --leader-border: #b86ef1;
   --leader-card: #f7fcff;
   --leader-user: #5cccf7;
+
+  --contact-title: #ff8559;
 
   --scoreboard-color: #fff;
 
