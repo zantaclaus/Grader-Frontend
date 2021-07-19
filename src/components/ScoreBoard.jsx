@@ -87,7 +87,7 @@ function ScoreBoard() {
         <Loading />
       ) : (
         <div className="leader__block">
-          <div data-aos="fade-up" className="container">
+          <div data-aos="zoom-in-up" className="container">
             <header className="leader__header">
               <h1 className="leader__title">Scoreboard</h1>
               {/* <p>Top 3 ranking doesn't sort by score.</p> */}
