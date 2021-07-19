@@ -59,7 +59,8 @@
 }
 
 .scoreboard__highlight {
-  color: rgb(56, 219, 170);
+  /* color: rgb(56, 219, 170); */
+  color: #10f3f3;
   /* color: tomato; */
 }
 

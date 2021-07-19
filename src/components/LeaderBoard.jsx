@@ -46,7 +46,7 @@ function LeaderBoard() {
         <Loading />
       ) : (
         <div className="leader__block">
-          <div data-aos="zoom-in-up" className="container">
+          <div data-aos="fade-up" className="container">
             <header className="leader__header">
               <h1 className="leader__title">Leader Board</h1>
               <p>Top 3 ranking doesn't sort by score.</p>
