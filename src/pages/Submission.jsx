@@ -66,6 +66,7 @@ function Submission(props) {
                       result={submit.result}
                       time={submit.time}
                       status={submit.status}
+                      questionId={submit.questionId}
                     />
                   ))}
                 </div>
