@@ -24,10 +24,17 @@
   width: 3rem;
 }
 
-.rank__rank {
-  margin-top: 1rem;
-  height: var(--card-rank-rank);
-  width: var(--card-rank-rank);
+.rank__team h1 {
+  font-size: var(--card-propoties-number);
+  font-weight: var(--font-bold);
+  transform: translateY(-5px);
+}
+
+.rank__score h1 {
+  font-size: var(--card-propoties-number);
+  font-weight: var(--font-bold);
+  /* color: #252f6b; */
+  transform: translateY(-5px);
 }
 
 .rank__score {
