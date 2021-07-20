@@ -19,7 +19,8 @@ function ProfileRank(props) {
         <div className="card__content rank__content">
           <div className="rank__team">
             <h3>You are</h3>
-            <BsQuestionCircleFill className="rank__rank" />
+            <h1>{userDetail.userRank}</h1>
+            {/* <BsQuestionCircleFill className="rank__rank" /> */}
             {/* <img className="team__logo" src={team2} alt="" /> */}
           </div>
           <div className="rank__score">
