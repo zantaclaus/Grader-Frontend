@@ -83,3 +83,7 @@
     height: calc(100% - 13rem);
   }
 }
+
+.logo {
+  cursor: pointer;
+}
