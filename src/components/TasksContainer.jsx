@@ -7,7 +7,8 @@ import Card from "./Card";
 // import { RiMoonClearFill } from "react-icons/ri";
 // import { BsListTask } from "react-icons/bs";
 import { BiTaskX } from "react-icons/bi";
-import { BiTask } from "react-icons/bi";
+// import { BiTask } from "react-icons/bi";
+import { FaTasks } from "react-icons/fa";
 import "../css/tasksContainer.css";
 import Pagination from "./Pagination";
 import { paginate } from "../services/paginateService";
@@ -64,15 +65,15 @@ function TasksContainer(props) {
           <div className="tasks__header">
             <div className="tasks__logo">
               {isFinishedFilter && (
-                <BiTask
+                <BiTaskX
                   className="logo"
-                  color="gold"
+                  color="red"
                   size="3rem"
                   onClick={handleFinished}
                 />
               )}
               {!isFinishedFilter && (
-                <BiTaskX
+                <FaTasks
                   className="logo"
                   color="gold"
                   size="3rem"
