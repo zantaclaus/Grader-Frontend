@@ -16,6 +16,7 @@ function TasksContainer(props) {
   const selectedUnit = useSelector((state) => state.selectedUnit);
   const currentPage = useSelector((state) => state.page);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isFinishedFilter, setIsFinishedFilter] = useState(false);
   const pageSize = 20;
   const dispatch = useDispatch();
 
@@ -32,6 +33,9 @@ function TasksContainer(props) {
   } else if (selectedUnit !== "All Units") {
     filtered = tasks.filter((u) => u.unit.trim() === selectedUnit);
   }
+  if (isFinishedFilter) {
+    filtered = filtered.filter((task) => task.status === 0);
+  }
 
   const sliceProblems = paginate(filtered, currentPage, pageSize);
   const lastPage = Math.ceil(filtered.length / pageSize);
@@ -40,6 +44,10 @@ function TasksContainer(props) {
     dispatch(setPage(1));
     dispatch(setTitle("All Units"));
     setSearchQuery(query);
+  };
+
+  const handleFinished = () => {
+    setIsFinishedFilter(!isFinishedFilter);
   };
 
   useEffect(() => {
@@ -52,7 +60,12 @@ function TasksContainer(props) {
         <div className="tasks__bar tasks__header">
           <div className="tasks__header">
             <div className="tasks__logo">
-              <RiMoonClearFill className="logo" color="gold" size="3rem" />
+              <RiMoonClearFill
+                className="logo"
+                color="gold"
+                size="3rem"
+                onClick={handleFinished}
+              />
             </div>
             <div className="tasks__title"></div>
             <span className="line" />
