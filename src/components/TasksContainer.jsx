@@ -4,7 +4,10 @@ import Aos from "aos";
 import SearchBox from "./SearchBox";
 import FilterBox from "./FilterBox";
 import Card from "./Card";
-import { RiMoonClearFill } from "react-icons/ri";
+// import { RiMoonClearFill } from "react-icons/ri";
+// import { BsListTask } from "react-icons/bs";
+import { BiTaskX } from "react-icons/bi";
+import { BiTask } from "react-icons/bi";
 import "../css/tasksContainer.css";
 import Pagination from "./Pagination";
 import { paginate } from "../services/paginateService";
@@ -34,7 +37,7 @@ function TasksContainer(props) {
     filtered = tasks.filter((u) => u.unit.trim() === selectedUnit);
   }
   if (isFinishedFilter) {
-    filtered = filtered.filter((task) => task.status === 0);
+    filtered = filtered.filter((task) => task.status !== 2);
   }
 
   const sliceProblems = paginate(filtered, currentPage, pageSize);
@@ -60,12 +63,22 @@ function TasksContainer(props) {
         <div className="tasks__bar tasks__header">
           <div className="tasks__header">
             <div className="tasks__logo">
-              <RiMoonClearFill
-                className="logo"
-                color="gold"
-                size="3rem"
-                onClick={handleFinished}
-              />
+              {isFinishedFilter && (
+                <BiTask
+                  className="logo"
+                  color="gold"
+                  size="3rem"
+                  onClick={handleFinished}
+                />
+              )}
+              {!isFinishedFilter && (
+                <BiTaskX
+                  className="logo"
+                  color="gold"
+                  size="3rem"
+                  onClick={handleFinished}
+                />
+              )}
             </div>
             <div className="tasks__title"></div>
             <span className="line" />
