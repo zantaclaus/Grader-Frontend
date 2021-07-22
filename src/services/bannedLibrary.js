@@ -9,6 +9,7 @@ export const bannedLibrary = [
   { id: "7", name: "list" },
   { id: "3", name: "map" },
   { id: "18", name: "mutex" },
+  { id: "99", name: "numeric" },
   { id: "4", name: "queue" },
   { id: "6", name: "set" },
   { id: "20", name: "signal.h" },
