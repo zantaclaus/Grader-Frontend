@@ -87,3 +87,11 @@
 .logo {
   cursor: pointer;
 }
+
+.logoX {
+  color: tomato;
+}
+
+.logoTick {
+  color: #08a58b;
+}

@@ -66,16 +66,14 @@ function TasksContainer(props) {
             <div className="tasks__logo">
               {isFinishedFilter && (
                 <BiTaskX
-                  className="logo"
-                  color="red"
+                  className="logo logoX"
                   size="3rem"
                   onClick={handleFinished}
                 />
               )}
               {!isFinishedFilter && (
                 <FaTasks
-                  className="logo"
-                  color="green"
+                  className="logo logoTick"
                   size="3rem"
                   onClick={handleFinished}
                 />
