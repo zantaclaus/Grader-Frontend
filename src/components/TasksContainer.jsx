@@ -75,7 +75,7 @@ function TasksContainer(props) {
               {!isFinishedFilter && (
                 <FaTasks
                   className="logo"
-                  color="gold"
+                  color="green"
                   size="3rem"
                   onClick={handleFinished}
                 />
