@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "../css/profileRank.css";
 import { useSelector } from "react-redux";
-import { BsQuestionCircleFill } from "react-icons/bs";
 
 function ProfileRank(props) {
   const userDetail = useSelector((state) => state.userDetail.user);
