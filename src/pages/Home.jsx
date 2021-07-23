@@ -25,6 +25,7 @@ function Home(props) {
       {!swap && <LeaderBoard />}
       {swap && <Contact />}
       <ScoreBoard />
+      <Contact />
     </React.Fragment>
   );
 }
