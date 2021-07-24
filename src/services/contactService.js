@@ -14,7 +14,7 @@ export const contacts = [
     section: "Frontend Designer",
     image: firn,
     facebook: "https://www.facebook.com/firnkenk/",
-    ig: " https://github.com/Kunkanit",
+    ig: "https://www.instagram.com/oh.imfirn/",
     github: "https://github.com/Kunkanit",
   },
   {
