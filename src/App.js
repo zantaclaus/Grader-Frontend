@@ -50,28 +50,32 @@ function App(props) {
 
   // console.log("App user:", user);
 
-  return (
-    <React.Fragment>
-      {user && <Navbar />}
-      <div className="content__container">
-        <Switch>
-          <Route path="/login" component={Login} />
-          <ProtectedRoute path="/logout" component={Logout} />
-          <ProtectedRoute path="/tasks/:id" exact component={Task} />
-          <ProtectedRoute path="/tasks" component={Tasks} />
-          <ProtectedRoute path="/submission" component={Submission} />
-          <ProtectedRoute path="/guidebook" component={GuideBook} />
-          <ProtectedRoute path="/profile" component={Profile} />
-          <ProtectedRoute path="/manage" component={Manage} />
-          <ProtectedRoute path="/home" component={Home} />
-          <Redirect path="/" exact to="/home" />
-        </Switch>
-      </div>
+  try {
+    return (
+      <React.Fragment>
+        {user && <Navbar />}
+        <div className="content__container">
+          <Switch>
+            <Route path="/login" component={Login} />
+            <ProtectedRoute path="/logout" component={Logout} />
+            <ProtectedRoute path="/tasks/:id" exact component={Task} />
+            <ProtectedRoute path="/tasks" component={Tasks} />
+            <ProtectedRoute path="/submission" component={Submission} />
+            <ProtectedRoute path="/guidebook" component={GuideBook} />
+            <ProtectedRoute path="/profile" component={Profile} />
+            <ProtectedRoute path="/manage" component={Manage} />
+            <ProtectedRoute path="/home" component={Home} />
+            <Redirect path="/" exact to="/home" />
+          </Switch>
+        </div>
 
-      <div id="fb-root"></div>
-      <div id="fb-customer-chat" className="fb-customerchat"></div>
-    </React.Fragment>
-  );
+        <div id="fb-root"></div>
+        <div id="fb-customer-chat" className="fb-customerchat"></div>
+      </React.Fragment>
+    );
+  } catch (ex) {
+    console.log("Error!", ex);
+  }
 }
 
 export default App;
