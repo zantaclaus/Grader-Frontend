@@ -12,6 +12,7 @@
   border-radius: 10px;
   color: white;
   background: var(--btn-background);
+  position: relative;
 }
 
 .submit__label {
@@ -26,4 +27,28 @@
 
 .submit__icon {
   margin-right: 1.2rem;
+}
+
+/* .submit__label {
+  cursor: default;
+  background: rgb(131, 129, 129);
+  border-radius: 10px;
+} */
+
+#Disable {
+  width: 100%;
+  height: 100%;
+  background: rgb(131, 129, 129);
+  position: absolute;
+}
+
+#Disable::before {
+  content: "Submit";
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: default;
+  align-items: center;
 }

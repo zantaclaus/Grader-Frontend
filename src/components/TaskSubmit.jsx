@@ -7,6 +7,8 @@ import { setCode } from "../redux/actions/codeAction";
 
 function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
   const user = useSelector((state) => state.user.user);
+  const task = useSelector((state) => state.task);
+
   // const [inQueue, setInQueue] = useState({});
   const dispatch = useDispatch();
 
@@ -40,20 +42,40 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
   };
 
   return (
-    <div className="task__submit btn--hover">
-      <button
-        id="submit"
-        type="submit"
-        onClick={handleCodeSubmit}
-        disabled={isDone}
-      >
-        Submit
-      </button>
-      <label htmlFor="submit" className="submit__label">
-        <FaLocationArrow size="1.8rem" className="submit__icon" />
-        Submit
-      </label>
-    </div>
+    <React.Fragment>
+      {task.number !== 255 && (
+        <div className="task__submit btn--hover">
+          <button
+            id="submit"
+            type="submit"
+            onClick={handleCodeSubmit}
+            disabled={isDone}
+          >
+            Submit
+          </button>
+          <label htmlFor="submit" className="submit__label">
+            <FaLocationArrow size="1.8rem" className="submit__icon" />
+            Submit
+          </label>
+        </div>
+      )}
+      {task.number === 255 && (
+        <div className="task__submit btn--hover">
+          <button id="submit" type="submit" onClick={handleCodeSubmit}>
+            Submit
+          </button>
+          <span
+            id="Disable"
+            className="disableSubmit"
+            dangerouslySetInnerHTML={{ __html: `<!-- Remove me -->` }}
+          ></span>
+          <label htmlFor="submit" className="submit__label">
+            <FaLocationArrow size="1.8rem" className="submit__icon" />
+            Submit
+          </label>
+        </div>
+      )}
+    </React.Fragment>
   );
 }
 
