@@ -46,24 +46,16 @@ function TaskQuestion(props) {
         <div dangerouslySetInnerHTML={{ __html: jsxQuestion }} />
       </div>
       <div className="pattern">
-        {task.q_input && (
-          <React.Fragment>
-            <div className="task__label">รูปแบบข้อมูลนำเข้า</div>
-            <div className="pattern__detail">
-              <div dangerouslySetInnerHTML={{ __html: jsxQ_input }} />
-            </div>
-          </React.Fragment>
-        )}
+        <div className="task__label">รูปแบบข้อมูลนำเข้า</div>
+        <div className="pattern__detail">
+          <div dangerouslySetInnerHTML={{ __html: jsxQ_input }} />
+        </div>
       </div>
       <div className="pattern">
-        {task.q_output && (
-          <React.Fragment>
-            <div className="task__label">รูปแบบข้อมูลส่งออก</div>
-            <div className="pattern__detail">
-              <div dangerouslySetInnerHTML={{ __html: jsxQ_output }} />
-            </div>
-          </React.Fragment>
-        )}
+        <div className="task__label">รูปแบบข้อมูลส่งออก</div>
+        <div className="pattern__detail">
+          <div dangerouslySetInnerHTML={{ __html: jsxQ_output }} />
+        </div>
       </div>
       <div className="tastcase">
         {(task.str_input_1 || task.str_output_1) && (
