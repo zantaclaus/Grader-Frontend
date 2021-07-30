@@ -43,7 +43,7 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
 
   return (
     <React.Fragment>
-      {task.number !== 255 && (
+      {task.number !== 255 && task.number !== 256 && (
         <div className="task__submit btn--hover">
           <button
             id="submit"
@@ -59,7 +59,7 @@ function TaskSubmit({ code, taskId, setforceRender, isDone, setIsDone }) {
           </label>
         </div>
       )}
-      {task.number === 255 && (
+      {task.number === 255 && task.number !== 256 && (
         <div className="task__submit btn--hover">
           <button id="submit" type="submit" onClick={handleCodeSubmit}>
             Submit
