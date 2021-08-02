@@ -24,7 +24,7 @@ function TasksContainer(props) {
   const pageSize = 20;
   const dispatch = useDispatch();
 
-  let filtered = tasks;
+  let filtered = tasks.filter((task) => task.number !== 258);
   if (searchQuery) {
     const queryNumber = tasks.filter((task) =>
       task.number.toString().startsWith(searchQuery)
