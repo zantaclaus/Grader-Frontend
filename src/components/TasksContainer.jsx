@@ -24,18 +24,18 @@ function TasksContainer(props) {
   const pageSize = 20;
   const dispatch = useDispatch();
 
-  let filtered = tasks.filter((task) => task.number !== 257);
+  let filtered = tasks.filter((task) => task.number !== 5);
   if (searchQuery) {
-    const queryNumber = tasks.filter((task) =>
+    const queryNumber = filtered.filter((task) =>
       task.number.toString().startsWith(searchQuery)
     );
-    const queryInclude = tasks.filter((task) =>
+    const queryInclude = filtered.filter((task) =>
       task.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
     filtered = queryNumber.concat(queryInclude);
     filtered = [...new Set([...queryNumber, ...queryInclude])];
   } else if (selectedUnit !== "All Units") {
-    filtered = tasks.filter((u) => u.unit.trim() === selectedUnit);
+    filtered = filtered.filter((u) => u.unit.trim() === selectedUnit);
   }
   if (isFinishedFilter) {
     filtered = filtered.filter((task) => task.status !== 2);
